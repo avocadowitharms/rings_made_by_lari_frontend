@@ -1,0 +1,2306 @@
+﻿[
+    {
+        "file":  "assets/old-site/old-001.jpg",
+        "url":  {
+                    "value":  "https://static.wixstatic.com/media/e5a4ea_021cc115f9fc4c818a804dc78f4776a2~mv2.jpg/v1/fit/w_500,h_500,q_90/file.jpg",
+                    "PSPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend\\old-all-media-selected.txt",
+                    "PSParentPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                    "PSChildName":  "old-all-media-selected.txt",
+                    "PSDrive":  {
+                                    "CurrentLocation":  "Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                                    "Name":  "C",
+                                    "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                                    "Root":  "C:\\",
+                                    "Description":  "",
+                                    "MaximumSize":  null,
+                                    "Credential":  "System.Management.Automation.PSCredential",
+                                    "DisplayRoot":  null
+                                },
+                    "PSProvider":  {
+                                       "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                                       "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                                       "Name":  "FileSystem",
+                                       "PSSnapIn":  "Microsoft.PowerShell.Core",
+                                       "ModuleName":  "Microsoft.PowerShell.Core",
+                                       "Module":  null,
+                                       "Description":  "",
+                                       "Capabilities":  52,
+                                       "Home":  "C:\\Users\\Ava",
+                                       "Drives":  "C G"
+                                   },
+                    "ReadCount":  1
+                }
+    },
+    {
+        "file":  "assets/old-site/old-002.jpg",
+        "url":  {
+                    "value":  "https://static.wixstatic.com/media/e5a4ea_03a594b407144aa4b7a7bf81266037b8~mv2.jpg/v1/fit/w_500,h_500,q_90/file.jpg",
+                    "PSPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend\\old-all-media-selected.txt",
+                    "PSParentPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                    "PSChildName":  "old-all-media-selected.txt",
+                    "PSDrive":  {
+                                    "CurrentLocation":  "Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                                    "Name":  "C",
+                                    "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                                    "Root":  "C:\\",
+                                    "Description":  "",
+                                    "MaximumSize":  null,
+                                    "Credential":  "System.Management.Automation.PSCredential",
+                                    "DisplayRoot":  null
+                                },
+                    "PSProvider":  {
+                                       "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                                       "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                                       "Name":  "FileSystem",
+                                       "PSSnapIn":  "Microsoft.PowerShell.Core",
+                                       "ModuleName":  "Microsoft.PowerShell.Core",
+                                       "Module":  null,
+                                       "Description":  "",
+                                       "Capabilities":  52,
+                                       "Home":  "C:\\Users\\Ava",
+                                       "Drives":  "C G"
+                                   },
+                    "ReadCount":  2
+                }
+    },
+    {
+        "file":  "assets/old-site/old-003.jpg",
+        "url":  {
+                    "value":  "https://static.wixstatic.com/media/e5a4ea_059414986db8411fba26e19bd5449a0b~mv2.jpg/v1/fit/w_500,h_500,q_90/file.jpg",
+                    "PSPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend\\old-all-media-selected.txt",
+                    "PSParentPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                    "PSChildName":  "old-all-media-selected.txt",
+                    "PSDrive":  {
+                                    "CurrentLocation":  "Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                                    "Name":  "C",
+                                    "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                                    "Root":  "C:\\",
+                                    "Description":  "",
+                                    "MaximumSize":  null,
+                                    "Credential":  "System.Management.Automation.PSCredential",
+                                    "DisplayRoot":  null
+                                },
+                    "PSProvider":  {
+                                       "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                                       "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                                       "Name":  "FileSystem",
+                                       "PSSnapIn":  "Microsoft.PowerShell.Core",
+                                       "ModuleName":  "Microsoft.PowerShell.Core",
+                                       "Module":  null,
+                                       "Description":  "",
+                                       "Capabilities":  52,
+                                       "Home":  "C:\\Users\\Ava",
+                                       "Drives":  "C G"
+                                   },
+                    "ReadCount":  3
+                }
+    },
+    {
+        "file":  "assets/old-site/old-004.jpg",
+        "url":  {
+                    "value":  "https://static.wixstatic.com/media/e5a4ea_0658adb658e24f85aa8056bc896183d7~mv2.jpg/v1/fit/w_500,h_500,q_90/file.jpg",
+                    "PSPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend\\old-all-media-selected.txt",
+                    "PSParentPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                    "PSChildName":  "old-all-media-selected.txt",
+                    "PSDrive":  {
+                                    "CurrentLocation":  "Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                                    "Name":  "C",
+                                    "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                                    "Root":  "C:\\",
+                                    "Description":  "",
+                                    "MaximumSize":  null,
+                                    "Credential":  "System.Management.Automation.PSCredential",
+                                    "DisplayRoot":  null
+                                },
+                    "PSProvider":  {
+                                       "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                                       "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                                       "Name":  "FileSystem",
+                                       "PSSnapIn":  "Microsoft.PowerShell.Core",
+                                       "ModuleName":  "Microsoft.PowerShell.Core",
+                                       "Module":  null,
+                                       "Description":  "",
+                                       "Capabilities":  52,
+                                       "Home":  "C:\\Users\\Ava",
+                                       "Drives":  "C G"
+                                   },
+                    "ReadCount":  4
+                }
+    },
+    {
+        "file":  "assets/old-site/old-005.jpg",
+        "url":  {
+                    "value":  "https://static.wixstatic.com/media/e5a4ea_073949c7e9124295a50054a193b19038~mv2.jpg/v1/fit/w_500,h_500,q_90/file.jpg",
+                    "PSPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend\\old-all-media-selected.txt",
+                    "PSParentPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                    "PSChildName":  "old-all-media-selected.txt",
+                    "PSDrive":  {
+                                    "CurrentLocation":  "Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                                    "Name":  "C",
+                                    "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                                    "Root":  "C:\\",
+                                    "Description":  "",
+                                    "MaximumSize":  null,
+                                    "Credential":  "System.Management.Automation.PSCredential",
+                                    "DisplayRoot":  null
+                                },
+                    "PSProvider":  {
+                                       "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                                       "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                                       "Name":  "FileSystem",
+                                       "PSSnapIn":  "Microsoft.PowerShell.Core",
+                                       "ModuleName":  "Microsoft.PowerShell.Core",
+                                       "Module":  null,
+                                       "Description":  "",
+                                       "Capabilities":  52,
+                                       "Home":  "C:\\Users\\Ava",
+                                       "Drives":  "C G"
+                                   },
+                    "ReadCount":  5
+                }
+    },
+    {
+        "file":  "assets/old-site/old-006.jpg",
+        "url":  {
+                    "value":  "https://static.wixstatic.com/media/e5a4ea_1254736a11b2448d9318aa5fadadc1f9~mv2.jpg/v1/fit/w_500,h_500,q_90/file.jpg",
+                    "PSPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend\\old-all-media-selected.txt",
+                    "PSParentPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                    "PSChildName":  "old-all-media-selected.txt",
+                    "PSDrive":  {
+                                    "CurrentLocation":  "Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                                    "Name":  "C",
+                                    "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                                    "Root":  "C:\\",
+                                    "Description":  "",
+                                    "MaximumSize":  null,
+                                    "Credential":  "System.Management.Automation.PSCredential",
+                                    "DisplayRoot":  null
+                                },
+                    "PSProvider":  {
+                                       "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                                       "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                                       "Name":  "FileSystem",
+                                       "PSSnapIn":  "Microsoft.PowerShell.Core",
+                                       "ModuleName":  "Microsoft.PowerShell.Core",
+                                       "Module":  null,
+                                       "Description":  "",
+                                       "Capabilities":  52,
+                                       "Home":  "C:\\Users\\Ava",
+                                       "Drives":  "C G"
+                                   },
+                    "ReadCount":  6
+                }
+    },
+    {
+        "file":  "assets/old-site/old-007.jpg",
+        "url":  {
+                    "value":  "https://static.wixstatic.com/media/e5a4ea_14b018ab859e484199d72427c4f4f78a~mv2.jpg/v1/fit/w_500,h_500,q_90/file.jpg",
+                    "PSPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend\\old-all-media-selected.txt",
+                    "PSParentPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                    "PSChildName":  "old-all-media-selected.txt",
+                    "PSDrive":  {
+                                    "CurrentLocation":  "Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                                    "Name":  "C",
+                                    "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                                    "Root":  "C:\\",
+                                    "Description":  "",
+                                    "MaximumSize":  null,
+                                    "Credential":  "System.Management.Automation.PSCredential",
+                                    "DisplayRoot":  null
+                                },
+                    "PSProvider":  {
+                                       "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                                       "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                                       "Name":  "FileSystem",
+                                       "PSSnapIn":  "Microsoft.PowerShell.Core",
+                                       "ModuleName":  "Microsoft.PowerShell.Core",
+                                       "Module":  null,
+                                       "Description":  "",
+                                       "Capabilities":  52,
+                                       "Home":  "C:\\Users\\Ava",
+                                       "Drives":  "C G"
+                                   },
+                    "ReadCount":  7
+                }
+    },
+    {
+        "file":  "assets/old-site/old-008.webp",
+        "url":  {
+                    "value":  "https://static.wixstatic.com/media/e5a4ea_14ed1ef867444c44b0184da0e0771535~mv2.webp/v1/fit/w_500,h_500,q_90/file.webp",
+                    "PSPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend\\old-all-media-selected.txt",
+                    "PSParentPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                    "PSChildName":  "old-all-media-selected.txt",
+                    "PSDrive":  {
+                                    "CurrentLocation":  "Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                                    "Name":  "C",
+                                    "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                                    "Root":  "C:\\",
+                                    "Description":  "",
+                                    "MaximumSize":  null,
+                                    "Credential":  "System.Management.Automation.PSCredential",
+                                    "DisplayRoot":  null
+                                },
+                    "PSProvider":  {
+                                       "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                                       "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                                       "Name":  "FileSystem",
+                                       "PSSnapIn":  "Microsoft.PowerShell.Core",
+                                       "ModuleName":  "Microsoft.PowerShell.Core",
+                                       "Module":  null,
+                                       "Description":  "",
+                                       "Capabilities":  52,
+                                       "Home":  "C:\\Users\\Ava",
+                                       "Drives":  "C G"
+                                   },
+                    "ReadCount":  8
+                }
+    },
+    {
+        "file":  "assets/old-site/old-009.jpg",
+        "url":  {
+                    "value":  "https://static.wixstatic.com/media/e5a4ea_1ab2d71683054d75a8925c7dfe98f381~mv2.jpg/v1/fit/w_500,h_500,q_90/file.jpg",
+                    "PSPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend\\old-all-media-selected.txt",
+                    "PSParentPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                    "PSChildName":  "old-all-media-selected.txt",
+                    "PSDrive":  {
+                                    "CurrentLocation":  "Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                                    "Name":  "C",
+                                    "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                                    "Root":  "C:\\",
+                                    "Description":  "",
+                                    "MaximumSize":  null,
+                                    "Credential":  "System.Management.Automation.PSCredential",
+                                    "DisplayRoot":  null
+                                },
+                    "PSProvider":  {
+                                       "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                                       "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                                       "Name":  "FileSystem",
+                                       "PSSnapIn":  "Microsoft.PowerShell.Core",
+                                       "ModuleName":  "Microsoft.PowerShell.Core",
+                                       "Module":  null,
+                                       "Description":  "",
+                                       "Capabilities":  52,
+                                       "Home":  "C:\\Users\\Ava",
+                                       "Drives":  "C G"
+                                   },
+                    "ReadCount":  9
+                }
+    },
+    {
+        "file":  "assets/old-site/old-010.jpg",
+        "url":  {
+                    "value":  "https://static.wixstatic.com/media/e5a4ea_1ad9c767f22545fbac95b966fc2a7c78~mv2.jpg/v1/fit/w_500,h_500,q_90/file.jpg",
+                    "PSPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend\\old-all-media-selected.txt",
+                    "PSParentPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                    "PSChildName":  "old-all-media-selected.txt",
+                    "PSDrive":  {
+                                    "CurrentLocation":  "Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                                    "Name":  "C",
+                                    "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                                    "Root":  "C:\\",
+                                    "Description":  "",
+                                    "MaximumSize":  null,
+                                    "Credential":  "System.Management.Automation.PSCredential",
+                                    "DisplayRoot":  null
+                                },
+                    "PSProvider":  {
+                                       "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                                       "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                                       "Name":  "FileSystem",
+                                       "PSSnapIn":  "Microsoft.PowerShell.Core",
+                                       "ModuleName":  "Microsoft.PowerShell.Core",
+                                       "Module":  null,
+                                       "Description":  "",
+                                       "Capabilities":  52,
+                                       "Home":  "C:\\Users\\Ava",
+                                       "Drives":  "C G"
+                                   },
+                    "ReadCount":  10
+                }
+    },
+    {
+        "file":  "assets/old-site/old-011.jpg",
+        "url":  {
+                    "value":  "https://static.wixstatic.com/media/e5a4ea_1d3588175b274b7f9990290ffca0bbc4~mv2.jpg/v1/fill/w_114,h_39,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Visa%20Mastercard.jpg",
+                    "PSPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend\\old-all-media-selected.txt",
+                    "PSParentPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                    "PSChildName":  "old-all-media-selected.txt",
+                    "PSDrive":  {
+                                    "CurrentLocation":  "Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                                    "Name":  "C",
+                                    "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                                    "Root":  "C:\\",
+                                    "Description":  "",
+                                    "MaximumSize":  null,
+                                    "Credential":  "System.Management.Automation.PSCredential",
+                                    "DisplayRoot":  null
+                                },
+                    "PSProvider":  {
+                                       "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                                       "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                                       "Name":  "FileSystem",
+                                       "PSSnapIn":  "Microsoft.PowerShell.Core",
+                                       "ModuleName":  "Microsoft.PowerShell.Core",
+                                       "Module":  null,
+                                       "Description":  "",
+                                       "Capabilities":  52,
+                                       "Home":  "C:\\Users\\Ava",
+                                       "Drives":  "C G"
+                                   },
+                    "ReadCount":  11
+                }
+    },
+    {
+        "file":  "assets/old-site/old-012.jpg",
+        "url":  {
+                    "value":  "https://static.wixstatic.com/media/e5a4ea_1d3588175b274b7f9990290ffca0bbc4~mv2.jpg/v1/fill/w_228,h_78,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Visa%20Mastercard.jpg",
+                    "PSPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend\\old-all-media-selected.txt",
+                    "PSParentPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                    "PSChildName":  "old-all-media-selected.txt",
+                    "PSDrive":  {
+                                    "CurrentLocation":  "Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                                    "Name":  "C",
+                                    "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                                    "Root":  "C:\\",
+                                    "Description":  "",
+                                    "MaximumSize":  null,
+                                    "Credential":  "System.Management.Automation.PSCredential",
+                                    "DisplayRoot":  null
+                                },
+                    "PSProvider":  {
+                                       "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                                       "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                                       "Name":  "FileSystem",
+                                       "PSSnapIn":  "Microsoft.PowerShell.Core",
+                                       "ModuleName":  "Microsoft.PowerShell.Core",
+                                       "Module":  null,
+                                       "Description":  "",
+                                       "Capabilities":  52,
+                                       "Home":  "C:\\Users\\Ava",
+                                       "Drives":  "C G"
+                                   },
+                    "ReadCount":  12
+                }
+    },
+    {
+        "file":  "assets/old-site/old-013.webp",
+        "url":  {
+                    "value":  "https://static.wixstatic.com/media/e5a4ea_1eaac4a1376b4af9b07817d901ed55c4~mv2.webp/v1/fit/w_500,h_500,q_90/file.webp",
+                    "PSPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend\\old-all-media-selected.txt",
+                    "PSParentPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                    "PSChildName":  "old-all-media-selected.txt",
+                    "PSDrive":  {
+                                    "CurrentLocation":  "Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                                    "Name":  "C",
+                                    "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                                    "Root":  "C:\\",
+                                    "Description":  "",
+                                    "MaximumSize":  null,
+                                    "Credential":  "System.Management.Automation.PSCredential",
+                                    "DisplayRoot":  null
+                                },
+                    "PSProvider":  {
+                                       "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                                       "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                                       "Name":  "FileSystem",
+                                       "PSSnapIn":  "Microsoft.PowerShell.Core",
+                                       "ModuleName":  "Microsoft.PowerShell.Core",
+                                       "Module":  null,
+                                       "Description":  "",
+                                       "Capabilities":  52,
+                                       "Home":  "C:\\Users\\Ava",
+                                       "Drives":  "C G"
+                                   },
+                    "ReadCount":  13
+                }
+    },
+    {
+        "file":  "assets/old-site/old-014.jpg",
+        "url":  {
+                    "value":  "https://static.wixstatic.com/media/e5a4ea_229b9faf77354cd78c0ebe3827eddb0e~mv2.jpg/v1/fit/w_500,h_500,q_90/file.jpg",
+                    "PSPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend\\old-all-media-selected.txt",
+                    "PSParentPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                    "PSChildName":  "old-all-media-selected.txt",
+                    "PSDrive":  {
+                                    "CurrentLocation":  "Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                                    "Name":  "C",
+                                    "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                                    "Root":  "C:\\",
+                                    "Description":  "",
+                                    "MaximumSize":  null,
+                                    "Credential":  "System.Management.Automation.PSCredential",
+                                    "DisplayRoot":  null
+                                },
+                    "PSProvider":  {
+                                       "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                                       "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                                       "Name":  "FileSystem",
+                                       "PSSnapIn":  "Microsoft.PowerShell.Core",
+                                       "ModuleName":  "Microsoft.PowerShell.Core",
+                                       "Module":  null,
+                                       "Description":  "",
+                                       "Capabilities":  52,
+                                       "Home":  "C:\\Users\\Ava",
+                                       "Drives":  "C G"
+                                   },
+                    "ReadCount":  14
+                }
+    },
+    {
+        "file":  "assets/old-site/old-015.jpg",
+        "url":  {
+                    "value":  "https://static.wixstatic.com/media/e5a4ea_22aad20da92349339e83691a8d6043c2~mv2.jpg/v1/fit/w_500,h_500,q_90/file.jpg",
+                    "PSPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend\\old-all-media-selected.txt",
+                    "PSParentPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                    "PSChildName":  "old-all-media-selected.txt",
+                    "PSDrive":  {
+                                    "CurrentLocation":  "Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                                    "Name":  "C",
+                                    "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                                    "Root":  "C:\\",
+                                    "Description":  "",
+                                    "MaximumSize":  null,
+                                    "Credential":  "System.Management.Automation.PSCredential",
+                                    "DisplayRoot":  null
+                                },
+                    "PSProvider":  {
+                                       "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                                       "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                                       "Name":  "FileSystem",
+                                       "PSSnapIn":  "Microsoft.PowerShell.Core",
+                                       "ModuleName":  "Microsoft.PowerShell.Core",
+                                       "Module":  null,
+                                       "Description":  "",
+                                       "Capabilities":  52,
+                                       "Home":  "C:\\Users\\Ava",
+                                       "Drives":  "C G"
+                                   },
+                    "ReadCount":  15
+                }
+    },
+    {
+        "file":  "assets/old-site/old-016.jpg",
+        "url":  {
+                    "value":  "https://static.wixstatic.com/media/e5a4ea_28e2e65abbeb4451b9813da9a0d66ee5~mv2.jpg/v1/fit/w_500,h_500,q_90/file.jpg",
+                    "PSPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend\\old-all-media-selected.txt",
+                    "PSParentPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                    "PSChildName":  "old-all-media-selected.txt",
+                    "PSDrive":  {
+                                    "CurrentLocation":  "Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                                    "Name":  "C",
+                                    "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                                    "Root":  "C:\\",
+                                    "Description":  "",
+                                    "MaximumSize":  null,
+                                    "Credential":  "System.Management.Automation.PSCredential",
+                                    "DisplayRoot":  null
+                                },
+                    "PSProvider":  {
+                                       "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                                       "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                                       "Name":  "FileSystem",
+                                       "PSSnapIn":  "Microsoft.PowerShell.Core",
+                                       "ModuleName":  "Microsoft.PowerShell.Core",
+                                       "Module":  null,
+                                       "Description":  "",
+                                       "Capabilities":  52,
+                                       "Home":  "C:\\Users\\Ava",
+                                       "Drives":  "C G"
+                                   },
+                    "ReadCount":  16
+                }
+    },
+    {
+        "file":  "assets/old-site/old-017.webp",
+        "url":  {
+                    "value":  "https://static.wixstatic.com/media/e5a4ea_2c7cee52a81f411db673d8379868feda~mv2.webp/v1/fit/w_500,h_500,q_90/file.webp",
+                    "PSPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend\\old-all-media-selected.txt",
+                    "PSParentPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                    "PSChildName":  "old-all-media-selected.txt",
+                    "PSDrive":  {
+                                    "CurrentLocation":  "Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                                    "Name":  "C",
+                                    "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                                    "Root":  "C:\\",
+                                    "Description":  "",
+                                    "MaximumSize":  null,
+                                    "Credential":  "System.Management.Automation.PSCredential",
+                                    "DisplayRoot":  null
+                                },
+                    "PSProvider":  {
+                                       "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                                       "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                                       "Name":  "FileSystem",
+                                       "PSSnapIn":  "Microsoft.PowerShell.Core",
+                                       "ModuleName":  "Microsoft.PowerShell.Core",
+                                       "Module":  null,
+                                       "Description":  "",
+                                       "Capabilities":  52,
+                                       "Home":  "C:\\Users\\Ava",
+                                       "Drives":  "C G"
+                                   },
+                    "ReadCount":  17
+                }
+    },
+    {
+        "file":  "assets/old-site/old-018.jpg",
+        "url":  {
+                    "value":  "https://static.wixstatic.com/media/e5a4ea_2cf64cae292c43ffbdbf7797313c8fbb~mv2.jpg/v1/fit/w_500,h_500,q_90/file.jpg",
+                    "PSPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend\\old-all-media-selected.txt",
+                    "PSParentPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                    "PSChildName":  "old-all-media-selected.txt",
+                    "PSDrive":  {
+                                    "CurrentLocation":  "Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                                    "Name":  "C",
+                                    "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                                    "Root":  "C:\\",
+                                    "Description":  "",
+                                    "MaximumSize":  null,
+                                    "Credential":  "System.Management.Automation.PSCredential",
+                                    "DisplayRoot":  null
+                                },
+                    "PSProvider":  {
+                                       "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                                       "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                                       "Name":  "FileSystem",
+                                       "PSSnapIn":  "Microsoft.PowerShell.Core",
+                                       "ModuleName":  "Microsoft.PowerShell.Core",
+                                       "Module":  null,
+                                       "Description":  "",
+                                       "Capabilities":  52,
+                                       "Home":  "C:\\Users\\Ava",
+                                       "Drives":  "C G"
+                                   },
+                    "ReadCount":  18
+                }
+    },
+    {
+        "file":  "assets/old-site/old-019.jpg",
+        "url":  {
+                    "value":  "https://static.wixstatic.com/media/e5a4ea_2dcf1f5148c244e3a835dbe4ab460654~mv2.jpg/v1/fit/w_500,h_500,q_90/file.jpg",
+                    "PSPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend\\old-all-media-selected.txt",
+                    "PSParentPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                    "PSChildName":  "old-all-media-selected.txt",
+                    "PSDrive":  {
+                                    "CurrentLocation":  "Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                                    "Name":  "C",
+                                    "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                                    "Root":  "C:\\",
+                                    "Description":  "",
+                                    "MaximumSize":  null,
+                                    "Credential":  "System.Management.Automation.PSCredential",
+                                    "DisplayRoot":  null
+                                },
+                    "PSProvider":  {
+                                       "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                                       "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                                       "Name":  "FileSystem",
+                                       "PSSnapIn":  "Microsoft.PowerShell.Core",
+                                       "ModuleName":  "Microsoft.PowerShell.Core",
+                                       "Module":  null,
+                                       "Description":  "",
+                                       "Capabilities":  52,
+                                       "Home":  "C:\\Users\\Ava",
+                                       "Drives":  "C G"
+                                   },
+                    "ReadCount":  19
+                }
+    },
+    {
+        "file":  "assets/old-site/old-020.jpg",
+        "url":  {
+                    "value":  "https://static.wixstatic.com/media/e5a4ea_309b5fe0482c4fb6be79c752bf1f5be2~mv2.jpg/v1/fit/w_500,h_500,q_90/file.jpg",
+                    "PSPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend\\old-all-media-selected.txt",
+                    "PSParentPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                    "PSChildName":  "old-all-media-selected.txt",
+                    "PSDrive":  {
+                                    "CurrentLocation":  "Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                                    "Name":  "C",
+                                    "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                                    "Root":  "C:\\",
+                                    "Description":  "",
+                                    "MaximumSize":  null,
+                                    "Credential":  "System.Management.Automation.PSCredential",
+                                    "DisplayRoot":  null
+                                },
+                    "PSProvider":  {
+                                       "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                                       "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                                       "Name":  "FileSystem",
+                                       "PSSnapIn":  "Microsoft.PowerShell.Core",
+                                       "ModuleName":  "Microsoft.PowerShell.Core",
+                                       "Module":  null,
+                                       "Description":  "",
+                                       "Capabilities":  52,
+                                       "Home":  "C:\\Users\\Ava",
+                                       "Drives":  "C G"
+                                   },
+                    "ReadCount":  20
+                }
+    },
+    {
+        "file":  "assets/old-site/old-021.jpg",
+        "url":  {
+                    "value":  "https://static.wixstatic.com/media/e5a4ea_32693cf24b2b4ee798363b77f8e234ab~mv2.jpg/v1/fit/w_500,h_500,q_90/file.jpg",
+                    "PSPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend\\old-all-media-selected.txt",
+                    "PSParentPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                    "PSChildName":  "old-all-media-selected.txt",
+                    "PSDrive":  {
+                                    "CurrentLocation":  "Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                                    "Name":  "C",
+                                    "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                                    "Root":  "C:\\",
+                                    "Description":  "",
+                                    "MaximumSize":  null,
+                                    "Credential":  "System.Management.Automation.PSCredential",
+                                    "DisplayRoot":  null
+                                },
+                    "PSProvider":  {
+                                       "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                                       "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                                       "Name":  "FileSystem",
+                                       "PSSnapIn":  "Microsoft.PowerShell.Core",
+                                       "ModuleName":  "Microsoft.PowerShell.Core",
+                                       "Module":  null,
+                                       "Description":  "",
+                                       "Capabilities":  52,
+                                       "Home":  "C:\\Users\\Ava",
+                                       "Drives":  "C G"
+                                   },
+                    "ReadCount":  21
+                }
+    },
+    {
+        "file":  "assets/old-site/old-022.jpg",
+        "url":  {
+                    "value":  "https://static.wixstatic.com/media/e5a4ea_352177ae771b42f4a572550ed5cf1d1c~mv2.jpg/v1/fit/w_500,h_500,q_90/file.jpg",
+                    "PSPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend\\old-all-media-selected.txt",
+                    "PSParentPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                    "PSChildName":  "old-all-media-selected.txt",
+                    "PSDrive":  {
+                                    "CurrentLocation":  "Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                                    "Name":  "C",
+                                    "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                                    "Root":  "C:\\",
+                                    "Description":  "",
+                                    "MaximumSize":  null,
+                                    "Credential":  "System.Management.Automation.PSCredential",
+                                    "DisplayRoot":  null
+                                },
+                    "PSProvider":  {
+                                       "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                                       "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                                       "Name":  "FileSystem",
+                                       "PSSnapIn":  "Microsoft.PowerShell.Core",
+                                       "ModuleName":  "Microsoft.PowerShell.Core",
+                                       "Module":  null,
+                                       "Description":  "",
+                                       "Capabilities":  52,
+                                       "Home":  "C:\\Users\\Ava",
+                                       "Drives":  "C G"
+                                   },
+                    "ReadCount":  22
+                }
+    },
+    {
+        "file":  "assets/old-site/old-023.jpg",
+        "url":  {
+                    "value":  "https://static.wixstatic.com/media/e5a4ea_3554ecf5d37d44dc9cd4dc72f264733f~mv2.jpg/v1/fit/w_500,h_500,q_90/file.jpg",
+                    "PSPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend\\old-all-media-selected.txt",
+                    "PSParentPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                    "PSChildName":  "old-all-media-selected.txt",
+                    "PSDrive":  {
+                                    "CurrentLocation":  "Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                                    "Name":  "C",
+                                    "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                                    "Root":  "C:\\",
+                                    "Description":  "",
+                                    "MaximumSize":  null,
+                                    "Credential":  "System.Management.Automation.PSCredential",
+                                    "DisplayRoot":  null
+                                },
+                    "PSProvider":  {
+                                       "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                                       "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                                       "Name":  "FileSystem",
+                                       "PSSnapIn":  "Microsoft.PowerShell.Core",
+                                       "ModuleName":  "Microsoft.PowerShell.Core",
+                                       "Module":  null,
+                                       "Description":  "",
+                                       "Capabilities":  52,
+                                       "Home":  "C:\\Users\\Ava",
+                                       "Drives":  "C G"
+                                   },
+                    "ReadCount":  23
+                }
+    },
+    {
+        "file":  "assets/old-site/old-024.jpg",
+        "url":  {
+                    "value":  "https://static.wixstatic.com/media/e5a4ea_382d2dd9737246238de98c9c8fdb4ea6~mv2.jpg/v1/fit/w_500,h_500,q_90/file.jpg",
+                    "PSPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend\\old-all-media-selected.txt",
+                    "PSParentPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                    "PSChildName":  "old-all-media-selected.txt",
+                    "PSDrive":  {
+                                    "CurrentLocation":  "Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                                    "Name":  "C",
+                                    "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                                    "Root":  "C:\\",
+                                    "Description":  "",
+                                    "MaximumSize":  null,
+                                    "Credential":  "System.Management.Automation.PSCredential",
+                                    "DisplayRoot":  null
+                                },
+                    "PSProvider":  {
+                                       "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                                       "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                                       "Name":  "FileSystem",
+                                       "PSSnapIn":  "Microsoft.PowerShell.Core",
+                                       "ModuleName":  "Microsoft.PowerShell.Core",
+                                       "Module":  null,
+                                       "Description":  "",
+                                       "Capabilities":  52,
+                                       "Home":  "C:\\Users\\Ava",
+                                       "Drives":  "C G"
+                                   },
+                    "ReadCount":  24
+                }
+    },
+    {
+        "file":  "assets/old-site/old-025.jpg",
+        "url":  {
+                    "value":  "https://static.wixstatic.com/media/e5a4ea_3eb5c33fe7eb4c2f9c31aac4e2389de1~mv2.jpg/v1/fit/w_500,h_500,q_90/file.jpg",
+                    "PSPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend\\old-all-media-selected.txt",
+                    "PSParentPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                    "PSChildName":  "old-all-media-selected.txt",
+                    "PSDrive":  {
+                                    "CurrentLocation":  "Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                                    "Name":  "C",
+                                    "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                                    "Root":  "C:\\",
+                                    "Description":  "",
+                                    "MaximumSize":  null,
+                                    "Credential":  "System.Management.Automation.PSCredential",
+                                    "DisplayRoot":  null
+                                },
+                    "PSProvider":  {
+                                       "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                                       "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                                       "Name":  "FileSystem",
+                                       "PSSnapIn":  "Microsoft.PowerShell.Core",
+                                       "ModuleName":  "Microsoft.PowerShell.Core",
+                                       "Module":  null,
+                                       "Description":  "",
+                                       "Capabilities":  52,
+                                       "Home":  "C:\\Users\\Ava",
+                                       "Drives":  "C G"
+                                   },
+                    "ReadCount":  25
+                }
+    },
+    {
+        "file":  "assets/old-site/old-026.jpg",
+        "url":  {
+                    "value":  "https://static.wixstatic.com/media/e5a4ea_429767ce137f4a77b4f016a2dfd46c94~mv2.jpg/v1/fit/w_500,h_500,q_90/file.jpg",
+                    "PSPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend\\old-all-media-selected.txt",
+                    "PSParentPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                    "PSChildName":  "old-all-media-selected.txt",
+                    "PSDrive":  {
+                                    "CurrentLocation":  "Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                                    "Name":  "C",
+                                    "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                                    "Root":  "C:\\",
+                                    "Description":  "",
+                                    "MaximumSize":  null,
+                                    "Credential":  "System.Management.Automation.PSCredential",
+                                    "DisplayRoot":  null
+                                },
+                    "PSProvider":  {
+                                       "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                                       "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                                       "Name":  "FileSystem",
+                                       "PSSnapIn":  "Microsoft.PowerShell.Core",
+                                       "ModuleName":  "Microsoft.PowerShell.Core",
+                                       "Module":  null,
+                                       "Description":  "",
+                                       "Capabilities":  52,
+                                       "Home":  "C:\\Users\\Ava",
+                                       "Drives":  "C G"
+                                   },
+                    "ReadCount":  26
+                }
+    },
+    {
+        "file":  "assets/old-site/old-027.jpg",
+        "url":  {
+                    "value":  "https://static.wixstatic.com/media/e5a4ea_4d5b8dbc675346df90ed5d54980ab702~mv2.jpg/v1/fit/w_500,h_500,q_90/file.jpg",
+                    "PSPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend\\old-all-media-selected.txt",
+                    "PSParentPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                    "PSChildName":  "old-all-media-selected.txt",
+                    "PSDrive":  {
+                                    "CurrentLocation":  "Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                                    "Name":  "C",
+                                    "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                                    "Root":  "C:\\",
+                                    "Description":  "",
+                                    "MaximumSize":  null,
+                                    "Credential":  "System.Management.Automation.PSCredential",
+                                    "DisplayRoot":  null
+                                },
+                    "PSProvider":  {
+                                       "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                                       "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                                       "Name":  "FileSystem",
+                                       "PSSnapIn":  "Microsoft.PowerShell.Core",
+                                       "ModuleName":  "Microsoft.PowerShell.Core",
+                                       "Module":  null,
+                                       "Description":  "",
+                                       "Capabilities":  52,
+                                       "Home":  "C:\\Users\\Ava",
+                                       "Drives":  "C G"
+                                   },
+                    "ReadCount":  27
+                }
+    },
+    {
+        "file":  "assets/old-site/old-028.jpg",
+        "url":  {
+                    "value":  "https://static.wixstatic.com/media/e5a4ea_597c085b2a3f4fe79a2bf193c43940a1~mv2.jpg/v1/fit/w_500,h_500,q_90/file.jpg",
+                    "PSPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend\\old-all-media-selected.txt",
+                    "PSParentPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                    "PSChildName":  "old-all-media-selected.txt",
+                    "PSDrive":  {
+                                    "CurrentLocation":  "Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                                    "Name":  "C",
+                                    "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                                    "Root":  "C:\\",
+                                    "Description":  "",
+                                    "MaximumSize":  null,
+                                    "Credential":  "System.Management.Automation.PSCredential",
+                                    "DisplayRoot":  null
+                                },
+                    "PSProvider":  {
+                                       "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                                       "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                                       "Name":  "FileSystem",
+                                       "PSSnapIn":  "Microsoft.PowerShell.Core",
+                                       "ModuleName":  "Microsoft.PowerShell.Core",
+                                       "Module":  null,
+                                       "Description":  "",
+                                       "Capabilities":  52,
+                                       "Home":  "C:\\Users\\Ava",
+                                       "Drives":  "C G"
+                                   },
+                    "ReadCount":  28
+                }
+    },
+    {
+        "file":  "assets/old-site/old-029.jpg",
+        "url":  {
+                    "value":  "https://static.wixstatic.com/media/e5a4ea_5c085f1207ac45ee92c515023d76c179~mv2.jpg/v1/fit/w_500,h_500,q_90/file.jpg",
+                    "PSPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend\\old-all-media-selected.txt",
+                    "PSParentPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                    "PSChildName":  "old-all-media-selected.txt",
+                    "PSDrive":  {
+                                    "CurrentLocation":  "Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                                    "Name":  "C",
+                                    "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                                    "Root":  "C:\\",
+                                    "Description":  "",
+                                    "MaximumSize":  null,
+                                    "Credential":  "System.Management.Automation.PSCredential",
+                                    "DisplayRoot":  null
+                                },
+                    "PSProvider":  {
+                                       "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                                       "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                                       "Name":  "FileSystem",
+                                       "PSSnapIn":  "Microsoft.PowerShell.Core",
+                                       "ModuleName":  "Microsoft.PowerShell.Core",
+                                       "Module":  null,
+                                       "Description":  "",
+                                       "Capabilities":  52,
+                                       "Home":  "C:\\Users\\Ava",
+                                       "Drives":  "C G"
+                                   },
+                    "ReadCount":  29
+                }
+    },
+    {
+        "file":  "assets/old-site/old-030.jpg",
+        "url":  {
+                    "value":  "https://static.wixstatic.com/media/e5a4ea_640c867d30ba4e278021ab3ca87ac34f~mv2.jpg/v1/fit/w_500,h_500,q_90/file.jpg",
+                    "PSPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend\\old-all-media-selected.txt",
+                    "PSParentPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                    "PSChildName":  "old-all-media-selected.txt",
+                    "PSDrive":  {
+                                    "CurrentLocation":  "Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                                    "Name":  "C",
+                                    "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                                    "Root":  "C:\\",
+                                    "Description":  "",
+                                    "MaximumSize":  null,
+                                    "Credential":  "System.Management.Automation.PSCredential",
+                                    "DisplayRoot":  null
+                                },
+                    "PSProvider":  {
+                                       "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                                       "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                                       "Name":  "FileSystem",
+                                       "PSSnapIn":  "Microsoft.PowerShell.Core",
+                                       "ModuleName":  "Microsoft.PowerShell.Core",
+                                       "Module":  null,
+                                       "Description":  "",
+                                       "Capabilities":  52,
+                                       "Home":  "C:\\Users\\Ava",
+                                       "Drives":  "C G"
+                                   },
+                    "ReadCount":  30
+                }
+    },
+    {
+        "file":  "assets/old-site/old-031.jpg",
+        "url":  {
+                    "value":  "https://static.wixstatic.com/media/e5a4ea_65f258d268ef46c68f4d4fd6a62b0a26~mv2.jpg/v1/fit/w_500,h_500,q_90/file.jpg",
+                    "PSPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend\\old-all-media-selected.txt",
+                    "PSParentPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                    "PSChildName":  "old-all-media-selected.txt",
+                    "PSDrive":  {
+                                    "CurrentLocation":  "Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                                    "Name":  "C",
+                                    "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                                    "Root":  "C:\\",
+                                    "Description":  "",
+                                    "MaximumSize":  null,
+                                    "Credential":  "System.Management.Automation.PSCredential",
+                                    "DisplayRoot":  null
+                                },
+                    "PSProvider":  {
+                                       "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                                       "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                                       "Name":  "FileSystem",
+                                       "PSSnapIn":  "Microsoft.PowerShell.Core",
+                                       "ModuleName":  "Microsoft.PowerShell.Core",
+                                       "Module":  null,
+                                       "Description":  "",
+                                       "Capabilities":  52,
+                                       "Home":  "C:\\Users\\Ava",
+                                       "Drives":  "C G"
+                                   },
+                    "ReadCount":  31
+                }
+    },
+    {
+        "file":  "assets/old-site/old-032.jpg",
+        "url":  {
+                    "value":  "https://static.wixstatic.com/media/e5a4ea_6e3b1f9b318a4517908c8262e7eb99a1~mv2.jpg/v1/fit/w_500,h_500,q_90/file.jpg",
+                    "PSPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend\\old-all-media-selected.txt",
+                    "PSParentPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                    "PSChildName":  "old-all-media-selected.txt",
+                    "PSDrive":  {
+                                    "CurrentLocation":  "Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                                    "Name":  "C",
+                                    "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                                    "Root":  "C:\\",
+                                    "Description":  "",
+                                    "MaximumSize":  null,
+                                    "Credential":  "System.Management.Automation.PSCredential",
+                                    "DisplayRoot":  null
+                                },
+                    "PSProvider":  {
+                                       "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                                       "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                                       "Name":  "FileSystem",
+                                       "PSSnapIn":  "Microsoft.PowerShell.Core",
+                                       "ModuleName":  "Microsoft.PowerShell.Core",
+                                       "Module":  null,
+                                       "Description":  "",
+                                       "Capabilities":  52,
+                                       "Home":  "C:\\Users\\Ava",
+                                       "Drives":  "C G"
+                                   },
+                    "ReadCount":  32
+                }
+    },
+    {
+        "file":  "assets/old-site/old-033.jpg",
+        "url":  {
+                    "value":  "https://static.wixstatic.com/media/e5a4ea_6f36e9b883534a7e8ac0755da0e2da60~mv2.jpg/v1/fit/w_500,h_500,q_90/file.jpg",
+                    "PSPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend\\old-all-media-selected.txt",
+                    "PSParentPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                    "PSChildName":  "old-all-media-selected.txt",
+                    "PSDrive":  {
+                                    "CurrentLocation":  "Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                                    "Name":  "C",
+                                    "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                                    "Root":  "C:\\",
+                                    "Description":  "",
+                                    "MaximumSize":  null,
+                                    "Credential":  "System.Management.Automation.PSCredential",
+                                    "DisplayRoot":  null
+                                },
+                    "PSProvider":  {
+                                       "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                                       "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                                       "Name":  "FileSystem",
+                                       "PSSnapIn":  "Microsoft.PowerShell.Core",
+                                       "ModuleName":  "Microsoft.PowerShell.Core",
+                                       "Module":  null,
+                                       "Description":  "",
+                                       "Capabilities":  52,
+                                       "Home":  "C:\\Users\\Ava",
+                                       "Drives":  "C G"
+                                   },
+                    "ReadCount":  33
+                }
+    },
+    {
+        "file":  "assets/old-site/old-034.png",
+        "url":  {
+                    "value":  "https://static.wixstatic.com/media/e5a4ea_753d0b72c43e48bb87bf01415c8effdf~mv2.png/v1/fill/w_121,h_39,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Twint_svg.png",
+                    "PSPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend\\old-all-media-selected.txt",
+                    "PSParentPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                    "PSChildName":  "old-all-media-selected.txt",
+                    "PSDrive":  {
+                                    "CurrentLocation":  "Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                                    "Name":  "C",
+                                    "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                                    "Root":  "C:\\",
+                                    "Description":  "",
+                                    "MaximumSize":  null,
+                                    "Credential":  "System.Management.Automation.PSCredential",
+                                    "DisplayRoot":  null
+                                },
+                    "PSProvider":  {
+                                       "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                                       "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                                       "Name":  "FileSystem",
+                                       "PSSnapIn":  "Microsoft.PowerShell.Core",
+                                       "ModuleName":  "Microsoft.PowerShell.Core",
+                                       "Module":  null,
+                                       "Description":  "",
+                                       "Capabilities":  52,
+                                       "Home":  "C:\\Users\\Ava",
+                                       "Drives":  "C G"
+                                   },
+                    "ReadCount":  34
+                }
+    },
+    {
+        "file":  "assets/old-site/old-035.png",
+        "url":  {
+                    "value":  "https://static.wixstatic.com/media/e5a4ea_753d0b72c43e48bb87bf01415c8effdf~mv2.png/v1/fill/w_242,h_78,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Twint_svg.png",
+                    "PSPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend\\old-all-media-selected.txt",
+                    "PSParentPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                    "PSChildName":  "old-all-media-selected.txt",
+                    "PSDrive":  {
+                                    "CurrentLocation":  "Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                                    "Name":  "C",
+                                    "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                                    "Root":  "C:\\",
+                                    "Description":  "",
+                                    "MaximumSize":  null,
+                                    "Credential":  "System.Management.Automation.PSCredential",
+                                    "DisplayRoot":  null
+                                },
+                    "PSProvider":  {
+                                       "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                                       "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                                       "Name":  "FileSystem",
+                                       "PSSnapIn":  "Microsoft.PowerShell.Core",
+                                       "ModuleName":  "Microsoft.PowerShell.Core",
+                                       "Module":  null,
+                                       "Description":  "",
+                                       "Capabilities":  52,
+                                       "Home":  "C:\\Users\\Ava",
+                                       "Drives":  "C G"
+                                   },
+                    "ReadCount":  35
+                }
+    },
+    {
+        "file":  "assets/old-site/old-036.jpg",
+        "url":  {
+                    "value":  "https://static.wixstatic.com/media/e5a4ea_77564f98e1514d3ab0f6dbc7ecf46b59~mv2.jpg/v1/fit/w_500,h_500,q_90/file.jpg",
+                    "PSPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend\\old-all-media-selected.txt",
+                    "PSParentPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                    "PSChildName":  "old-all-media-selected.txt",
+                    "PSDrive":  {
+                                    "CurrentLocation":  "Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                                    "Name":  "C",
+                                    "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                                    "Root":  "C:\\",
+                                    "Description":  "",
+                                    "MaximumSize":  null,
+                                    "Credential":  "System.Management.Automation.PSCredential",
+                                    "DisplayRoot":  null
+                                },
+                    "PSProvider":  {
+                                       "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                                       "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                                       "Name":  "FileSystem",
+                                       "PSSnapIn":  "Microsoft.PowerShell.Core",
+                                       "ModuleName":  "Microsoft.PowerShell.Core",
+                                       "Module":  null,
+                                       "Description":  "",
+                                       "Capabilities":  52,
+                                       "Home":  "C:\\Users\\Ava",
+                                       "Drives":  "C G"
+                                   },
+                    "ReadCount":  36
+                }
+    },
+    {
+        "file":  "assets/old-site/old-037.jpg",
+        "url":  {
+                    "value":  "https://static.wixstatic.com/media/e5a4ea_790796345de443aeaf552a83f0fb2661~mv2.jpg/v1/fit/w_500,h_500,q_90/file.jpg",
+                    "PSPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend\\old-all-media-selected.txt",
+                    "PSParentPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                    "PSChildName":  "old-all-media-selected.txt",
+                    "PSDrive":  {
+                                    "CurrentLocation":  "Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                                    "Name":  "C",
+                                    "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                                    "Root":  "C:\\",
+                                    "Description":  "",
+                                    "MaximumSize":  null,
+                                    "Credential":  "System.Management.Automation.PSCredential",
+                                    "DisplayRoot":  null
+                                },
+                    "PSProvider":  {
+                                       "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                                       "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                                       "Name":  "FileSystem",
+                                       "PSSnapIn":  "Microsoft.PowerShell.Core",
+                                       "ModuleName":  "Microsoft.PowerShell.Core",
+                                       "Module":  null,
+                                       "Description":  "",
+                                       "Capabilities":  52,
+                                       "Home":  "C:\\Users\\Ava",
+                                       "Drives":  "C G"
+                                   },
+                    "ReadCount":  37
+                }
+    },
+    {
+        "file":  "assets/old-site/old-038.jpg",
+        "url":  {
+                    "value":  "https://static.wixstatic.com/media/e5a4ea_7e8a937350b84b61b67e621fe44ce19b~mv2.jpg/v1/fit/w_500,h_500,q_90/file.jpg",
+                    "PSPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend\\old-all-media-selected.txt",
+                    "PSParentPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                    "PSChildName":  "old-all-media-selected.txt",
+                    "PSDrive":  {
+                                    "CurrentLocation":  "Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                                    "Name":  "C",
+                                    "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                                    "Root":  "C:\\",
+                                    "Description":  "",
+                                    "MaximumSize":  null,
+                                    "Credential":  "System.Management.Automation.PSCredential",
+                                    "DisplayRoot":  null
+                                },
+                    "PSProvider":  {
+                                       "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                                       "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                                       "Name":  "FileSystem",
+                                       "PSSnapIn":  "Microsoft.PowerShell.Core",
+                                       "ModuleName":  "Microsoft.PowerShell.Core",
+                                       "Module":  null,
+                                       "Description":  "",
+                                       "Capabilities":  52,
+                                       "Home":  "C:\\Users\\Ava",
+                                       "Drives":  "C G"
+                                   },
+                    "ReadCount":  38
+                }
+    },
+    {
+        "file":  "assets/old-site/old-039.jpg",
+        "url":  {
+                    "value":  "https://static.wixstatic.com/media/e5a4ea_852a2cd85a2c4fcca13eb30b0c779c43~mv2.jpg/v1/fit/w_500,h_500,q_90/file.jpg",
+                    "PSPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend\\old-all-media-selected.txt",
+                    "PSParentPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                    "PSChildName":  "old-all-media-selected.txt",
+                    "PSDrive":  {
+                                    "CurrentLocation":  "Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                                    "Name":  "C",
+                                    "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                                    "Root":  "C:\\",
+                                    "Description":  "",
+                                    "MaximumSize":  null,
+                                    "Credential":  "System.Management.Automation.PSCredential",
+                                    "DisplayRoot":  null
+                                },
+                    "PSProvider":  {
+                                       "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                                       "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                                       "Name":  "FileSystem",
+                                       "PSSnapIn":  "Microsoft.PowerShell.Core",
+                                       "ModuleName":  "Microsoft.PowerShell.Core",
+                                       "Module":  null,
+                                       "Description":  "",
+                                       "Capabilities":  52,
+                                       "Home":  "C:\\Users\\Ava",
+                                       "Drives":  "C G"
+                                   },
+                    "ReadCount":  39
+                }
+    },
+    {
+        "file":  "assets/old-site/old-040.jpg",
+        "url":  {
+                    "value":  "https://static.wixstatic.com/media/e5a4ea_899ef54647214a9cae6ae3b6e05729ad~mv2.jpg/v1/fit/w_500,h_500,q_90/file.jpg",
+                    "PSPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend\\old-all-media-selected.txt",
+                    "PSParentPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                    "PSChildName":  "old-all-media-selected.txt",
+                    "PSDrive":  {
+                                    "CurrentLocation":  "Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                                    "Name":  "C",
+                                    "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                                    "Root":  "C:\\",
+                                    "Description":  "",
+                                    "MaximumSize":  null,
+                                    "Credential":  "System.Management.Automation.PSCredential",
+                                    "DisplayRoot":  null
+                                },
+                    "PSProvider":  {
+                                       "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                                       "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                                       "Name":  "FileSystem",
+                                       "PSSnapIn":  "Microsoft.PowerShell.Core",
+                                       "ModuleName":  "Microsoft.PowerShell.Core",
+                                       "Module":  null,
+                                       "Description":  "",
+                                       "Capabilities":  52,
+                                       "Home":  "C:\\Users\\Ava",
+                                       "Drives":  "C G"
+                                   },
+                    "ReadCount":  40
+                }
+    },
+    {
+        "file":  "assets/old-site/old-041.jpg",
+        "url":  {
+                    "value":  "https://static.wixstatic.com/media/e5a4ea_8b57e8d7b80944b7a39e77127f06fe8f~mv2.jpg/v1/fit/w_500,h_500,q_90/file.jpg",
+                    "PSPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend\\old-all-media-selected.txt",
+                    "PSParentPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                    "PSChildName":  "old-all-media-selected.txt",
+                    "PSDrive":  {
+                                    "CurrentLocation":  "Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                                    "Name":  "C",
+                                    "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                                    "Root":  "C:\\",
+                                    "Description":  "",
+                                    "MaximumSize":  null,
+                                    "Credential":  "System.Management.Automation.PSCredential",
+                                    "DisplayRoot":  null
+                                },
+                    "PSProvider":  {
+                                       "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                                       "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                                       "Name":  "FileSystem",
+                                       "PSSnapIn":  "Microsoft.PowerShell.Core",
+                                       "ModuleName":  "Microsoft.PowerShell.Core",
+                                       "Module":  null,
+                                       "Description":  "",
+                                       "Capabilities":  52,
+                                       "Home":  "C:\\Users\\Ava",
+                                       "Drives":  "C G"
+                                   },
+                    "ReadCount":  41
+                }
+    },
+    {
+        "file":  "assets/old-site/old-042.jpg",
+        "url":  {
+                    "value":  "https://static.wixstatic.com/media/e5a4ea_8dff6d16074649f0a8b6e46e673bbb19~mv2.jpg/v1/fit/w_500,h_500,q_90/file.jpg",
+                    "PSPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend\\old-all-media-selected.txt",
+                    "PSParentPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                    "PSChildName":  "old-all-media-selected.txt",
+                    "PSDrive":  {
+                                    "CurrentLocation":  "Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                                    "Name":  "C",
+                                    "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                                    "Root":  "C:\\",
+                                    "Description":  "",
+                                    "MaximumSize":  null,
+                                    "Credential":  "System.Management.Automation.PSCredential",
+                                    "DisplayRoot":  null
+                                },
+                    "PSProvider":  {
+                                       "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                                       "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                                       "Name":  "FileSystem",
+                                       "PSSnapIn":  "Microsoft.PowerShell.Core",
+                                       "ModuleName":  "Microsoft.PowerShell.Core",
+                                       "Module":  null,
+                                       "Description":  "",
+                                       "Capabilities":  52,
+                                       "Home":  "C:\\Users\\Ava",
+                                       "Drives":  "C G"
+                                   },
+                    "ReadCount":  42
+                }
+    },
+    {
+        "file":  "assets/old-site/old-043.jpg",
+        "url":  {
+                    "value":  "https://static.wixstatic.com/media/e5a4ea_90cc206841d94a78961245f631e90144~mv2.jpg/v1/fit/w_500,h_500,q_90/file.jpg",
+                    "PSPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend\\old-all-media-selected.txt",
+                    "PSParentPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                    "PSChildName":  "old-all-media-selected.txt",
+                    "PSDrive":  {
+                                    "CurrentLocation":  "Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                                    "Name":  "C",
+                                    "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                                    "Root":  "C:\\",
+                                    "Description":  "",
+                                    "MaximumSize":  null,
+                                    "Credential":  "System.Management.Automation.PSCredential",
+                                    "DisplayRoot":  null
+                                },
+                    "PSProvider":  {
+                                       "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                                       "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                                       "Name":  "FileSystem",
+                                       "PSSnapIn":  "Microsoft.PowerShell.Core",
+                                       "ModuleName":  "Microsoft.PowerShell.Core",
+                                       "Module":  null,
+                                       "Description":  "",
+                                       "Capabilities":  52,
+                                       "Home":  "C:\\Users\\Ava",
+                                       "Drives":  "C G"
+                                   },
+                    "ReadCount":  43
+                }
+    },
+    {
+        "file":  "assets/old-site/old-044.jpg",
+        "url":  {
+                    "value":  "https://static.wixstatic.com/media/e5a4ea_922475e0cc4c404faf72543348881b1c~mv2.jpg/v1/fit/w_500,h_500,q_90/file.jpg",
+                    "PSPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend\\old-all-media-selected.txt",
+                    "PSParentPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                    "PSChildName":  "old-all-media-selected.txt",
+                    "PSDrive":  {
+                                    "CurrentLocation":  "Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                                    "Name":  "C",
+                                    "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                                    "Root":  "C:\\",
+                                    "Description":  "",
+                                    "MaximumSize":  null,
+                                    "Credential":  "System.Management.Automation.PSCredential",
+                                    "DisplayRoot":  null
+                                },
+                    "PSProvider":  {
+                                       "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                                       "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                                       "Name":  "FileSystem",
+                                       "PSSnapIn":  "Microsoft.PowerShell.Core",
+                                       "ModuleName":  "Microsoft.PowerShell.Core",
+                                       "Module":  null,
+                                       "Description":  "",
+                                       "Capabilities":  52,
+                                       "Home":  "C:\\Users\\Ava",
+                                       "Drives":  "C G"
+                                   },
+                    "ReadCount":  44
+                }
+    },
+    {
+        "file":  "assets/old-site/old-045.jpg",
+        "url":  {
+                    "value":  "https://static.wixstatic.com/media/e5a4ea_9250d43d185d41f598782f04fdedb23d~mv2.jpg/v1/fit/w_500,h_500,q_90/file.jpg",
+                    "PSPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend\\old-all-media-selected.txt",
+                    "PSParentPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                    "PSChildName":  "old-all-media-selected.txt",
+                    "PSDrive":  {
+                                    "CurrentLocation":  "Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                                    "Name":  "C",
+                                    "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                                    "Root":  "C:\\",
+                                    "Description":  "",
+                                    "MaximumSize":  null,
+                                    "Credential":  "System.Management.Automation.PSCredential",
+                                    "DisplayRoot":  null
+                                },
+                    "PSProvider":  {
+                                       "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                                       "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                                       "Name":  "FileSystem",
+                                       "PSSnapIn":  "Microsoft.PowerShell.Core",
+                                       "ModuleName":  "Microsoft.PowerShell.Core",
+                                       "Module":  null,
+                                       "Description":  "",
+                                       "Capabilities":  52,
+                                       "Home":  "C:\\Users\\Ava",
+                                       "Drives":  "C G"
+                                   },
+                    "ReadCount":  45
+                }
+    },
+    {
+        "file":  "assets/old-site/old-046.jpg",
+        "url":  {
+                    "value":  "https://static.wixstatic.com/media/e5a4ea_939f7e096edf4456a33bcd22036c6897~mv2.jpg/v1/fit/w_500,h_500,q_90/file.jpg",
+                    "PSPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend\\old-all-media-selected.txt",
+                    "PSParentPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                    "PSChildName":  "old-all-media-selected.txt",
+                    "PSDrive":  {
+                                    "CurrentLocation":  "Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                                    "Name":  "C",
+                                    "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                                    "Root":  "C:\\",
+                                    "Description":  "",
+                                    "MaximumSize":  null,
+                                    "Credential":  "System.Management.Automation.PSCredential",
+                                    "DisplayRoot":  null
+                                },
+                    "PSProvider":  {
+                                       "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                                       "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                                       "Name":  "FileSystem",
+                                       "PSSnapIn":  "Microsoft.PowerShell.Core",
+                                       "ModuleName":  "Microsoft.PowerShell.Core",
+                                       "Module":  null,
+                                       "Description":  "",
+                                       "Capabilities":  52,
+                                       "Home":  "C:\\Users\\Ava",
+                                       "Drives":  "C G"
+                                   },
+                    "ReadCount":  46
+                }
+    },
+    {
+        "file":  "assets/old-site/old-047.jpg",
+        "url":  {
+                    "value":  "https://static.wixstatic.com/media/e5a4ea_9dc5d4e5e7de4f4fb63f4e6331e1cea5~mv2.jpg/v1/fit/w_500,h_500,q_90/file.jpg",
+                    "PSPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend\\old-all-media-selected.txt",
+                    "PSParentPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                    "PSChildName":  "old-all-media-selected.txt",
+                    "PSDrive":  {
+                                    "CurrentLocation":  "Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                                    "Name":  "C",
+                                    "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                                    "Root":  "C:\\",
+                                    "Description":  "",
+                                    "MaximumSize":  null,
+                                    "Credential":  "System.Management.Automation.PSCredential",
+                                    "DisplayRoot":  null
+                                },
+                    "PSProvider":  {
+                                       "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                                       "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                                       "Name":  "FileSystem",
+                                       "PSSnapIn":  "Microsoft.PowerShell.Core",
+                                       "ModuleName":  "Microsoft.PowerShell.Core",
+                                       "Module":  null,
+                                       "Description":  "",
+                                       "Capabilities":  52,
+                                       "Home":  "C:\\Users\\Ava",
+                                       "Drives":  "C G"
+                                   },
+                    "ReadCount":  47
+                }
+    },
+    {
+        "file":  "assets/old-site/old-048.jpg",
+        "url":  {
+                    "value":  "https://static.wixstatic.com/media/e5a4ea_a27be6df154c4c878e379e73500ff0cc~mv2.jpg/v1/fit/w_500,h_500,q_90/file.jpg",
+                    "PSPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend\\old-all-media-selected.txt",
+                    "PSParentPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                    "PSChildName":  "old-all-media-selected.txt",
+                    "PSDrive":  {
+                                    "CurrentLocation":  "Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                                    "Name":  "C",
+                                    "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                                    "Root":  "C:\\",
+                                    "Description":  "",
+                                    "MaximumSize":  null,
+                                    "Credential":  "System.Management.Automation.PSCredential",
+                                    "DisplayRoot":  null
+                                },
+                    "PSProvider":  {
+                                       "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                                       "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                                       "Name":  "FileSystem",
+                                       "PSSnapIn":  "Microsoft.PowerShell.Core",
+                                       "ModuleName":  "Microsoft.PowerShell.Core",
+                                       "Module":  null,
+                                       "Description":  "",
+                                       "Capabilities":  52,
+                                       "Home":  "C:\\Users\\Ava",
+                                       "Drives":  "C G"
+                                   },
+                    "ReadCount":  48
+                }
+    },
+    {
+        "file":  "assets/old-site/old-049.jpg",
+        "url":  {
+                    "value":  "https://static.wixstatic.com/media/e5a4ea_a2d195a1a32045daa1c8c6258816e91f~mv2.jpg/v1/fit/w_500,h_500,q_90/file.jpg",
+                    "PSPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend\\old-all-media-selected.txt",
+                    "PSParentPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                    "PSChildName":  "old-all-media-selected.txt",
+                    "PSDrive":  {
+                                    "CurrentLocation":  "Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                                    "Name":  "C",
+                                    "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                                    "Root":  "C:\\",
+                                    "Description":  "",
+                                    "MaximumSize":  null,
+                                    "Credential":  "System.Management.Automation.PSCredential",
+                                    "DisplayRoot":  null
+                                },
+                    "PSProvider":  {
+                                       "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                                       "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                                       "Name":  "FileSystem",
+                                       "PSSnapIn":  "Microsoft.PowerShell.Core",
+                                       "ModuleName":  "Microsoft.PowerShell.Core",
+                                       "Module":  null,
+                                       "Description":  "",
+                                       "Capabilities":  52,
+                                       "Home":  "C:\\Users\\Ava",
+                                       "Drives":  "C G"
+                                   },
+                    "ReadCount":  49
+                }
+    },
+    {
+        "file":  "assets/old-site/old-050.jpg",
+        "url":  {
+                    "value":  "https://static.wixstatic.com/media/e5a4ea_a4f3d088dbed4942909a3f62c872e6b4~mv2.jpg/v1/fit/w_500,h_500,q_90/file.jpg",
+                    "PSPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend\\old-all-media-selected.txt",
+                    "PSParentPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                    "PSChildName":  "old-all-media-selected.txt",
+                    "PSDrive":  {
+                                    "CurrentLocation":  "Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                                    "Name":  "C",
+                                    "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                                    "Root":  "C:\\",
+                                    "Description":  "",
+                                    "MaximumSize":  null,
+                                    "Credential":  "System.Management.Automation.PSCredential",
+                                    "DisplayRoot":  null
+                                },
+                    "PSProvider":  {
+                                       "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                                       "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                                       "Name":  "FileSystem",
+                                       "PSSnapIn":  "Microsoft.PowerShell.Core",
+                                       "ModuleName":  "Microsoft.PowerShell.Core",
+                                       "Module":  null,
+                                       "Description":  "",
+                                       "Capabilities":  52,
+                                       "Home":  "C:\\Users\\Ava",
+                                       "Drives":  "C G"
+                                   },
+                    "ReadCount":  50
+                }
+    },
+    {
+        "file":  "assets/old-site/old-051.jpg",
+        "url":  {
+                    "value":  "https://static.wixstatic.com/media/e5a4ea_ac690bb9c497482ca695317c6edc74f0~mv2.jpg/v1/fit/w_500,h_500,q_90/file.jpg",
+                    "PSPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend\\old-all-media-selected.txt",
+                    "PSParentPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                    "PSChildName":  "old-all-media-selected.txt",
+                    "PSDrive":  {
+                                    "CurrentLocation":  "Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                                    "Name":  "C",
+                                    "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                                    "Root":  "C:\\",
+                                    "Description":  "",
+                                    "MaximumSize":  null,
+                                    "Credential":  "System.Management.Automation.PSCredential",
+                                    "DisplayRoot":  null
+                                },
+                    "PSProvider":  {
+                                       "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                                       "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                                       "Name":  "FileSystem",
+                                       "PSSnapIn":  "Microsoft.PowerShell.Core",
+                                       "ModuleName":  "Microsoft.PowerShell.Core",
+                                       "Module":  null,
+                                       "Description":  "",
+                                       "Capabilities":  52,
+                                       "Home":  "C:\\Users\\Ava",
+                                       "Drives":  "C G"
+                                   },
+                    "ReadCount":  51
+                }
+    },
+    {
+        "file":  "assets/old-site/old-052.jpg",
+        "url":  {
+                    "value":  "https://static.wixstatic.com/media/e5a4ea_b22b0985c1d14e4393d18c5779c63514~mv2.jpg/v1/fit/w_500,h_500,q_90/file.jpg",
+                    "PSPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend\\old-all-media-selected.txt",
+                    "PSParentPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                    "PSChildName":  "old-all-media-selected.txt",
+                    "PSDrive":  {
+                                    "CurrentLocation":  "Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                                    "Name":  "C",
+                                    "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                                    "Root":  "C:\\",
+                                    "Description":  "",
+                                    "MaximumSize":  null,
+                                    "Credential":  "System.Management.Automation.PSCredential",
+                                    "DisplayRoot":  null
+                                },
+                    "PSProvider":  {
+                                       "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                                       "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                                       "Name":  "FileSystem",
+                                       "PSSnapIn":  "Microsoft.PowerShell.Core",
+                                       "ModuleName":  "Microsoft.PowerShell.Core",
+                                       "Module":  null,
+                                       "Description":  "",
+                                       "Capabilities":  52,
+                                       "Home":  "C:\\Users\\Ava",
+                                       "Drives":  "C G"
+                                   },
+                    "ReadCount":  52
+                }
+    },
+    {
+        "file":  "assets/old-site/old-053.jpg",
+        "url":  {
+                    "value":  "https://static.wixstatic.com/media/e5a4ea_b4fc1044055c4b18a41d8f4aa7b3d718~mv2.jpg/v1/fit/w_500,h_500,q_90/file.jpg",
+                    "PSPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend\\old-all-media-selected.txt",
+                    "PSParentPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                    "PSChildName":  "old-all-media-selected.txt",
+                    "PSDrive":  {
+                                    "CurrentLocation":  "Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                                    "Name":  "C",
+                                    "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                                    "Root":  "C:\\",
+                                    "Description":  "",
+                                    "MaximumSize":  null,
+                                    "Credential":  "System.Management.Automation.PSCredential",
+                                    "DisplayRoot":  null
+                                },
+                    "PSProvider":  {
+                                       "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                                       "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                                       "Name":  "FileSystem",
+                                       "PSSnapIn":  "Microsoft.PowerShell.Core",
+                                       "ModuleName":  "Microsoft.PowerShell.Core",
+                                       "Module":  null,
+                                       "Description":  "",
+                                       "Capabilities":  52,
+                                       "Home":  "C:\\Users\\Ava",
+                                       "Drives":  "C G"
+                                   },
+                    "ReadCount":  53
+                }
+    },
+    {
+        "file":  "assets/old-site/old-054.jpg",
+        "url":  {
+                    "value":  "https://static.wixstatic.com/media/e5a4ea_bad4156bf3204bd89e4ed68afe7fe804~mv2.jpg/v1/fit/w_500,h_500,q_90/file.jpg",
+                    "PSPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend\\old-all-media-selected.txt",
+                    "PSParentPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                    "PSChildName":  "old-all-media-selected.txt",
+                    "PSDrive":  {
+                                    "CurrentLocation":  "Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                                    "Name":  "C",
+                                    "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                                    "Root":  "C:\\",
+                                    "Description":  "",
+                                    "MaximumSize":  null,
+                                    "Credential":  "System.Management.Automation.PSCredential",
+                                    "DisplayRoot":  null
+                                },
+                    "PSProvider":  {
+                                       "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                                       "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                                       "Name":  "FileSystem",
+                                       "PSSnapIn":  "Microsoft.PowerShell.Core",
+                                       "ModuleName":  "Microsoft.PowerShell.Core",
+                                       "Module":  null,
+                                       "Description":  "",
+                                       "Capabilities":  52,
+                                       "Home":  "C:\\Users\\Ava",
+                                       "Drives":  "C G"
+                                   },
+                    "ReadCount":  54
+                }
+    },
+    {
+        "file":  "assets/old-site/old-055.jpg",
+        "url":  {
+                    "value":  "https://static.wixstatic.com/media/e5a4ea_be03eadba83d46b2a053d7d3874485f9~mv2.jpg/v1/fit/w_500,h_500,q_90/file.jpg",
+                    "PSPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend\\old-all-media-selected.txt",
+                    "PSParentPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                    "PSChildName":  "old-all-media-selected.txt",
+                    "PSDrive":  {
+                                    "CurrentLocation":  "Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                                    "Name":  "C",
+                                    "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                                    "Root":  "C:\\",
+                                    "Description":  "",
+                                    "MaximumSize":  null,
+                                    "Credential":  "System.Management.Automation.PSCredential",
+                                    "DisplayRoot":  null
+                                },
+                    "PSProvider":  {
+                                       "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                                       "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                                       "Name":  "FileSystem",
+                                       "PSSnapIn":  "Microsoft.PowerShell.Core",
+                                       "ModuleName":  "Microsoft.PowerShell.Core",
+                                       "Module":  null,
+                                       "Description":  "",
+                                       "Capabilities":  52,
+                                       "Home":  "C:\\Users\\Ava",
+                                       "Drives":  "C G"
+                                   },
+                    "ReadCount":  55
+                }
+    },
+    {
+        "file":  "assets/old-site/old-056.webp",
+        "url":  {
+                    "value":  "https://static.wixstatic.com/media/e5a4ea_bf7e34361d694760a8cde6f628589b8f~mv2.webp/v1/fill/w_139,h_123,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/logo.webp",
+                    "PSPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend\\old-all-media-selected.txt",
+                    "PSParentPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                    "PSChildName":  "old-all-media-selected.txt",
+                    "PSDrive":  {
+                                    "CurrentLocation":  "Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                                    "Name":  "C",
+                                    "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                                    "Root":  "C:\\",
+                                    "Description":  "",
+                                    "MaximumSize":  null,
+                                    "Credential":  "System.Management.Automation.PSCredential",
+                                    "DisplayRoot":  null
+                                },
+                    "PSProvider":  {
+                                       "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                                       "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                                       "Name":  "FileSystem",
+                                       "PSSnapIn":  "Microsoft.PowerShell.Core",
+                                       "ModuleName":  "Microsoft.PowerShell.Core",
+                                       "Module":  null,
+                                       "Description":  "",
+                                       "Capabilities":  52,
+                                       "Home":  "C:\\Users\\Ava",
+                                       "Drives":  "C G"
+                                   },
+                    "ReadCount":  56
+                }
+    },
+    {
+        "file":  "assets/old-site/old-057.webp",
+        "url":  {
+                    "value":  "https://static.wixstatic.com/media/e5a4ea_bf7e34361d694760a8cde6f628589b8f~mv2.webp/v1/fill/w_278,h_246,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/logo.webp",
+                    "PSPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend\\old-all-media-selected.txt",
+                    "PSParentPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                    "PSChildName":  "old-all-media-selected.txt",
+                    "PSDrive":  {
+                                    "CurrentLocation":  "Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                                    "Name":  "C",
+                                    "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                                    "Root":  "C:\\",
+                                    "Description":  "",
+                                    "MaximumSize":  null,
+                                    "Credential":  "System.Management.Automation.PSCredential",
+                                    "DisplayRoot":  null
+                                },
+                    "PSProvider":  {
+                                       "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                                       "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                                       "Name":  "FileSystem",
+                                       "PSSnapIn":  "Microsoft.PowerShell.Core",
+                                       "ModuleName":  "Microsoft.PowerShell.Core",
+                                       "Module":  null,
+                                       "Description":  "",
+                                       "Capabilities":  52,
+                                       "Home":  "C:\\Users\\Ava",
+                                       "Drives":  "C G"
+                                   },
+                    "ReadCount":  57
+                }
+    },
+    {
+        "file":  "assets/old-site/old-058.jpg",
+        "url":  {
+                    "value":  "https://static.wixstatic.com/media/e5a4ea_c3c3b6c6effc4817981b333b16459422~mv2.jpg/v1/fit/w_500,h_500,q_90/file.jpg",
+                    "PSPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend\\old-all-media-selected.txt",
+                    "PSParentPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                    "PSChildName":  "old-all-media-selected.txt",
+                    "PSDrive":  {
+                                    "CurrentLocation":  "Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                                    "Name":  "C",
+                                    "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                                    "Root":  "C:\\",
+                                    "Description":  "",
+                                    "MaximumSize":  null,
+                                    "Credential":  "System.Management.Automation.PSCredential",
+                                    "DisplayRoot":  null
+                                },
+                    "PSProvider":  {
+                                       "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                                       "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                                       "Name":  "FileSystem",
+                                       "PSSnapIn":  "Microsoft.PowerShell.Core",
+                                       "ModuleName":  "Microsoft.PowerShell.Core",
+                                       "Module":  null,
+                                       "Description":  "",
+                                       "Capabilities":  52,
+                                       "Home":  "C:\\Users\\Ava",
+                                       "Drives":  "C G"
+                                   },
+                    "ReadCount":  58
+                }
+    },
+    {
+        "file":  "assets/old-site/old-059.jpg",
+        "url":  {
+                    "value":  "https://static.wixstatic.com/media/e5a4ea_c3dcc5c0e22c4f9aa07990eed00e156c~mv2.jpg/v1/fit/w_500,h_500,q_90/file.jpg",
+                    "PSPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend\\old-all-media-selected.txt",
+                    "PSParentPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                    "PSChildName":  "old-all-media-selected.txt",
+                    "PSDrive":  {
+                                    "CurrentLocation":  "Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                                    "Name":  "C",
+                                    "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                                    "Root":  "C:\\",
+                                    "Description":  "",
+                                    "MaximumSize":  null,
+                                    "Credential":  "System.Management.Automation.PSCredential",
+                                    "DisplayRoot":  null
+                                },
+                    "PSProvider":  {
+                                       "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                                       "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                                       "Name":  "FileSystem",
+                                       "PSSnapIn":  "Microsoft.PowerShell.Core",
+                                       "ModuleName":  "Microsoft.PowerShell.Core",
+                                       "Module":  null,
+                                       "Description":  "",
+                                       "Capabilities":  52,
+                                       "Home":  "C:\\Users\\Ava",
+                                       "Drives":  "C G"
+                                   },
+                    "ReadCount":  59
+                }
+    },
+    {
+        "file":  "assets/old-site/old-060.jpg",
+        "url":  {
+                    "value":  "https://static.wixstatic.com/media/e5a4ea_c58998a1f8354c5a8e9d2270f2596354~mv2.jpg/v1/fit/w_500,h_500,q_90/file.jpg",
+                    "PSPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend\\old-all-media-selected.txt",
+                    "PSParentPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                    "PSChildName":  "old-all-media-selected.txt",
+                    "PSDrive":  {
+                                    "CurrentLocation":  "Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                                    "Name":  "C",
+                                    "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                                    "Root":  "C:\\",
+                                    "Description":  "",
+                                    "MaximumSize":  null,
+                                    "Credential":  "System.Management.Automation.PSCredential",
+                                    "DisplayRoot":  null
+                                },
+                    "PSProvider":  {
+                                       "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                                       "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                                       "Name":  "FileSystem",
+                                       "PSSnapIn":  "Microsoft.PowerShell.Core",
+                                       "ModuleName":  "Microsoft.PowerShell.Core",
+                                       "Module":  null,
+                                       "Description":  "",
+                                       "Capabilities":  52,
+                                       "Home":  "C:\\Users\\Ava",
+                                       "Drives":  "C G"
+                                   },
+                    "ReadCount":  60
+                }
+    },
+    {
+        "file":  "assets/old-site/old-061.jpg",
+        "url":  {
+                    "value":  "https://static.wixstatic.com/media/e5a4ea_d1b9f95374234a0a9ba95de3adbb29f9%7Emv2.jpg/v1/fit/w_2500,h_1330,al_c/e5a4ea_d1b9f95374234a0a9ba95de3adbb29f9%7Emv2.jpg",
+                    "PSPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend\\old-all-media-selected.txt",
+                    "PSParentPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                    "PSChildName":  "old-all-media-selected.txt",
+                    "PSDrive":  {
+                                    "CurrentLocation":  "Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                                    "Name":  "C",
+                                    "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                                    "Root":  "C:\\",
+                                    "Description":  "",
+                                    "MaximumSize":  null,
+                                    "Credential":  "System.Management.Automation.PSCredential",
+                                    "DisplayRoot":  null
+                                },
+                    "PSProvider":  {
+                                       "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                                       "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                                       "Name":  "FileSystem",
+                                       "PSSnapIn":  "Microsoft.PowerShell.Core",
+                                       "ModuleName":  "Microsoft.PowerShell.Core",
+                                       "Module":  null,
+                                       "Description":  "",
+                                       "Capabilities":  52,
+                                       "Home":  "C:\\Users\\Ava",
+                                       "Drives":  "C G"
+                                   },
+                    "ReadCount":  61
+                }
+    },
+    {
+        "file":  "assets/old-site/old-062.jpg",
+        "url":  {
+                    "value":  "https://static.wixstatic.com/media/e5a4ea_d2976613995341e3b8a995684080356f~mv2.jpg/v1/fit/w_500,h_500,q_90/file.jpg",
+                    "PSPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend\\old-all-media-selected.txt",
+                    "PSParentPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                    "PSChildName":  "old-all-media-selected.txt",
+                    "PSDrive":  {
+                                    "CurrentLocation":  "Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                                    "Name":  "C",
+                                    "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                                    "Root":  "C:\\",
+                                    "Description":  "",
+                                    "MaximumSize":  null,
+                                    "Credential":  "System.Management.Automation.PSCredential",
+                                    "DisplayRoot":  null
+                                },
+                    "PSProvider":  {
+                                       "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                                       "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                                       "Name":  "FileSystem",
+                                       "PSSnapIn":  "Microsoft.PowerShell.Core",
+                                       "ModuleName":  "Microsoft.PowerShell.Core",
+                                       "Module":  null,
+                                       "Description":  "",
+                                       "Capabilities":  52,
+                                       "Home":  "C:\\Users\\Ava",
+                                       "Drives":  "C G"
+                                   },
+                    "ReadCount":  62
+                }
+    },
+    {
+        "file":  "assets/old-site/old-063.jpg",
+        "url":  {
+                    "value":  "https://static.wixstatic.com/media/e5a4ea_d3fa2519e0194a5ea77a34d078e709cf~mv2.jpg/v1/fit/w_500,h_500,q_90/file.jpg",
+                    "PSPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend\\old-all-media-selected.txt",
+                    "PSParentPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                    "PSChildName":  "old-all-media-selected.txt",
+                    "PSDrive":  {
+                                    "CurrentLocation":  "Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                                    "Name":  "C",
+                                    "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                                    "Root":  "C:\\",
+                                    "Description":  "",
+                                    "MaximumSize":  null,
+                                    "Credential":  "System.Management.Automation.PSCredential",
+                                    "DisplayRoot":  null
+                                },
+                    "PSProvider":  {
+                                       "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                                       "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                                       "Name":  "FileSystem",
+                                       "PSSnapIn":  "Microsoft.PowerShell.Core",
+                                       "ModuleName":  "Microsoft.PowerShell.Core",
+                                       "Module":  null,
+                                       "Description":  "",
+                                       "Capabilities":  52,
+                                       "Home":  "C:\\Users\\Ava",
+                                       "Drives":  "C G"
+                                   },
+                    "ReadCount":  63
+                }
+    },
+    {
+        "file":  "assets/old-site/old-064.jpg",
+        "url":  {
+                    "value":  "https://static.wixstatic.com/media/e5a4ea_dacb8e3c150a4617a108e0967df1b795~mv2.jpg/v1/fit/w_500,h_500,q_90/file.jpg",
+                    "PSPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend\\old-all-media-selected.txt",
+                    "PSParentPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                    "PSChildName":  "old-all-media-selected.txt",
+                    "PSDrive":  {
+                                    "CurrentLocation":  "Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                                    "Name":  "C",
+                                    "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                                    "Root":  "C:\\",
+                                    "Description":  "",
+                                    "MaximumSize":  null,
+                                    "Credential":  "System.Management.Automation.PSCredential",
+                                    "DisplayRoot":  null
+                                },
+                    "PSProvider":  {
+                                       "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                                       "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                                       "Name":  "FileSystem",
+                                       "PSSnapIn":  "Microsoft.PowerShell.Core",
+                                       "ModuleName":  "Microsoft.PowerShell.Core",
+                                       "Module":  null,
+                                       "Description":  "",
+                                       "Capabilities":  52,
+                                       "Home":  "C:\\Users\\Ava",
+                                       "Drives":  "C G"
+                                   },
+                    "ReadCount":  64
+                }
+    },
+    {
+        "file":  "assets/old-site/old-065.jpg",
+        "url":  {
+                    "value":  "https://static.wixstatic.com/media/e5a4ea_db6e0b782a9446f885d826efd5b55f0b~mv2.jpg/v1/fit/w_500,h_500,q_90/file.jpg",
+                    "PSPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend\\old-all-media-selected.txt",
+                    "PSParentPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                    "PSChildName":  "old-all-media-selected.txt",
+                    "PSDrive":  {
+                                    "CurrentLocation":  "Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                                    "Name":  "C",
+                                    "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                                    "Root":  "C:\\",
+                                    "Description":  "",
+                                    "MaximumSize":  null,
+                                    "Credential":  "System.Management.Automation.PSCredential",
+                                    "DisplayRoot":  null
+                                },
+                    "PSProvider":  {
+                                       "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                                       "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                                       "Name":  "FileSystem",
+                                       "PSSnapIn":  "Microsoft.PowerShell.Core",
+                                       "ModuleName":  "Microsoft.PowerShell.Core",
+                                       "Module":  null,
+                                       "Description":  "",
+                                       "Capabilities":  52,
+                                       "Home":  "C:\\Users\\Ava",
+                                       "Drives":  "C G"
+                                   },
+                    "ReadCount":  65
+                }
+    },
+    {
+        "file":  "assets/old-site/old-066.jpg",
+        "url":  {
+                    "value":  "https://static.wixstatic.com/media/e5a4ea_deaaed9c76054978917197421107a86b~mv2.jpg/v1/fit/w_500,h_500,q_90/file.jpg",
+                    "PSPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend\\old-all-media-selected.txt",
+                    "PSParentPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                    "PSChildName":  "old-all-media-selected.txt",
+                    "PSDrive":  {
+                                    "CurrentLocation":  "Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                                    "Name":  "C",
+                                    "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                                    "Root":  "C:\\",
+                                    "Description":  "",
+                                    "MaximumSize":  null,
+                                    "Credential":  "System.Management.Automation.PSCredential",
+                                    "DisplayRoot":  null
+                                },
+                    "PSProvider":  {
+                                       "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                                       "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                                       "Name":  "FileSystem",
+                                       "PSSnapIn":  "Microsoft.PowerShell.Core",
+                                       "ModuleName":  "Microsoft.PowerShell.Core",
+                                       "Module":  null,
+                                       "Description":  "",
+                                       "Capabilities":  52,
+                                       "Home":  "C:\\Users\\Ava",
+                                       "Drives":  "C G"
+                                   },
+                    "ReadCount":  66
+                }
+    },
+    {
+        "file":  "assets/old-site/old-067.jpg",
+        "url":  {
+                    "value":  "https://static.wixstatic.com/media/e5a4ea_e0e34c56931f44199534360e788d0093~mv2.jpg/v1/fit/w_500,h_500,q_90/file.jpg",
+                    "PSPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend\\old-all-media-selected.txt",
+                    "PSParentPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                    "PSChildName":  "old-all-media-selected.txt",
+                    "PSDrive":  {
+                                    "CurrentLocation":  "Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                                    "Name":  "C",
+                                    "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                                    "Root":  "C:\\",
+                                    "Description":  "",
+                                    "MaximumSize":  null,
+                                    "Credential":  "System.Management.Automation.PSCredential",
+                                    "DisplayRoot":  null
+                                },
+                    "PSProvider":  {
+                                       "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                                       "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                                       "Name":  "FileSystem",
+                                       "PSSnapIn":  "Microsoft.PowerShell.Core",
+                                       "ModuleName":  "Microsoft.PowerShell.Core",
+                                       "Module":  null,
+                                       "Description":  "",
+                                       "Capabilities":  52,
+                                       "Home":  "C:\\Users\\Ava",
+                                       "Drives":  "C G"
+                                   },
+                    "ReadCount":  67
+                }
+    },
+    {
+        "file":  "assets/old-site/old-068.jpg",
+        "url":  {
+                    "value":  "https://static.wixstatic.com/media/e5a4ea_e5c8c49642eb4626af9b9176daaaade3~mv2.jpg/v1/fit/w_500,h_500,q_90/file.jpg",
+                    "PSPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend\\old-all-media-selected.txt",
+                    "PSParentPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                    "PSChildName":  "old-all-media-selected.txt",
+                    "PSDrive":  {
+                                    "CurrentLocation":  "Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                                    "Name":  "C",
+                                    "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                                    "Root":  "C:\\",
+                                    "Description":  "",
+                                    "MaximumSize":  null,
+                                    "Credential":  "System.Management.Automation.PSCredential",
+                                    "DisplayRoot":  null
+                                },
+                    "PSProvider":  {
+                                       "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                                       "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                                       "Name":  "FileSystem",
+                                       "PSSnapIn":  "Microsoft.PowerShell.Core",
+                                       "ModuleName":  "Microsoft.PowerShell.Core",
+                                       "Module":  null,
+                                       "Description":  "",
+                                       "Capabilities":  52,
+                                       "Home":  "C:\\Users\\Ava",
+                                       "Drives":  "C G"
+                                   },
+                    "ReadCount":  68
+                }
+    },
+    {
+        "file":  "assets/old-site/old-069.jpg",
+        "url":  {
+                    "value":  "https://static.wixstatic.com/media/e5a4ea_e79d551353884c0d8c38e052ee465d5f~mv2.jpg/v1/fit/w_500,h_500,q_90/file.jpg",
+                    "PSPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend\\old-all-media-selected.txt",
+                    "PSParentPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                    "PSChildName":  "old-all-media-selected.txt",
+                    "PSDrive":  {
+                                    "CurrentLocation":  "Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                                    "Name":  "C",
+                                    "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                                    "Root":  "C:\\",
+                                    "Description":  "",
+                                    "MaximumSize":  null,
+                                    "Credential":  "System.Management.Automation.PSCredential",
+                                    "DisplayRoot":  null
+                                },
+                    "PSProvider":  {
+                                       "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                                       "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                                       "Name":  "FileSystem",
+                                       "PSSnapIn":  "Microsoft.PowerShell.Core",
+                                       "ModuleName":  "Microsoft.PowerShell.Core",
+                                       "Module":  null,
+                                       "Description":  "",
+                                       "Capabilities":  52,
+                                       "Home":  "C:\\Users\\Ava",
+                                       "Drives":  "C G"
+                                   },
+                    "ReadCount":  69
+                }
+    },
+    {
+        "file":  "assets/old-site/old-070.webp",
+        "url":  {
+                    "value":  "https://static.wixstatic.com/media/e5a4ea_eb161ab70ef947ec9eae1270a0d4f600~mv2.webp/v1/fit/w_500,h_500,q_90/file.webp",
+                    "PSPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend\\old-all-media-selected.txt",
+                    "PSParentPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                    "PSChildName":  "old-all-media-selected.txt",
+                    "PSDrive":  {
+                                    "CurrentLocation":  "Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                                    "Name":  "C",
+                                    "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                                    "Root":  "C:\\",
+                                    "Description":  "",
+                                    "MaximumSize":  null,
+                                    "Credential":  "System.Management.Automation.PSCredential",
+                                    "DisplayRoot":  null
+                                },
+                    "PSProvider":  {
+                                       "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                                       "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                                       "Name":  "FileSystem",
+                                       "PSSnapIn":  "Microsoft.PowerShell.Core",
+                                       "ModuleName":  "Microsoft.PowerShell.Core",
+                                       "Module":  null,
+                                       "Description":  "",
+                                       "Capabilities":  52,
+                                       "Home":  "C:\\Users\\Ava",
+                                       "Drives":  "C G"
+                                   },
+                    "ReadCount":  70
+                }
+    },
+    {
+        "file":  "assets/old-site/old-071.jpg",
+        "url":  {
+                    "value":  "https://static.wixstatic.com/media/e5a4ea_ede9fed8d69b42a7a8cc923f794d5973~mv2.jpg/v1/fit/w_500,h_500,q_90/file.jpg",
+                    "PSPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend\\old-all-media-selected.txt",
+                    "PSParentPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                    "PSChildName":  "old-all-media-selected.txt",
+                    "PSDrive":  {
+                                    "CurrentLocation":  "Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                                    "Name":  "C",
+                                    "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                                    "Root":  "C:\\",
+                                    "Description":  "",
+                                    "MaximumSize":  null,
+                                    "Credential":  "System.Management.Automation.PSCredential",
+                                    "DisplayRoot":  null
+                                },
+                    "PSProvider":  {
+                                       "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                                       "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                                       "Name":  "FileSystem",
+                                       "PSSnapIn":  "Microsoft.PowerShell.Core",
+                                       "ModuleName":  "Microsoft.PowerShell.Core",
+                                       "Module":  null,
+                                       "Description":  "",
+                                       "Capabilities":  52,
+                                       "Home":  "C:\\Users\\Ava",
+                                       "Drives":  "C G"
+                                   },
+                    "ReadCount":  71
+                }
+    },
+    {
+        "file":  "assets/old-site/old-072.jpg",
+        "url":  {
+                    "value":  "https://static.wixstatic.com/media/e5a4ea_f7273f78e47e46ceae50288de94ccb60~mv2.jpg/v1/fit/w_500,h_500,q_90/file.jpg",
+                    "PSPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend\\old-all-media-selected.txt",
+                    "PSParentPath":  "C:\\Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                    "PSChildName":  "old-all-media-selected.txt",
+                    "PSDrive":  {
+                                    "CurrentLocation":  "Users\\Ava\\Documents\\rings_made_by_lari_frontend",
+                                    "Name":  "C",
+                                    "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                                    "Root":  "C:\\",
+                                    "Description":  "",
+                                    "MaximumSize":  null,
+                                    "Credential":  "System.Management.Automation.PSCredential",
+                                    "DisplayRoot":  null
+                                },
+                    "PSProvider":  {
+                                       "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                                       "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                                       "Name":  "FileSystem",
+                                       "PSSnapIn":  "Microsoft.PowerShell.Core",
+                                       "ModuleName":  "Microsoft.PowerShell.Core",
+                                       "Module":  null,
+                                       "Description":  "",
+                                       "Capabilities":  52,
+                                       "Home":  "C:\\Users\\Ava",
+                                       "Drives":  "C G"
+                                   },
+                    "ReadCount":  72
+                }
+    }
+]
