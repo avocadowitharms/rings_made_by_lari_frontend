@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="Cache-Control" content="no-store" />
     <meta name="description" content="Rings made by Lari handmade silver jewelry shop." />
     <title>Rings made by Lari</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -11,7 +12,7 @@
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css?v=bottom-sheet-3" />
   </head>
   <body data-theme="light">
     <header class="site-header">
@@ -100,12 +101,14 @@
           <h2 id="preview-title"></h2>
           <p class="preview-price" id="preview-price"></p>
           <p class="preview-description" id="preview-description"></p>
-          <a class="button" href="#contact">Ask about this piece</a>
+          <div class="preview-actions"><label>Qty <input type="number" min="1" value="1" aria-label="Quantity" /></label><button class="button add-cart-button" type="button">Add to cart</button></div>
         </div>
       </div>
     </dialog>
     <div class="notice" role="status" aria-live="polite" hidden></div>
 
-    <script src="app.js"></script>
+    <script src="app.js?v=bottom-sheet-3"></script>
   </body>
 </html>
+
+

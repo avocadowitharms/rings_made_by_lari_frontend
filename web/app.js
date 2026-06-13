@@ -131,6 +131,7 @@ const previewPrice = document.querySelector("#preview-price");
 const previewDescription = document.querySelector("#preview-description");
 const previewClose = document.querySelector(".preview-close");
 const oldGallery = document.querySelector("#old-gallery");
+let activePreviewItem = null;
 
 let activeTheme = localStorage.getItem("lari-theme") || "light";
 let activeLanguage = localStorage.getItem("lari-language") || "en";
@@ -220,7 +221,7 @@ const copy = {
     categories: "Shop Kategorien",
     bestsellers: "Bestseller",
     viewAll: "Alle ansehen",
-    ask: "Details",
+    ask: "Anfragen",
     footerContact: "Kontakt",
     payments: "Zahlungsmethoden: TWINT, Visa, Mastercard",
     legal: ["Datenschutz", "Geschäftsbedingungen", "Impressum"],
@@ -353,6 +354,12 @@ function showNotice(message) {
   }, 2200);
 }
 
+function closePreview() {
+  if (!previewDialog) return;
+  previewDialog.close();
+  body.classList.remove("sheet-open");
+}
+
 function collectionCard(item) {
   const title = activeLanguage === "de" ? item.titleDe : item.title;
   const media = item.icon
@@ -393,6 +400,28 @@ function findPreviewItem(title, type) {
 
 function openPreview(item, type) {
   if (!previewDialog) return;
+  activePreviewItem = item;
+  const gallery = item.image
+    ? [item.image, ...oldSiteMedia.slice(0, 5).map((file) => file.replace("assets/", ""))]
+    : [];
+  let thumbs = previewDialog.querySelector(".preview-thumbs");
+  if (!thumbs) {
+    previewImage.insertAdjacentHTML("afterend", '<div class="preview-thumbs" aria-label="Image gallery"></div>');
+    thumbs = previewDialog.querySelector(".preview-thumbs");
+  }
+  let actions = previewDialog.querySelector(".preview-actions");
+  if (!actions) {
+    previewDescription.insertAdjacentHTML(
+      "afterend",
+      `<div class="preview-actions">
+        <label>Qty <input type="number" min="1" value="1" aria-label="Quantity" /></label>
+        <button class="button add-cart-button" type="button"></button>
+      </div>`,
+    );
+    actions = previewDialog.querySelector(".preview-actions");
+  }
+  actions.querySelector(".add-cart-button").textContent = activeLanguage === "de" ? "In den Warenkorb" : "Add to cart";
+  actions.querySelector("label").firstChild.textContent = activeLanguage === "de" ? "Anzahl " : "Qty ";
   if (item.image) {
     previewImage.hidden = false;
     previewImage.src = asset(item.image);
@@ -402,6 +431,15 @@ function openPreview(item, type) {
     previewImage.removeAttribute("src");
     previewImage.alt = "";
   }
+  thumbs.hidden = gallery.length <= 1;
+  thumbs.innerHTML = gallery
+    .map(
+      (image, index) =>
+        `<button type="button" class="${index === 0 ? "active" : ""}" data-preview-image="${image}">
+          <img src="${asset(image)}" alt="${item.title} view ${index + 1}" />
+        </button>`,
+    )
+    .join("");
   previewKicker.textContent = type === "product" ? "Bestseller" : copy[activeLanguage].collections;
   previewTitle.textContent = item.title;
   previewPrice.textContent = item.price || "";
@@ -409,7 +447,9 @@ function openPreview(item, type) {
   previewDescription.textContent =
     (activeLanguage === "de" && item.descriptionDe ? item.descriptionDe : item.description) ||
     "Handmade silver-toned piece from Rings made by Lari.";
-  previewDialog.showModal();
+  actions.querySelector("input").value = "1";
+  previewDialog.setAttribute("open", "");
+  body.classList.add("sheet-open");
 }
 
 function benefitItem([title, text]) {
@@ -661,11 +701,28 @@ if (categoryList) {
   });
 }
 
-if (previewClose) previewClose.addEventListener("click", () => previewDialog.close());
+if (previewClose) previewClose.addEventListener("click", closePreview);
 
 if (previewDialog) {
   previewDialog.addEventListener("click", (event) => {
-    if (event.target === previewDialog) previewDialog.close();
+    const thumb = event.target.closest("[data-preview-image]");
+    if (thumb) {
+      previewImage.src = asset(thumb.dataset.previewImage);
+      previewDialog.querySelectorAll(".preview-thumbs button").forEach((button) => {
+        button.classList.toggle("active", button === thumb);
+      });
+      return;
+    }
+
+    const addButton = event.target.closest(".add-cart-button");
+    if (addButton) {
+      const quantity = previewDialog.querySelector(".preview-actions input")?.value || "1";
+      showNotice(`${quantity} x ${activePreviewItem?.title || "item"} added to cart.`);
+      closePreview();
+      return;
+    }
+
+    if (event.target === previewDialog) closePreview();
   });
 }
 
