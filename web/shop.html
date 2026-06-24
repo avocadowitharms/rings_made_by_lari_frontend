@@ -8,15 +8,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css?v=bottom-sheet-3" />
+    <link rel="stylesheet" href="css/styles.css?v=mockup-layout-22" />
   </head>
-  <body data-theme="light">
+  <body class="shop-page" data-theme="light">
     <header class="site-header">
       <a class="brand" href="index.html"><span>Rings</span><small>made by Lari</small></a>
       <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" data-icon="menu"></button>
       <nav class="nav" aria-label="Primary navigation">
         <a href="shop.html">Shop</a>
-        <a href="#collections">Collections</a>
         <a href="about.html">About</a>
         <a href="gallery.html">Gallery</a>
         <a href="loyalty.html">Loyalty</a>
@@ -33,25 +32,51 @@
       </div>
     </header>
 
-    <main>
-      <section class="page-hero">
-        <p>Shop</p>
-        <h1>Handmade pieces from old cutlery.</h1>
-      </section>
+    <main class="shop-main">
+      <p class="shop-service-note">Handmade rings and accessories from vintage silver cutlery - free shipping within Switzerland</p>
+      <nav class="shop-breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Start</a>
+        <span aria-hidden="true">/</span>
+        <span>All products</span>
+      </nav>
 
-      <section class="content-section" id="collections" aria-labelledby="collections-title">
-        <div class="section-head"><h2 id="collections-title">Shop by collection</h2></div>
-        <div class="grid collection-grid" id="collections-grid"></div>
-      </section>
+      <section class="shop-catalog" aria-labelledby="shop-catalog-title">
+        <aside class="shop-filter-panel" aria-labelledby="shop-filter-title">
+          <h2 id="shop-filter-title">Filter by</h2>
+          <form class="shop-filter-form" id="shop-filter-form"></form>
+        </aside>
 
-      <section class="content-section" id="shop-categories" aria-labelledby="shop-categories-title">
-        <div class="section-head"><h2 id="shop-categories-title">Shop categories</h2></div>
-        <div class="category-list" id="category-list"></div>
-      </section>
+        <div class="shop-catalog-content">
+          <header class="shop-catalog-head">
+            <div>
+              <p class="shop-kicker">All products</p>
+              <h1 id="shop-catalog-title">All products</h1>
+              <p id="shop-catalog-description">Browse rings, cutlery pieces, necklaces, gifts, and accessories handmade by Lari.</p>
+            </div>
+            <label class="shop-sort">
+              <span>Sort by</span>
+              <select id="shop-sort-select" aria-label="Sort products">
+                <option value="featured">Featured</option>
+                <option value="new">Newest</option>
+                <option value="price-low">Price low to high</option>
+                <option value="price-high">Price high to low</option>
+              </select>
+            </label>
+          </header>
 
-      <section class="content-section" id="bestsellers" aria-labelledby="bestsellers-title">
-        <div class="section-head"><h2 id="bestsellers-title">Bestsellers</h2></div>
-        <div class="grid product-grid" id="bestsellers-grid"></div>
+          <section class="shop-new-items" id="shop-new-items" aria-labelledby="shop-new-items-title" hidden>
+            <div class="shop-row-head">
+              <h2 id="shop-new-items-title">New arrivals</h2>
+              <span id="shop-new-items-count"></span>
+            </div>
+            <div class="shop-gallery-row" id="shop-new-items-row"></div>
+          </section>
+
+          <div class="shop-results-meta">
+            <span id="shop-product-count">0 products</span>
+          </div>
+          <div class="shop-product-grid" id="shop-product-grid"></div>
+        </div>
       </section>
 
       <footer class="footer" id="contact">
@@ -89,7 +114,7 @@
       </div>
     </dialog>
     <div class="notice" role="status" aria-live="polite" hidden></div>
-    <script src="app.js?v=bottom-sheet-3"></script>
+    <script src="js/app.js?v=mockup-layout-22"></script>
   </body>
 </html>
 

@@ -12,7 +12,7 @@
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=bottom-sheet-3" />
+    <link rel="stylesheet" href="css/styles.css?v=mockup-layout-22" />
   </head>
   <body data-theme="light">
     <header class="site-header">
@@ -25,7 +25,7 @@
 
       <nav class="nav" aria-label="Primary navigation">
         <a href="shop.html">Shop</a>
-        <a href="shop.html#collections">Collections</a>
+        
         <a href="about.html">About</a>
         <a href="gallery.html">Gallery</a>
         <a href="loyalty.html">Loyalty</a>
@@ -56,10 +56,18 @@
         <div class="hero-dots" id="hero-dots" aria-label="Hero images"></div>
       </section>
 
+      <section class="content-section" id="new-arrivals" aria-labelledby="new-arrivals-title">
+        <div class="section-head">
+          <h2 id="new-arrivals-title">New arrivals</h2>
+          <a href="#new-arrivals-grid">View all <span aria-hidden="true">-&gt;</span></a>
+        </div>
+        <div class="home-product-row" id="new-arrivals-grid"></div>
+      </section>
+
       <section class="content-section" id="collections" aria-labelledby="collections-title">
         <div class="section-head">
           <h2 id="collections-title">Shop by collection</h2>
-          <a href="#collections-grid">View all <span aria-hidden="true">-&gt;</span></a>
+          <a href="shop.html">View all <span aria-hidden="true">-&gt;</span></a>
         </div>
         <div class="grid collection-grid" id="collections-grid"></div>
       </section>
@@ -67,9 +75,9 @@
       <section class="content-section" id="bestsellers" aria-labelledby="bestsellers-title">
         <div class="section-head">
           <h2 id="bestsellers-title">Bestsellers</h2>
-          <a href="#bestsellers-grid">View all <span aria-hidden="true">-&gt;</span></a>
+          <a href="shop.html">View all <span aria-hidden="true">-&gt;</span></a>
         </div>
-        <div class="grid product-grid" id="bestsellers-grid"></div>
+        <div class="home-product-row" id="bestsellers-grid"></div>
       </section>
       <footer class="footer" id="contact">
         <div class="benefits" id="benefits"></div>
@@ -107,7 +115,7 @@
     </dialog>
     <div class="notice" role="status" aria-live="polite" hidden></div>
 
-    <script src="app.js?v=bottom-sheet-3"></script>
+    <script src="js/app.js?v=mockup-layout-22"></script>
   </body>
 </html>
 

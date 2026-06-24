@@ -1,0 +1,13 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "pwa-chrome",
+            "request": "launch",
+            "name": "Start app in browser",
+            "url": "http://localhost:8080/index.html",
+            "webRoot": "${workspaceFolder}/web",
+            "preLaunchTask": "Serve web app"
+        }
+    ]
+}

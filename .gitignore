@@ -3,6 +3,6 @@
 .flutter-plugins-dependencies
 .packages
 build/
-/assets/
+assets/
 old-*.html
 old-*.txt
