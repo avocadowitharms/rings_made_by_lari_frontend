@@ -1917,8 +1917,6 @@ function injectSectionDividers() {
     }
   };
 
-  addDividerAfter(document.querySelector(".hero, .page-hero"));
-
   const sections = document.querySelectorAll(".content-section, .editorial-section");
   sections.forEach((section, index) => {
     if (index > 0) addDividerBefore(section);

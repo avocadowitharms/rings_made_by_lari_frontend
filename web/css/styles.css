@@ -223,7 +223,7 @@ main {
   position: absolute;
   inset: 0;
   z-index: 0;
-  background: var(--surface);
+  background: transparent;
 }
 .hero-slide {
   position: absolute;
@@ -1018,6 +1018,12 @@ body {
   background: #0d0d0f;
 }
 
+body,
+html,
+main {
+  background: #0d0d0f;
+}
+
 .site-header {
   position: sticky;
   top: 0;
@@ -1100,18 +1106,27 @@ body {
 
 main {
   max-width: none;
+  background: #0d0d0f;
 }
 
 .hero {
   min-height: calc(100svh - 64px);
   border: 0;
   border-radius: 0;
-  background: #050506;
+  background: transparent;
 }
 
 .hero::after {
-  height: 34%;
-  background: linear-gradient(to bottom, transparent, rgb(5 5 6 / 0.9));
+  display: block;
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  height: clamp(90px, 12vw, 160px);
+  background: linear-gradient(to bottom, transparent, #0d0d0f);
+  pointer-events: none;
 }
 
 .hero-slide {
@@ -1124,25 +1139,17 @@ main {
 }
 
 .hero-overlay {
-  background:
-    radial-gradient(
-      circle at 52% 48%,
-      rgb(0 0 0 / 0.05) 0 20%,
-      rgb(0 0 0 / 0.38) 54%,
-      rgb(0 0 0 / 0.76) 100%
-    ),
-    linear-gradient(
-      to bottom,
-      rgb(0 0 0 / 0.12),
-      rgb(0 0 0 / 0.22) 46%,
-      rgb(0 0 0 / 0.62) 100%
-    ),
-    linear-gradient(
-      90deg,
-      rgb(0 0 0 / 0.64),
-      rgb(0 0 0 / 0.1) 48%,
-      rgb(0 0 0 / 0.58)
-    );
+  display: none;
+}
+
+.hero-slider {
+  bottom: 0;
+  mask-image: linear-gradient(to bottom, black 0%, black 50%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 0%, black 50%, transparent 100%);
+}
+
+.hero-slider::after {
+  content: none;
 }
 
 .hero-copy {
@@ -2250,13 +2257,8 @@ body.cart-open .cart-drawer {
   display: block;
   width: min(76%, 1180px);
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgb(244 244 245 / 0.18) 18%, rgb(244 244 245 / 0.18) 82%, transparent);
+  background: linear-gradient(90deg, transparent 0%, rgb(244 244 245 / 0.16) 18%, rgb(244 244 245 / 0.16) 82%, transparent 100%);
   margin: clamp(92px, 10vw, 142px) auto clamp(32px, 4vw, 58px);
-}
-
-.hero + .section-divider {
-  width: 100%;
-  margin-top: 0;
 }
 
 .section-divider + .content-section,
@@ -2363,39 +2365,6 @@ body.cart-open .cart-drawer {
   }
 
   
-  #collections.content-section::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 500px;
-    height: 500px;
-    background-image: url("../assets/old-site/old-061.jpg");
-    background-size: cover;
-    background-position: center;
-    opacity: 0.035;
-    pointer-events: none;
-    z-index: 0;
-    mask-image: radial-gradient(circle at bottom left, black 25%, transparent 75%);
-    -webkit-mask-image: radial-gradient(circle at bottom left, black 25%, transparent 75%);
-  }
-
-  #bestsellers.content-section::before {
-    content: "";
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    width: 500px;
-    height: 500px;
-    background-image: url("../assets/old-site/old-001.jpg");
-    background-size: cover;
-    background-position: center;
-    opacity: 0.035;
-    pointer-events: none;
-    z-index: 0;
-    mask-image: radial-gradient(circle at bottom right, black 25%, transparent 75%);
-    -webkit-mask-image: radial-gradient(circle at bottom right, black 25%, transparent 75%);
-  }
 }
 
 /* Reference-inspired dark editorial sections */
@@ -2405,12 +2374,12 @@ body.cart-open .cart-drawer {
 }
 
 .hero {
-  margin-bottom: -72px;
+  margin-bottom: 0;
+  z-index: 2;
 }
 
 .hero::after {
-  height: clamp(170px, 20vw, 260px);
-  background: linear-gradient(to bottom, transparent 0%, rgb(13 14 15 / 0.72) 54%, rgb(13 14 15) 100%);
+  display: none;
 }
 
 #new-arrivals.content-section,
@@ -2430,20 +2399,21 @@ body.cart-open .cart-drawer {
   isolation: isolate;
 }
 
+#new-arrivals.content-section {
+  overflow: hidden;
+  z-index: 1;
+  margin-top: 0;
+}
+
 #new-arrivals.content-section::before,
 #collections.content-section::before,
 #bestsellers.content-section::before,
 #shop-categories.content-section::before {
-  content: "";
-  position: absolute;
-  inset: -110px 0;
-  z-index: 0;
-  background:
-    radial-gradient(circle at 50% 16%, rgb(255 255 255 / 0.06), transparent 34%),
-    linear-gradient(135deg, rgb(18 19 21 / 0.96) 0%, rgb(10 11 12 / 0.98) 55%, rgb(17 18 20 / 0.94) 100%);
-  mask-image: linear-gradient(to bottom, transparent 0, rgb(0 0 0 / 0.18) 70px, black 170px, black calc(100% - 170px), rgb(0 0 0 / 0.18) calc(100% - 70px), transparent 100%);
-  -webkit-mask-image: linear-gradient(to bottom, transparent 0, rgb(0 0 0 / 0.18) 70px, black 170px, black calc(100% - 170px), rgb(0 0 0 / 0.18) calc(100% - 70px), transparent 100%);
-  pointer-events: none;
+  content: none;
+}
+
+#new-arrivals.content-section::before {
+  content: none;
 }
 
 #new-arrivals .section-head,
@@ -2702,9 +2672,7 @@ body.cart-open .cart-drawer {
   }
 
   #collections.content-section::after,
-  #new-arrivals.content-section::after,
-  #bestsellers.content-section::after,
-  #shop-categories.content-section::after {
+  #bestsellers.content-section::after {
     content: "";
     position: absolute;
     bottom: 0;
@@ -2714,25 +2682,28 @@ body.cart-open .cart-drawer {
     opacity: 0.08;
     background-size: cover;
     background-position: center;
-    filter: grayscale(1) contrast(1.16) brightness(0.72);
+    filter: grayscale(1) contrast(1.08) brightness(0.68);
     mix-blend-mode: screen;
     pointer-events: none;
-    mask-image: radial-gradient(circle at bottom left, black 22%, transparent 72%);
-    -webkit-mask-image: radial-gradient(circle at bottom left, black 22%, transparent 72%);
   }
 
-  #collections.content-section::after,
-  #new-arrivals.content-section::after,
-  #shop-categories.content-section::after {
+  #collections.content-section::after {
     left: 0;
     background-image: url("../assets/old-site/old-061.jpg");
+    mask-image: radial-gradient(circle at bottom left, black, black 65%, transparent 85%);
+    -webkit-mask-image: radial-gradient(circle at bottom left, black, black 65%, transparent 85%);
   }
-
+ 
   #bestsellers.content-section::after {
     right: 0;
     background-image: url("../assets/old-site/old-001.jpg");
-    mask-image: radial-gradient(circle at bottom right, black 22%, transparent 72%);
-    -webkit-mask-image: radial-gradient(circle at bottom right, black 22%, transparent 72%);
+    mask-image: radial-gradient(circle at bottom right, black, black 65%, transparent 85%);
+    -webkit-mask-image: radial-gradient(circle at bottom right, black, black 65%, transparent 85%);
+  }
+
+  #new-arrivals.content-section::after,
+  #shop-categories.content-section::after {
+    content: none;
   }
 }
 
@@ -2775,7 +2746,7 @@ body.cart-open .cart-drawer {
 
 #new-arrivals.content-section {
   display: block;
-  padding-top: clamp(70px, 8vw, 120px) !important;
+  padding-top: clamp(190px, 17vw, 260px) !important;
 }
 
 #new-arrivals .section-head,
@@ -2785,8 +2756,20 @@ body.cart-open .cart-drawer {
   display: block;
   margin-bottom: 18px;
   padding-bottom: 18px;
-  border-bottom: 1px solid rgb(244 244 245 / 0.16);
+  border-bottom: 0;
   text-align: left;
+}
+
+#new-arrivals .section-head::after,
+#bestsellers .section-head::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgb(244 244 245 / 0.16) 18%, rgb(244 244 245 / 0.16) 82%, transparent 100%);
+  pointer-events: none;
 }
 
 #new-arrivals .section-head h2,
@@ -2853,6 +2836,10 @@ body.cart-open .cart-drawer {
   text-align: right;
 }
 
+#bestsellers .section-head::after {
+  display: none;
+}
+
 #bestsellers .section-head h2 {
   margin-bottom: clamp(22px, 3vw, 36px) !important;
 }
@@ -2889,8 +2876,12 @@ body.cart-open .cart-drawer {
     max-width: none;
     margin-bottom: 18px;
     padding-bottom: 18px;
-    border-bottom: 1px solid rgb(244 244 245 / 0.16);
+    border-bottom: 0;
     text-align: left;
+  }
+
+  #bestsellers .section-head::after {
+    display: block;
   }
 
   #bestsellers .section-description,
@@ -3291,4 +3282,16 @@ body.cart-open .cart-drawer {
   .shop-product-grid {
     grid-template-columns: 1fr;
   }
+}
+
+/* Flat dark page background: no hero overlay or section background imagery. */
+.hero-overlay,
+#new-arrivals.content-section::before,
+#collections.content-section::before,
+#bestsellers.content-section::before,
+#shop-categories.content-section::before,
+#new-arrivals.content-section::after,
+#shop-categories.content-section::after {
+  display: none !important;
+  content: none !important;
 }
