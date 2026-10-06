@@ -546,22 +546,8 @@ const copy = {
       ],
       "gallery.html": ["Gallery", "Silver-toned pieces in quiet detail."],
       "loyalty.html": ["Loyalty", "Collect points and receive rewards."],
-      "privacy.html": [
-        "Legal",
-        "Datenschutz",
-        [
-          "This page is reserved for privacy information about customer, order, contact, and website usage data for Rings made by Lari.",
-          "For production, replace this placeholder with the complete legally reviewed privacy policy.",
-        ],
-      ],
-      "terms.html": [
-        "Legal",
-        "Geschäftsbedingungen",
-        [
-          "This page is reserved for shop terms including orders, payment, free shipping within Switzerland, handmade availability, returns, and product variation notes.",
-          "For production, replace this placeholder with the complete legally reviewed terms and conditions.",
-        ],
-      ],
+      "privacy.html": ["Rechtliches", "Datenschutz"],
+      "terms.html": ["Rechtliches", "Geschäftsbedingungen"],
       "imprint.html": ["Legal", "Impressum"],
     },
     collectionDescriptions: [
@@ -647,22 +633,8 @@ const copy = {
       ],
       "gallery.html": ["Galerie", "Handgefertigte Ringe und Accessoires."],
       "loyalty.html": ["Treueprogramm", "Punkte sammeln und Prämien erhalten."],
-      "privacy.html": [
-        "Rechtliches",
-        "Datenschutz",
-        [
-          "Diese Seite ist für Informationen zum Umgang mit Kunden-, Bestell-, Kontakt- und Websitedaten von Rings made by Lari vorgesehen.",
-          "Für die Veröffentlichung sollte hier die vollständig rechtlich geprüfte Datenschutzerklärung eingefügt werden.",
-        ],
-      ],
-      "terms.html": [
-        "Rechtliches",
-        "Geschäftsbedingungen",
-        [
-          "Diese Seite ist für Geschäftsbedingungen zu Bestellung, Zahlung, kostenlosem Versand innerhalb der Schweiz, handgemachter Verfügbarkeit, Rückgaben und Produktabweichungen vorgesehen.",
-          "Für die Veröffentlichung sollten hier die vollständig rechtlich geprüften Geschäftsbedingungen eingefügt werden.",
-        ],
-      ],
+      "privacy.html": ["Rechtliches", "Datenschutz"],
+      "terms.html": ["Rechtliches", "Geschäftsbedingungen"],
       "imprint.html": ["Rechtliches", "Impressum"],
     },
     collectionDescriptions: [

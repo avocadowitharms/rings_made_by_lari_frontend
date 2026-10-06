@@ -54,3 +54,15 @@ for page in web.glob("*.html"):
         assert not parsed.path.startswith("/"), (page, url)
         assert (page.parent / unquote(parsed.path)).is_file(), (page, url)
 print("OK: German defaults and root-relative hosting links.")
+
+# Legal imports must remain complete and must not be replaced by language placeholders.
+import hashlib
+import html as html_module
+for source in json.loads((root / "docs/legal-sources.json").read_text(encoding="utf-8"))["pages"]:
+    legal = (root / source["file"]).read_text(encoding="utf-8")
+    body = re.search(r'<div class="page-copy legal-copy" lang="de">(.*?)</div>', legal, re.S).group(1)
+    text = " ".join(html_module.unescape(re.sub(r"<[^>]*>", " ", body)).split())
+    assert hashlib.sha256(text.encode()).hexdigest() == source["textSha256"], source["file"]
+assert "replace this placeholder" not in script
+assert "vollständig rechtlich geprüfte" not in script
+print("OK: complete reference legal text retained.")

@@ -1,0 +1,21 @@
+{
+  "pages": [
+    {
+      "file": "privacy.html",
+      "source": "https://ringsmadebylari.wixsite.com/dein-onlineshop-f/datenschutz",
+      "retrieved": "2026-10-06",
+      "characters": 20243,
+      "note": "Source wording retained, including legacy webshop references and template placeholders.",
+      "textSha256": "92cfc7fe1004ff00b0ab73cf949f0df930ae5e0c04a08c19c0148d398ca17c9f"
+    },
+    {
+      "file": "terms.html",
+      "source": "https://ringsmadebylari.wixsite.com/dein-onlineshop-f/gesch%C3%A4ftsbedigungen",
+      "retrieved": "2026-10-06",
+      "characters": 20373,
+      "note": "Source wording retained, including legacy webshop references and template placeholders.",
+      "textSha256": "6819e3a4cc4c6223d6241014eb6ad58fd1c224c17e94975b18ca06ee9fd2e2ab"
+    }
+  ],
+  "alternativeTermsSource": "https://ringsmadebylari.wixsite.com/dein-onlineshop-f/agb-s"
+}

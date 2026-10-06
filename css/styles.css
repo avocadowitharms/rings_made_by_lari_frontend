@@ -3384,3 +3384,11 @@ body.cart-open .cart-drawer {
   .about-layout { grid-template-columns: 1fr; }
   .about-portrait { grid-row: 1; max-width: 480px; justify-self: center; }
 }
+
+.legal-page { max-width: 1040px; margin: auto; }
+.legal-copy { max-width: 860px; overflow-wrap: anywhere; }
+.legal-copy h2 { font-family: var(--serif); font-size: clamp(26px, 3vw, 36px); line-height: 1.25; margin: 40px 0 18px; }
+.legal-copy h3 { font-size: 16px; line-height: 1.5; margin: 24px 0 12px; }
+.legal-copy :is(ul, ol) { padding-left: 24px; color: var(--muted); line-height: 1.85; }
+.legal-copy li + li { margin-top: 10px; }
+.legal-copy a { text-decoration: underline; text-underline-offset: 3px; }
