@@ -81,25 +81,7 @@ const collectionProducts = [
   },
 ];
 
-const giftProducts = [
-  {
-    title: "Digital gift card", titleDe: "Digitale Geschenkkarte",
-    price: "CHF 25.00+",
-    image: "",
-    description:
-      "A digital gift card delivered for flexible gifting across the shop.",
-    descriptionDe:
-      "Eine digitale Geschenkkarte für flexibles Schenken im Shop.",
-  },
-  {
-    title: "Paper voucher", titleDe: "Papiergutschein",
-    price: "CHF 25.00+",
-    image: "",
-    description: "A paper voucher prepared as a physical gift, ready to give.",
-    descriptionDe:
-      "Ein Papiergutschein als physisches Geschenk, bereit zum Verschenken.",
-  },
-];
+const giftProducts = [];
 
 const oldSiteMedia = [
   "assets/old-site/old-001.jpg",
@@ -232,141 +214,7 @@ oldSiteMedia.push(...[
   "assets/old-site/e5a4ea_fefc2c59b94b41b798538316f51f7e24~mv2.jpg"
 ]);
 
-const products = [
-  {
-    title: "Twist Ring",
-    price: "CHF 28.00",
-    image: "jewelry-6.jfif",
-    description:
-      "A slim silver band with a gentle twisted profile and polished highlights.",
-    material: "Hand-twisted Sterling Silver (Upcycled)",
-    materialDe: "Handgedrehtes Sterlingsilber (Upgecycelt)",
-    tag: "NEW",
-    tagDe: "NEU"
-  },
-  {
-    title: "Moonstone Ring",
-    price: "CHF 56.00",
-    image: "jewelry-4.jfif",
-    description:
-      "A luminous silver ring set with a pale stone for a soft, milky glow.",
-    material: "Sterling Silver & Moonstone (Upcycled)",
-    materialDe: "Sterlingsilber & Mondstein (Upgecycelt)",
-    tag: "LIMITED",
-    tagDe: "LIMITIERT"
-  },
-  {
-    title: "Dotted Band",
-    price: "CHF 32.00",
-    image: "jewelry-1.jfif",
-    description:
-      "A narrow silver band finished with tiny raised details and a clean silhouette.",
-    material: "Sterling Silver (Upcycled)",
-    materialDe: "Sterlingsilber (Upgecycelt)"
-  },
-  {
-    title: "Organic Signet Ring",
-    price: "CHF 52.00",
-    image: "jewelry-2.jfif",
-    description:
-      "A rounded silver signet with a handmade surface and softened edges.",
-    material: "Hand-carved Sterling Silver (Upcycled)",
-    materialDe: "Handgeschnitztes Sterlingsilber (Upgecycelt)",
-    tag: "LIMITED",
-    tagDe: "LIMITIERT"
-  },
-  {
-    title: "Spoon Ring Floral",
-    price: "CHF 35.00",
-    image: "old-site/old-001.jpg",
-    description:
-      "An artistic ring crafted from an antique spoon with elegant floral relief details.",
-    material: "Antique silver-plated cutlery (Upcycled)",
-    materialDe: "Antikes versilbertes Besteck (Upgecycelt)",
-    tag: "NEW",
-    tagDe: "NEU"
-  },
-  {
-    title: "Silver Band Classic",
-    price: "CHF 29.00",
-    image: "old-site/old-002.jpg",
-    description:
-      "A classic polished band formed from the handle of an elegant vintage spoon.",
-    material: "Antique silver-plated cutlery (Upcycled)",
-    materialDe: "Antikes versilbertes Besteck (Upgecycelt)"
-  },
-  {
-    title: "Spoon Ring Wide",
-    price: "CHF 38.00",
-    image: "old-site/old-004.jpg",
-    description:
-      "A wide statement ring featuring beautiful historical engravings.",
-    material: "Antique silver-plated cutlery (Upcycled)",
-    materialDe: "Antikes versilbertes Besteck (Upgecycelt)",
-    tag: "NEW",
-    tagDe: "NEU"
-  },
-  {
-    title: "Minimalist Band",
-    price: "CHF 30.00",
-    image: "old-site/old-003.jpg",
-    description:
-      "A simple, clean band ring made for everyday comfort and layering.",
-    material: "Antique silver-plated cutlery (Upcycled)",
-    materialDe: "Antikes versilbertes Besteck (Upgecycelt)"
-  },
-  {
-    title: "Vintage Signet Ring",
-    price: "CHF 45.00",
-    image: "old-site/old-005.jpg",
-    description:
-      "A handcrafted signet ring with delicate vintage textures from antique silverware.",
-    material: "Antique silver-plated cutlery (Upcycled)",
-    materialDe: "Antikes versilbertes Besteck (Upgecycelt)",
-    tag: "LIMITED",
-    tagDe: "LIMITIERT"
-  },
-  {
-    title: "Engraved Spoon Ring",
-    price: "CHF 39.00",
-    image: "old-site/old-014.jpg",
-    description:
-      "A polished spoon ring with crisp vintage engraving and a rounded everyday fit.",
-    material: "Antique silver-plated cutlery (Upcycled)",
-    materialDe: "Antikes versilbertes Besteck (Upgecycelt)"
-  },
-  {
-    title: "Floral Wide Band",
-    price: "CHF 42.00",
-    image: "old-site/old-015.jpg",
-    description:
-      "A wide floral band shaped from a found cutlery handle with soft polished edges.",
-    material: "Antique silver-plated cutlery (Upcycled)",
-    materialDe: "Antikes versilbertes Besteck (Upgecycelt)",
-    tag: "LIMITED",
-    tagDe: "LIMITIERT"
-  },
-  {
-    title: "Classic Spoon Band",
-    price: "CHF 34.00",
-    image: "old-site/old-016.jpg",
-    description:
-      "A clean silver-toned band with subtle vintage patterning and a comfortable curve.",
-    material: "Antique silver-plated cutlery (Upcycled)",
-    materialDe: "Antikes versilbertes Besteck (Upgecycelt)"
-  },
-  {
-    title: "Ornate Silver Ring",
-    price: "CHF 44.00",
-    image: "old-site/old-018.jpg",
-    description:
-      "A decorative ring with old-world texture, reshaped and finished by hand.",
-    material: "Antique silver-plated cutlery (Upcycled)",
-    materialDe: "Antikes versilbertes Besteck (Upgecycelt)",
-    tag: "NEW",
-    tagDe: "NEU"
-  },
-];
+const products = [];
 
 const shopCategoryOptions = [
   ["narrow-rings", "Narrow rings", "Schmale Ringe"],
@@ -381,29 +229,7 @@ const shopCategoryOptions = [
   ["necklaces", "Necklaces", "Halsketten"],
 ].map(([id, label, labelDe]) => ({ id, label, labelDe }));
 
-const shopProductCategories = [
-  "wide-rings",
-  "medium-rings",
-  "wide-rings",
-  "medium-rings",
-  "rings",
-  "rings",
-  "wide-rings",
-  "narrow-rings",
-  "brooches",
-  "cutlery",
-  "gifts",
-  "lucky-charms",
-  "necklaces",
-];
-
-const shopProducts = products.map((product, index) => ({
-  ...product,
-  category: shopProductCategories[index] || "rings",
-  isNewArrival: index === 0 || index === 4,
-}));
-
-shopProducts.push(...collectionProducts.map((product) => ({ ...product, category: "rings", isNewArrival: false })));
+const shopProducts = collectionProducts.map((product) => ({ ...product, category: "rings", isNewArrival: false }));
 
 const detailPageCollection = collections.find(
   (collection) => (pageName() === "collection-rings-size.html" ? "collection-ready-rings.html" : pageName()) === collection.href,
@@ -547,7 +373,6 @@ const copy = {
 ],
       ],
       "gallery.html": ["Gallery", "Silver-toned pieces in quiet detail."],
-      "loyalty.html": ["Loyalty", "Collect points and receive rewards."],
       "privacy.html": ["Rechtliches", "Datenschutz"],
       "terms.html": ["Rechtliches", "Geschäftsbedingungen"],
       "imprint.html": ["Legal", "Impressum"],
@@ -649,7 +474,6 @@ const copy = {
 ],
       ],
       "gallery.html": ["Galerie", "Handgefertigte Ringe und Accessoires."],
-      "loyalty.html": ["Treueprogramm", "Punkte sammeln und Prämien erhalten."],
       "privacy.html": ["Rechtliches", "Datenschutz"],
       "terms.html": ["Rechtliches", "Geschäftsbedingungen"],
       "imprint.html": ["Rechtliches", "Impressum"],
@@ -1324,15 +1148,6 @@ function renderHeaderSettings() {
             <button type="button" data-theme-set="dark">Dark</button>
           </div>
         </div>
-        <div class="settings-section admin-section">
-          <button type="button" class="admin-login-button">
-            <span class="admin-icon">${icons.user}</span>
-            <div class="admin-label">
-              <strong>Admin Portal</strong>
-              <small>Login placeholder</small>
-            </div>
-          </button>
-        </div>
       </div>`,
     );
     settingsMenu = document.querySelector(".settings-menu");
@@ -1360,17 +1175,6 @@ function renderHeaderSettings() {
       const themeBtn = e.target.closest("[data-theme-set]");
       if (themeBtn) {
         setTheme(themeBtn.dataset.themeSet);
-      }
-      const adminBtn = e.target.closest(".admin-login-button");
-      if (adminBtn) {
-        showNotice(
-          activeLanguage === "de"
-            ? "Admin-Login folgt in Kürze."
-            : "Admin portal login coming soon.",
-        );
-        settingsMenu.hidden = true;
-        const toggle = document.querySelector(".settings-toggle");
-        toggle?.classList.remove("active");
       }
     });
   }
@@ -1406,16 +1210,6 @@ function updateSettingsMenuState() {
   const darkBtn = settingsMenu.querySelector('[data-theme-set="dark"]');
   if (darkBtn) {
     darkBtn.textContent = activeLanguage === "de" ? "Dunkel" : "Dark";
-  }
-  const adminTitle = settingsMenu.querySelector(".admin-label strong");
-  if (adminTitle) {
-    adminTitle.textContent =
-      activeLanguage === "de" ? "Admin-Bereich" : "Admin Portal";
-  }
-  const adminSubtitle = settingsMenu.querySelector(".admin-label small");
-  if (adminSubtitle) {
-    adminSubtitle.textContent =
-      activeLanguage === "de" ? "Platzhalter Login" : "Login placeholder";
   }
 }
 

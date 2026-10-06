@@ -55,7 +55,7 @@ for page in web.glob("*.html"):
         assert (page.parent / unquote(parsed.path)).is_file(), (page, url)
 print("OK: German defaults and root-relative hosting links.")
 
-# Legal imports must remain complete and must not be replaced by language placeholders.
+# Legal copy changes are recorded alongside archived original imports.
 import hashlib
 import html as html_module
 for source in json.loads((root / "docs/legal-sources.json").read_text(encoding="utf-8"))["pages"]:
@@ -65,7 +65,7 @@ for source in json.loads((root / "docs/legal-sources.json").read_text(encoding="
     assert hashlib.sha256(text.encode()).hexdigest() == source["textSha256"], source["file"]
 assert "replace this placeholder" not in script
 assert "vollständig rechtlich geprüfte" not in script
-print("OK: complete reference legal text retained.")
+print("OK: legal copy matches the recorded cleanup.")
 
 # The removed collections stay out of navigation; former size-selectable rings remain in the catalog.
 catalog = json.loads(subprocess.check_output([
@@ -79,3 +79,12 @@ assert not any(item["id"] in ["rings-size", "ready-rings", "ring-measurer"] for 
 for ring in catalog["collectionProducts"]:
     assert any(item["title"] == ring["title"] and item["category"] == "rings" for item in catalog["shopProducts"])
 print("OK: removed collections and merged ring products.")
+
+# Public content must not expose demo controls or unresolved template fields.
+assert "admin-login-button" not in script
+assert "jewelry-" not in script
+for page in web.glob("*.html"):
+    text = page.read_text(encoding="utf-8")
+    assert not re.search(r"Login placeholder|Platzhalter|Kategorie:|\[Bitte |\[Name und", text), page
+assert len(catalog["shopProducts"]) == len(catalog["collectionProducts"])
+print("OK: demo catalog and visible template placeholders removed.")

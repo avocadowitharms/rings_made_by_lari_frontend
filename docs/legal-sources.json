@@ -5,16 +5,20 @@
       "source": "https://ringsmadebylari.wixsite.com/dein-onlineshop-f/datenschutz",
       "retrieved": "2026-10-06",
       "characters": 20243,
-      "note": "Source wording retained, including legacy webshop references and template placeholders.",
-      "textSha256": "92cfc7fe1004ff00b0ab73cf949f0df930ae5e0c04a08c19c0148d398ca17c9f"
+      "note": "Removed visible template category labels; original wording archived. Remaining policy content has not been legally revised.",
+      "textSha256": "f19c654d00bc92a840b2eb05b2cdc750c4b8d85ca77267400f0b54aec20aa9f7",
+      "originalFile": "docs/privacy-original.html",
+      "originalTextSha256": "92cfc7fe1004ff00b0ab73cf949f0df930ae5e0c04a08c19c0148d398ca17c9f"
     },
     {
       "file": "terms.html",
       "source": "https://ringsmadebylari.wixsite.com/dein-onlineshop-f/gesch%C3%A4ftsbedigungen",
       "retrieved": "2026-10-06",
       "characters": 20373,
-      "note": "Source wording retained, including legacy webshop references and template placeholders.",
-      "textSha256": "6819e3a4cc4c6223d6241014eb6ad58fd1c224c17e94975b18ca06ee9fd2e2ab"
+      "note": "Replaced contact and language fields with existing site details; removed unconfirmed template jurisdiction clause. Original wording archived; remaining terms have not been legally revised.",
+      "textSha256": "161c4f6129dc79fa5dacdd32ee5fe7f5af6bb3b910a9d79a86ec93ead269c9a6",
+      "originalFile": "docs/terms-original.html",
+      "originalTextSha256": "6819e3a4cc4c6223d6241014eb6ad58fd1c224c17e94975b18ca06ee9fd2e2ab"
     }
   ],
   "alternativeTermsSource": "https://ringsmadebylari.wixsite.com/dein-onlineshop-f/agb-s"
