@@ -17,7 +17,7 @@ for page in root.glob('*.html'):
     Strings().feed(source)
 runner="""
 const fs=require('fs'),vm=require('vm');
-const source=fs.readFileSync('js/fr.js','utf8').split('// Keep source strings')[0];
+const source=fs.readFileSync('js/catalog-fr.js','utf8')+fs.readFileSync('js/fr.js','utf8').split('// Keep source strings')[0];
 const values=JSON.parse(fs.readFileSync(0,'utf8'));
 const context=vm.createContext({values});
 console.log(JSON.stringify(vm.runInContext(source+';values.map(x=>[x,translateFrench(x)])',context)));

@@ -46,40 +46,7 @@ const collections = [
 
 const categories = collections.map((collection) => collection.title);
 
-const collectionProducts = [
-  { title: "Ring 43", price: "CHF 29.95", image: "old-site/old-001.jpg" },
-  {
-    title: "Ring 34 schmal & breit",
-    price: "CHF 29.95",
-    image: "old-site/old-002.jpg",
-  },
-  { title: "Ring 35", price: "CHF 29.95", image: "old-site/old-003.jpg" },
-  {
-    title: "Ring 38 mittel & breit",
-    price: "CHF 29.95",
-    image: "old-site/old-004.jpg",
-  },
-  { title: "Ring 40", price: "CHF 25.95", image: "old-site/old-005.jpg" },
-  { title: "Ring 37", price: "CHF 29.95", image: "old-site/old-006.jpg" },
-  { title: "Ring 18", price: "CHF 29.95", image: "old-site/old-007.jpg" },
-  {
-    title: "Ring 26 schmal & breit",
-    price: "CHF 29.95",
-    image: "old-site/old-009.jpg",
-  },
-  { title: "Ring 23", price: "CHF 29.95", image: "old-site/old-010.jpg" },
-  { title: "Ring 42", price: "CHF 29.95", image: "old-site/old-014.jpg" },
-  {
-    title: "Ring 41 mittel & breit",
-    price: "CHF 29.95",
-    image: "old-site/old-015.jpg",
-  },
-  {
-    title: "Ring 39 mittel & breit",
-    price: "CHF 29.95",
-    image: "old-site/old-016.jpg",
-  },
-];
+const collectionProducts = catalogProducts.filter(item => item.categories.includes("rings"));
 
 const giftProducts = [];
 
@@ -227,9 +194,22 @@ const shopCategoryOptions = [
   ["gifts", "Gifts", "Geschenke"],
   ["lucky-charms", "Lucky charms", "Glücksbringer"],
   ["necklaces", "Necklaces", "Halsketten"],
+  ["accessories", "Accessories", "Zubehör"],
 ].map(([id, label, labelDe]) => ({ id, label, labelDe }));
 
-const shopProducts = collectionProducts.map((product) => ({ ...product, category: "rings", isNewArrival: false }));
+const shopProducts = catalogProducts;
+function collectionItems(page) {
+  const category = page.replace("collection-", "").replace(".html", "");
+  if (["ready-rings", "rings-size"].includes(category)) return collectionProducts;
+  if (category === "ring-size-measurer") return catalogProducts.filter(item => item.categories.includes("accessories"));
+  if (category === "gift-cards") return catalogProducts.filter(item => item.title.startsWith("Gutschein"));
+  if (category === "keychains") return catalogProducts.filter(item => item.title.includes("Schlüsselanhänger"));
+  return catalogProducts.filter(item => item.categories.includes(category));
+}
+collections.forEach(collection => {
+  const first = collectionItems(collection.href)[0];
+  if (first) collection.image = first.image;
+});
 
 const detailPageCollection = collections.find(
   (collection) => (pageName() === "collection-rings-size.html" ? "collection-ready-rings.html" : pageName()) === collection.href,
@@ -337,7 +317,7 @@ const copy = {
     introKicker: "OLD CUTLERY. NEW POSSIBILITIES.",
     introTitle: "Small pieces. Full of character.",
     introText: "Discover my unique, handmade jewelry. Every piece is made by hand, giving old cutlery a new life.",
-    introNote: "Free shipping within Switzerland. Interested in a piece? Get in touch with me directly.",
+    introNote: "Interested in a piece? Get in touch with me directly.",
     contactButton: "Contact Lari",
     galleryTitle: "A closer look",
 
@@ -438,7 +418,7 @@ const copy = {
     introKicker: "ALTES BESTECK. NEUE MÖGLICHKEITEN.",
     introTitle: "Kleine Stücke. Voller Charakter.",
     introText: "Entdecke meine einzigartigen, handgefertigten Schmuckstücke. Garantiert handgefertigt! Aus altem Besteck entsteht etwas Neues.",
-    introNote: "Kostenloser Versand innerhalb der Schweiz. Du interessierst dich für ein Schmuckstück? Melde dich direkt bei mir.",
+    introNote: "Du interessierst dich für ein Schmuckstück? Melde dich direkt bei mir.",
     contactButton: "Kontakt aufnehmen",
     galleryTitle: "Ein genauerer Blick",
 
@@ -597,7 +577,7 @@ function collectionCard(item) {
   const title = activeLanguage !== "en" ? item.titleDe : item.title;
   const media = item.icon
     ? `<span class="collection-icon" aria-hidden="true">${icons[item.icon]}</span>`
-    : `<img src="${asset(item.image)}" alt="${productTitle(item)}" />`;
+    : `<img src="${asset(item.image)}" alt="${escapeHtml(productTitle(item))}" loading="lazy" decoding="async" />`;
   return `
     <a class="collection-card" href="${item.href}" aria-label="${title}">
       ${media}
@@ -610,18 +590,23 @@ function collectionCard(item) {
 }
 
 function productTitle(item) {
-  if (activeLanguage === "en") return item.title;
-  return item.titleDe || ["Gedrehter Ring", "Mondsteinring", "Ring mit Punktmuster", "Organischer Siegelring", "Löffelring mit Blumenmuster", "Klassischer Silberring", "Breiter Löffelring", "Schlichter Bandring", "Vintage-Siegelring", "Gravierter Löffelring", "Breiter Blumenring", "Klassischer Löffelring", "Verzierter Silberring"][products.findIndex((product) => product.title === item.title)] || item.title;
+  return activeLanguage === "en" ? item.titleEn || item.title : item.titleDe || item.title;
+}
+function escapeHtml(value) {
+  return String(value).replace(/[&<>"']/g, char => ({"&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;", "'":"&#39;"}[char]));
+}
+function productPrice(item) {
+  return `${item.available === false ? (activeLanguage === "en" ? "Sold out · " : "Ausverkauft · ") : ""}${item.originalPrice ? `<del>CHF ${item.originalPrice.toFixed(2)}</del> ` : ""}${item.price}`;
 }
 
 function productCard(item) {
   const media = item.image
-    ? `<img src="${asset(item.image)}" alt="${productTitle(item)}" />`
+    ? `<img src="${asset(item.image)}" alt="${escapeHtml(productTitle(item))}" loading="lazy" decoding="async" />`
     : `<span class="collection-icon product-icon" aria-hidden="true">${icons.gift}</span>`;
 
   const tagText = item.tag ? (activeLanguage !== "en" ? item.tagDe : item.tag) : "";
   const tagBadge = tagText
-    ? `<span class="product-card-tag">${tagText}</span>`
+    ? `<span class="product-card-tag">${escapeHtml(tagText)}</span>`
     : "";
 
   const materialText = item.material ? (activeLanguage !== "en" ? item.materialDe : item.material) : "";
@@ -629,17 +614,17 @@ function productCard(item) {
 
   return `
     <article class="product-card">
-      <button class="product-preview" type="button" data-preview-type="product" data-preview-title="${item.title}" aria-label="${activeLanguage !== "en" ? "Details zu" : "Preview"} ${productTitle(item)}">
+      <button class="product-preview" type="button" data-preview-type="product" data-preview-id="${item.id || item.title}" aria-label="${activeLanguage !== "en" ? "Details zu" : "Preview"} ${escapeHtml(productTitle(item))}">
         ${tagBadge}
         ${media}
       </button>
       <div class="card-copy">
         <div class="card-copy-details">
-          <h3>${productTitle(item)}</h3>
+          <h3>${escapeHtml(productTitle(item))}</h3>
           ${materialHtml}
-          <p class="product-card-price">${item.price}</p>
+          <p class="product-card-price">${productPrice(item)}</p>
         </div>
-        <button type="button" aria-label="${activeLanguage !== "en" ? "Merken:" : "Save"} ${productTitle(item)}" data-save="${item.title}">&#9825;</button>
+        <button type="button" aria-label="${activeLanguage !== "en" ? "Merken:" : "Save"} ${escapeHtml(productTitle(item))}" data-save="${item.id}">&#9825;</button>
       </div>
     </article>
   `;
@@ -657,22 +642,22 @@ function shopLabel(option) {
 function shopProductCard(item) {
   const tagText = item.tag ? (activeLanguage !== "en" ? item.tagDe : item.tag) : "";
   const tagBadge = tagText
-    ? `<span class="product-card-tag">${tagText}</span>`
+    ? `<span class="product-card-tag">${escapeHtml(tagText)}</span>`
     : "";
   const category = shopCategoryOptions.find((option) => option.id === item.category);
   const categoryText = category ? shopLabel(category) : "";
 
   return `
     <article class="shop-product-card">
-      <button class="shop-product-preview" type="button" data-preview-type="product" data-preview-title="${item.title}" aria-label="${activeLanguage !== "en" ? "Details zu" : "Preview"} ${productTitle(item)}">
+      <button class="shop-product-preview" type="button" data-preview-type="product" data-preview-id="${item.id || item.title}" aria-label="${activeLanguage !== "en" ? "Details zu" : "Preview"} ${escapeHtml(productTitle(item))}">
         ${tagBadge}
-        <img src="${asset(item.image)}" alt="${productTitle(item)}" loading="lazy" />
+        <img src="${asset(item.image)}" alt="${escapeHtml(productTitle(item))}" loading="lazy" />
       </button>
       <div class="shop-product-copy">
         <p>${categoryText}</p>
-        <h3>${productTitle(item)}</h3>
-        <span>${item.price}</span>
-        <button type="button" data-preview-type="product" data-preview-title="${item.title}">${activeLanguage !== "en" ? "Details ansehen" : "View details"}</button>
+        <h3>${escapeHtml(productTitle(item))}</h3>
+        <span>${productPrice(item)}</span>
+        <button type="button" data-preview-type="product" data-preview-id="${item.id || item.title}">${activeLanguage !== "en" ? "Details ansehen" : "View details"}</button>
       </div>
     </article>
   `;
@@ -713,6 +698,7 @@ function renderShopCatalog() {
     `;
   }
 
+  document.querySelector("#shop-filter-title").textContent = activeLanguage === "en" ? "Filter by" : "Filtern nach";
   const heading = document.querySelector("#shop-catalog-title");
   const kicker = document.querySelector(".shop-kicker");
   const description = document.querySelector("#shop-catalog-description");
@@ -732,8 +718,8 @@ function renderShopCatalog() {
   if (serviceNote) {
     serviceNote.textContent =
       activeLanguage !== "en"
-        ? "Handgefertigte Ringe und Accessoires aus altem Besteck - Gratis Versand innerhalb der Schweiz"
-        : "Handmade rings and accessories from vintage silver cutlery - free shipping within Switzerland";
+        ? "Handgefertigte Ringe und Accessoires aus altem Besteck"
+        : "Handmade rings and accessories from vintage silver cutlery";
   }
   if (newTitle) newTitle.textContent = activeLanguage !== "en" ? "Neu eingetroffen" : "New arrivals";
   if (sortLabel) sortLabel.textContent = activeLanguage !== "en" ? "Sortieren nach" : "Sort by";
@@ -748,7 +734,7 @@ function renderShopCatalog() {
   }
 
   const filtered = shopActiveCategories.length
-    ? shopProducts.filter((item) => shopActiveCategories.includes(item.category))
+    ? shopProducts.filter((item) => item.categories.some(category => shopActiveCategories.includes(category)))
     : shopProducts;
   const renderedProducts = sortedShopProducts(filtered);
   const newItems = shopProducts.filter((item) => item.isNewArrival).slice(0, 2);
@@ -779,14 +765,12 @@ function findPreviewItem(title, type) {
     type === "product"
       ? [...shopProducts, ...products, ...collectionProducts, ...giftProducts]
       : collections;
-  return source.find((item) => item.title === title);
+  return source.find((item) => (item.id || item.title) === title);
 }
 
 function openPreview(item, type) {
   if (!previewDialog) return;
-  const gallery = item.image
-    ? [item.image]
-    : [];
+  const gallery = item.gallery || (item.image ? [item.image] : []);
   let thumbs = previewDialog.querySelector(".preview-thumbs");
   if (!thumbs) {
     previewImage.insertAdjacentHTML(
@@ -810,11 +794,12 @@ function openPreview(item, type) {
   }
   const materialText =
     activeLanguage !== "en"
-      ? item.materialDe || "Versilbertes Vintage-Besteck"
-      : item.material || "Silver-plated Vintage Cutlery";
+      ? item.materialDe || ""
+      : item.material || "";
   materialEl.querySelector("h3").textContent =
     activeLanguage !== "en" ? "MATERIAL" : "MATERIAL";
   materialEl.querySelector("p").textContent = materialText;
+  materialEl.hidden = !materialText;
 
   // Dynamic Description Header
   let descLabel = previewDialog.querySelector(".preview-desc-label");
@@ -829,7 +814,7 @@ function openPreview(item, type) {
     activeLanguage !== "en" ? "BESCHREIBUNG" : "DESCRIPTION";
 
   const actions = previewDialog.querySelector(".preview-actions");
-  actions.innerHTML = `<a class="button" href="contact.html?product=${encodeURIComponent(productTitle(item))}">${copy[activeLanguage].ask}</a>`;
+  actions.innerHTML = `<a class="button" href="contact.html?product=${encodeURIComponent(productTitle(item))}&reference=${encodeURIComponent(item.source || "")}">${copy[activeLanguage].ask}</a>`;
 
   // Set image source and alt
   if (item.image) {
@@ -847,7 +832,7 @@ function openPreview(item, type) {
     .map(
       (image, index) =>
         `<button type="button" class="${index === 0 ? "active" : ""}" data-preview-image="${image}">
-          <img src="${asset(image)}" alt="${item.title} view ${index + 1}" />
+          <img src="${asset(image)}" alt="${escapeHtml(productTitle(item))} view ${index + 1}" />
         </button>`,
     )
     .join("");
@@ -855,13 +840,35 @@ function openPreview(item, type) {
   previewKicker.textContent =
     type === "product" ? (activeLanguage !== "en" ? "Handgemacht von Lari" : "Handmade by Lari") : copy[activeLanguage].collections;
   previewTitle.textContent = productTitle(item);
-  previewPrice.textContent = item.price || "";
+  previewPrice.innerHTML = item.price ? productPrice(item) : "";
   previewPrice.hidden = !item.price;
-  previewDescription.textContent =
-    (activeLanguage !== "en"
-      ? item.descriptionDe || copy.de.productDescriptions[products.findIndex((product) => product.title === item.title)]
-      : item.description) ||
-    (activeLanguage !== "en" ? "Handgefertigtes silberfarbenes Schmuckstück von Rings made by Lari." : "Handmade silver-toned piece from Rings made by Lari.");
+  previewDescription.textContent = (activeLanguage !== "en" ? item.descriptionDe : item.description) || "";
+  previewDescription.hidden = descLabel.hidden = !previewDescription.textContent;
+  previewDialog.querySelector(".preview-options")?.remove();
+  if (item.optionGroups?.length) {
+    const options = document.createElement("div");
+    options.className = "preview-options";
+    item.optionGroups.forEach(group => {
+      const heading = document.createElement("h3");
+      heading.textContent = group.title;
+      const choices = document.createElement("p");
+      choices.textContent = group.choices.join(" · ");
+      options.append(heading, choices);
+    });
+    if (item.variants.length) {
+      const details = document.createElement("details");
+      const summary = document.createElement("summary");
+      summary.textContent = activeLanguage === "en" ? "Variants & prices" : "Ausführungen & Preise";
+      details.append(summary);
+      item.variants.forEach(variant => {
+        const row = document.createElement("p");
+        row.textContent = `${variant.label} — CHF ${variant.price.toFixed(2)}${variant.available ? "" : activeLanguage === "en" ? " (Sold out)" : " (Ausverkauft)"}`;
+        details.append(row);
+      });
+      options.append(details);
+    }
+    previewDescription.after(options);
+  }
 
   previewDialog.showModal();
   body.classList.add("sheet-open");
@@ -1070,10 +1077,7 @@ function renderCards() {
     productsGrid.innerHTML = selectedBestsellers.map(shopProductCard).join("");
   }
   if (collectionProductsGrid) {
-    const source =
-      pageName() === "collection-gift-cards.html"
-        ? giftProducts
-        : collectionProducts;
+    const source = collectionItems(pageName());
     collectionProductsGrid.innerHTML = source.map(productCard).join("");
   }
   renderShopCatalog();
@@ -1253,10 +1257,10 @@ if (nav) {
 }
 
 function handleProductGridClick(event) {
-  const previewButton = event.target.closest("[data-preview-title]");
+  const previewButton = event.target.closest("[data-preview-id]");
   if (previewButton) {
     const item = findPreviewItem(
-      previewButton.dataset.previewTitle,
+      previewButton.dataset.previewId,
       previewButton.dataset.previewType,
     );
     if (item) openPreview(item, previewButton.dataset.previewType);
@@ -1268,7 +1272,7 @@ function handleProductGridClick(event) {
   button.classList.toggle("saved");
   button.innerHTML = button.classList.contains("saved") ? "&#9829;" : "&#9825;";
   showNotice(
-    `${button.dataset.save} ${
+    `${productTitle(findPreviewItem(button.dataset.save, "product"))} ${
       button.classList.contains("saved")
         ? copy[activeLanguage].productSaved
         : copy[activeLanguage].productRemoved
@@ -1319,10 +1323,10 @@ if (shopSortSelect) {
 
 if (collectionsGrid) {
   collectionsGrid.addEventListener("click", (event) => {
-    const previewButton = event.target.closest("[data-preview-title]");
+    const previewButton = event.target.closest("[data-preview-id]");
     if (!previewButton) return;
     const item = findPreviewItem(
-      previewButton.dataset.previewTitle,
+      previewButton.dataset.previewId,
       previewButton.dataset.previewType,
     );
     if (item) openPreview(item, previewButton.dataset.previewType);
@@ -1519,7 +1523,8 @@ document.querySelectorAll(".customer-story").forEach((link) => {
 const contactForm = document.querySelector("#contact-form");
 if (contactForm) {
   const selectedProduct = new URLSearchParams(window.location.search).get("product");
-  if (selectedProduct) contactForm.elements.message.value = activeLanguage === "fr" ? translateFrench(selectedProduct) : selectedProduct;
+  const reference = new URLSearchParams(window.location.search).get("reference");
+  if (selectedProduct) contactForm.elements.message.value = (activeLanguage === "fr" ? translateFrench(selectedProduct) : selectedProduct) + (reference?.startsWith("https://ringsmadebylari.wixsite.com/dein-onlineshop-f/product-page/") ? "\n" + reference : "");
   contactForm.addEventListener("submit", (event) => {
     event.preventDefault();
     const data = new FormData(contactForm);

@@ -22,6 +22,12 @@ The standalone contact page follows the reference enquiry flow. Submitting valid
 
 Run `python tests/check_landing.py` `node tests/check_contact.cjs`, and `node --check js/app.js`. Do not run Flutter analysis.
 
+## Original product catalog
+
+The 71 products in `js/products.js` were imported from the original Wix product pages on 6 October 2026. `docs/catalog-links.json` records their URLs; `docs/reference-products.json` preserves the original product data, descriptions, categories, options, prices and availability. These are a static snapshot, not a live stock feed.
+
+Run `python scripts/import_catalog.py` to resume an incomplete download, `python scripts/build_catalog.py` to rebuild the catalog, and `python scripts/download_product_images.py` to fetch missing photos. The importer reuses completed records; remove the specific saved record to refresh a changed product. French product translations are in `js/catalog-fr.js`. Validate with `node tests/check_catalog.cjs` and `python tests/check_french.py`.
+
 `docs/reference-images.json` maps the 100 image references from the Wix home page to local assets (40 reused, 60 imported). The hero uses a CSS crop to exclude the photograph's lower logo; the original image remains intact in the gallery.
 
 German is the initial language, including static HTML, navigation, footer and product details. Visitors can explicitly choose English in settings. The updated language preference uses `lari-language-v2` so older preview sessions do not force an English first visit.

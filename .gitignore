@@ -5,3 +5,4 @@
 build/
 old-*.html
 old-*.txt
+__pycache__/

@@ -300,8 +300,17 @@ const frenchCopy = {
 };
 
 function translateFrench(value) {
+  if (/ (gespeichert|entfernt)\.?$/.test(value)) return value.replace(/^(.*) (gespeichert|entfernt)(\.?)$/, (_, title, action, dot) => translateFrench(title) + (action === "gespeichert" ? " enregistré" : " retiré") + dot);
+  if (value.includes("\n")) return value.split("\n").map(translateFrench).join("\n");
+  if (value.includes(" · ")) return value.split(" · ").map(translateFrench).join(" · ");
+  if (value.includes(" / ") && / — CHF /.test(value)) return value.split(" / ").map(translateFrench).join(" / ");
+  if (/ — CHF /.test(value)) {
+    const [label, price] = value.split(" — CHF ");
+    return translateFrench(label) + " — CHF " + price.replace("Ausverkauft", "Épuisé");
+  }
+  if (/ view \d+$/.test(value)) return value.replace(/^(.*) view (\d+)$/, (_, title, n) => translateFrench(title) + ", vue " + n);
   const key = value.trim().replace(/\s+/g, " ");
-  let translated = frenchCopy[key];
+  let translated = frenchCopy[key] || (typeof translateCatalogFrench === "function" && translateCatalogFrench(key));
   if (!translated) {
     if (key.endsWith(" | Rings made by Lari")) translated = `${translateFrench(key.slice(0, -" | Rings made by Lari".length))} | Rings made by Lari`;
     else if (/^Ring \d+/.test(key)) translated = key.replace(/^Ring /, "Bague ").replace("schmal & breit", "fine et large").replace("mittel & breit", "moyenne et large").replace(/ view (\d+)$/, ", vue $1").replace(/ gespeichert$/, " enregistré").replace(/ entfernt$/, " retiré");

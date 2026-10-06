@@ -70,7 +70,7 @@ print("OK: legal copy matches the recorded cleanup.")
 # The removed collections stay out of navigation; former size-selectable rings remain in the catalog.
 catalog = json.loads(subprocess.check_output([
     "node", "-e", "function pageName() { return 'index.html'; }\n" +
-    script[:script.index("const benefits =")] +
+    "require('vm').runInThisContext(require('fs').readFileSync('js/products.js','utf8'));" + script[:script.index("const benefits =")] +
     "console.log(JSON.stringify({collections, shopCategoryOptions, shopProducts, collectionProducts}));"
 ], encoding="utf-8"))
 assert not any(item["href"] in ["collection-ring-size-measurer.html", "collection-gift-cards.html", "collection-rings-size.html"] for item in catalog["collections"])
@@ -86,5 +86,5 @@ assert "jewelry-" not in script
 for page in web.glob("*.html"):
     text = page.read_text(encoding="utf-8")
     assert not re.search(r"Login placeholder|Platzhalter|Kategorie:|\[Bitte |\[Name und", text), page
-assert len(catalog["shopProducts"]) == len(catalog["collectionProducts"])
+assert len(catalog["shopProducts"]) == 71
 print("OK: demo catalog and visible template placeholders removed.")
