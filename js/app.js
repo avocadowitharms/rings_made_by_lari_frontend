@@ -473,6 +473,21 @@ const heroImages = ["old-site/e5a4ea_fefc2c59b94b41b798538316f51f7e24~mv2.jpg"];
 
 const copy = {
   en: {
+    story1: "In their new home",
+    story2: "A creative companion",
+    story3: "A personal commission",
+    story4: "Working from home",
+    story5: "By the sea",
+    story6: "Your favourite ring",
+    story7: "10 out of 10 – your feedback",
+
+    proofKicker: "FROM OUR COMMUNITY",
+    proofTitle: "Worn by you. Loved by you.",
+    proofText: "Your photos, reposts and feedback make these pieces even more special. I collect your moments in the Instagram highlight “KUNDEN”.",
+    proofCta: "See feedback on Instagram",
+    proofOpen: "Open highlight ↗",
+
+    mobileContact: "Contact form",
     instagramCta: "Follow me on Instagram",
     emailCta: "Send an email",
     phoneCta: "Call now",
@@ -559,6 +574,21 @@ const copy = {
     productRemoved: "removed",
   },
   de: {
+    story1: "Im neuen Zuhause",
+    story2: "Beim Kreativtag",
+    story3: "Ein persönlicher Spezialauftrag",
+    story4: "Im Homeoffice",
+    story5: "Begleiter am Meer",
+    story6: "Euer Lieblingsring",
+    story7: "10 von 10 – euer Feedback",
+
+    proofKicker: "AUS EURER COMMUNITY",
+    proofTitle: "Von euch getragen. Von euch geliebt.",
+    proofText: "Eure Bilder, Reposts und Rückmeldungen machen meine Schmuckstücke noch besonderer. Im Instagram-Highlight «KUNDEN» sammle ich eure Momente.",
+    proofCta: "Feedback auf Instagram ansehen",
+    proofOpen: "Highlight öffnen ↗",
+
+    mobileContact: "Kontaktformular",
     instagramCta: "Folge mir auf Instagram",
     emailCta: "E-Mail schreiben",
     phoneCta: "Jetzt anrufen",
@@ -1729,8 +1759,38 @@ function injectSectionDividers() {
   addDividerAfter(document.querySelector("#bestsellers"));
 }
 
+document.body.insertAdjacentHTML("beforeend", `
+  <nav class="mobile-contact-nav" aria-label="Kontakt-Schnellzugriff">
+    <a href="mailto:rings_made_by_lari@hotmail.com">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+      <span>Mail</span>
+    </a>
+    <a href="https://www.instagram.com/rings_made_by_lari" target="_blank" rel="noopener noreferrer">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor" stroke="none"/></svg>
+      <span>Insta</span>
+    </a>
+    <a href="${pageName() === "contact.html" ? "#contact-form" : "contact.html#contact-form"}" class="mobile-contact-primary">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 11.5a8.5 8.5 0 0 1-8.5 8.5H4l-2 2V11.5a9.5 9.5 0 0 1 19 0Z"/><path d="M7 9h10M7 13h7"/></svg>
+      <span data-copy="mobileContact">Kontaktformular</span>
+    </a>
+  </nav>
+`);
+
 setTheme(activeTheme);
 setLanguage(activeLanguage);
+
+// Native dialog provides keyboard dismissal, focus trapping and focus return.
+const proofDialog = document.querySelector("#proof-dialog");
+document.querySelectorAll(".customer-story").forEach((link) => {
+  link.addEventListener("click", (event) => {
+    if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+    event.preventDefault();
+    const image = proofDialog.querySelector("img");
+    image.src = link.href;
+    image.alt = link.querySelector("img").alt;
+    proofDialog.showModal();
+  });
+});
 
 const contactForm = document.querySelector("#contact-form");
 if (contactForm) {
