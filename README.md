@@ -1,46 +1,27 @@
-# Rings made by Lari Frontend
+# Rings made by Lari
 
-Static Flutter web shell for the Rings made by Lari webshop redesign. The visible site is implemented with HTML, CSS, and JavaScript under `web/`.
+Static German-first landing page, product catalog and gallery. The complete site lives in the repository root: `index.html`, `contact.html`, the other HTML pages, `css/`, `js/` and `assets/`. No build step or Flutter runtime is required.
 
-## Project Structure
+## Preview
 
-```text
-.
-├── docs/
-│   └── design-system.md
-├── lib/
-│   └── main.dart
-├── web/
-│   ├── assets/
-│   │   └── old-site/
-│   ├── css/
-│   │   └── styles.css
-│   ├── js/
-│   │   └── app.js
-│   ├── index.html
-│   ├── shop.html
-│   └── collection-*.html
-├── pubspec.yaml
-└── pubspec.lock
-```
+Run `python -m http.server 8080` from the repository root, then open http://localhost:8080/. The VS Code launch configuration serves the same directory.
 
-## Notes
+## GitHub Pages
 
-- `web/css/styles.css` contains the shared design system and page styling.
-- `web/js/app.js` contains theme switching, language switching, generated product cards, galleries, and product preview behavior.
-- `web/assets/old-site/` contains imported media from the old site.
-- Root-level scrape files such as `old-*.html` and `old-*.txt` are temporary import artifacts and should not be committed.
+Commit and push the site files, including `assets/` and `.nojekyll`. In the repository's **Settings → Pages**, select **Deploy from a branch**, choose your published branch and **/(root)**, then save. All internal links and asset URLs are relative, so the site also works at a repository URL such as `https://username.github.io/repository/`.
 
-## Start in Browser
+The repository is prepared for hosting; no publishing or account setting changes have been made.
 
-In VS Code, run the `Start app in browser` launch configuration. It starts a local static server for the `web/` folder and opens:
+[GitHub Pages publishing instructions](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site).
 
-```text
-http://localhost:8080/index.html
-```
+## Contact form
 
-You can also start the server manually:
+The standalone contact page follows the reference enquiry flow. Submitting valid fields opens a prepared email in the visitor's mail app; the visitor must send it there. Direct email and telephone links are also available. GitHub Pages does not provide a form backend. To deliver submissions directly from the website, connect a form service or backend before changing this behavior.
 
-```powershell
-python -m http.server 8080 --directory web
-```
+## Checks
+
+Run `python tests/check_landing.py` `node tests/check_contact.cjs`, and `node --check js/app.js`. Do not run Flutter analysis.
+
+`docs/reference-images.json` maps the 100 image references from the Wix home page to local assets (40 reused, 60 imported). The hero uses a CSS crop to exclude the photograph's lower logo; the original image remains intact in the gallery.
+
+German is the initial language, including static HTML, navigation, footer and product details. Visitors can explicitly choose English in settings. The updated language preference uses `lari-language-v2` so older preview sessions do not force an English first visit.

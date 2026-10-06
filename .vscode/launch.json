@@ -6,7 +6,7 @@
             "request": "launch",
             "name": "Start app in browser",
             "url": "http://localhost:8080/index.html",
-            "webRoot": "${workspaceFolder}/web",
+            "webRoot": "${workspaceFolder}",
             "preLaunchTask": "Serve web app"
         }
     ]

@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="Cache-Control" content="no-store" />
+    <title>Produkte | Rings made by Lari</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/styles.css?v=landing-41" />
+  </head>
+  <body class="shop-page" data-theme="light">
+    <aside class="social-banner" aria-label="Folge Lari"><span data-copy="socialFollow">Folge mir auf</span> <a href="https://www.instagram.com/rings_made_by_lari" target="_blank" rel="noopener noreferrer">Instagram</a><span aria-hidden="true">&amp;</span><a href="https://www.facebook.com/rings_made_by_lari" target="_blank" rel="noopener noreferrer">Facebook</a></aside>
+    <header class="site-header">
+      <a class="brand" href="index.html"><span>Rings</span><small>made by Lari</small></a>
+      <button class="menu-toggle" type="button" aria-label="Navigation öffnen" aria-expanded="false" data-icon="menu"></button>
+      <nav class="nav" aria-label="Hauptnavigation"><a href="index.html">Start</a><a href="contact.html">Kontakt</a><a href="shop.html">Produkte</a><a href="about.html">Über mich</a><a href="gallery.html">Galerie</a></nav>
+      <div class="header-tools" aria-label="Anzeigeeinstellungen">
+        <div class="theme-switcher" role="group" aria-label="Darstellung">
+          <button class="active" type="button" data-theme-choice="light">Hell</button>
+          <button type="button" data-theme-choice="dark">Dunkel</button>
+        </div>
+
+
+
+      </div>
+    </header>
+
+    <main class="shop-main">
+      <p class="shop-service-note">Handgemachte Ringe und Accessoires aus altem Silberbesteck – kostenloser Versand innerhalb der Schweiz</p>
+      <nav class="shop-breadcrumb" aria-label="Seitenpfad">
+        <a href="index.html">Start</a>
+        <span aria-hidden="true">/</span>
+        <span>Alle Produkte</span>
+      </nav>
+
+      <section class="shop-catalog" aria-labelledby="shop-catalog-title">
+        <aside class="shop-filter-panel" aria-labelledby="shop-filter-title">
+          <h2 id="shop-filter-title">Filtern nach</h2>
+          <form class="shop-filter-form" id="shop-filter-form"></form>
+        </aside>
+
+        <div class="shop-catalog-content">
+          <header class="shop-catalog-head">
+            <div>
+              <p class="shop-kicker">Alle Produkte</p>
+              <h1 id="shop-catalog-title">Alle Produkte</h1>
+              <p id="shop-catalog-description">Entdecke Ringe, Besteckstücke, Halsketten, Geschenke und Accessoires, handgemacht von Lari.</p>
+            </div>
+            <label class="shop-sort">
+              <span>Sortieren nach</span>
+              <select id="shop-sort-select" aria-label="Produkte sortieren">
+                <option value="featured">Empfohlen</option>
+                <option value="new">Neueste</option>
+                <option value="price-low">Preis aufsteigend</option>
+                <option value="price-high">Preis absteigend</option>
+              </select>
+            </label>
+          </header>
+
+          <section class="shop-new-items" id="shop-new-items" aria-labelledby="shop-new-items-title" hidden>
+            <div class="shop-row-head">
+              <h2 id="shop-new-items-title">Neu eingetroffen</h2>
+              <span id="shop-new-items-count"></span>
+            </div>
+            <div class="shop-gallery-row" id="shop-new-items-row"></div>
+          </section>
+
+          <div class="shop-results-meta">
+            <span id="shop-product-count">0 Produkte</span>
+          </div>
+          <div class="shop-product-grid" id="shop-product-grid"></div>
+        </div>
+      </section>
+
+      <footer class="footer" id="contact">
+        <div class="benefits" id="benefits"></div>
+        <div class="footer-info">
+          <address>
+            <strong>Kontakt</strong>
+            <span>Larissa Engeli</span>
+            <span>Berggasse 14, 3283 Kallnach, Schweiz</span>
+            <a href="tel:+41795630129">079 563 01 29</a>
+            <a href="mailto:rings_made_by_lari@hotmail.com">rings_made_by_lari@hotmail.com</a>
+            <span>Instagram: rings_made_by_lari</span>
+          </address>
+          <div class="legal-links" aria-label="Rechtliche Informationen">
+            <a href="privacy.html">Datenschutz</a>
+            <a href="terms.html">Geschäftsbedingungen</a>
+            <a href="imprint.html">Impressum</a>
+          </div>
+
+        </div>
+      </footer>
+    </main>
+
+    <dialog class="preview-dialog" id="preview-dialog" aria-labelledby="preview-title">
+      <div class="preview-card">
+        <button class="preview-close" type="button" aria-label="Detailansicht schliessen">&times;</button>
+        <img id="preview-image" alt="" />
+        <div class="preview-copy">
+          <p class="preview-kicker" id="preview-kicker"></p>
+          <h2 id="preview-title"></h2>
+          <p class="preview-price" id="preview-price"></p>
+          <p class="preview-description" id="preview-description"></p>
+          <div class="preview-actions"></div>
+        </div>
+      </div>
+    </dialog>
+    <div class="notice" role="status" aria-live="polite" hidden></div>
+    <script src="js/app.js?v=landing-41"></script>
+  </body>
+</html>
+
+
