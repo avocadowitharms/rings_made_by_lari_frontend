@@ -66,3 +66,16 @@ for source in json.loads((root / "docs/legal-sources.json").read_text(encoding="
 assert "replace this placeholder" not in script
 assert "vollständig rechtlich geprüfte" not in script
 print("OK: complete reference legal text retained.")
+
+# The removed collections stay out of navigation; former size-selectable rings remain in the catalog.
+catalog = json.loads(subprocess.check_output([
+    "node", "-e", "function pageName() { return 'index.html'; }\n" +
+    script[:script.index("const benefits =")] +
+    "console.log(JSON.stringify({collections, shopCategoryOptions, shopProducts, collectionProducts}));"
+], encoding="utf-8"))
+assert not any(item["href"] in ["collection-ring-size-measurer.html", "collection-gift-cards.html", "collection-rings-size.html"] for item in catalog["collections"])
+assert any(item["titleDe"] == "Ringe" for item in catalog["collections"])
+assert not any(item["id"] in ["rings-size", "ready-rings", "ring-measurer"] for item in catalog["shopCategoryOptions"])
+for ring in catalog["collectionProducts"]:
+    assert any(item["title"] == ring["title"] and item["category"] == "rings" for item in catalog["shopProducts"])
+print("OK: removed collections and merged ring products.")

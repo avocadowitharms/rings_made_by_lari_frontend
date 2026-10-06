@@ -1,21 +1,9 @@
 const collections = [
   [
-    "Rings size selectable",
-    "Ringe grösse Frei wählbar",
-    "collection-rings-size.html",
-    "old-001.jpg",
-  ],
-  [
-    "Ready-made rings",
-    "Ringe vorgefertigt",
+    "Rings",
+    "Ringe",
     "collection-ready-rings.html",
     "old-002.jpg",
-  ],
-  [
-    "Ring size measurer",
-    "Ringgrössenmesser",
-    "collection-ring-size-measurer.html",
-    "measure",
   ],
   ["Bracelets", "Armketten", "collection-bracelets.html", "old-003.jpg"],
   ["Necklaces", "Halsketten", "collection-necklaces.html", "old-004.jpg"],
@@ -34,7 +22,6 @@ const collections = [
     "collection-keychains.html",
     "old-008.webp",
   ],
-  ["Gift cards", "Geschenkkarten", "collection-gift-cards.html", "gift"],
   [
     "Statement rings",
     "Statement-Ringe",
@@ -385,15 +372,13 @@ const shopCategoryOptions = [
   ["narrow-rings", "Narrow rings", "Schmale Ringe"],
   ["medium-rings", "Medium rings", "Mittlere Ringe"],
   ["wide-rings", "Wide rings", "Breite Ringe"],
-  ["rings-size", "Rings, size selectable", "Ringe, Größe frei wählbar"],
+  ["rings", "Rings", "Ringe"],
   ["bracelets", "Bracelets", "Armketten"],
   ["cutlery", "Cutlery", "Besteck"],
   ["brooches", "Brooches", "Broschen"],
   ["gifts", "Gifts", "Geschenke"],
   ["lucky-charms", "Lucky charms", "Glücksbringer"],
   ["necklaces", "Necklaces", "Halsketten"],
-  ["ready-rings", "Ready-made rings", "Ringe vorgefertigt"],
-  ["ring-measurer", "Ring size measurer", "Ringgrößenmesser"],
 ].map(([id, label, labelDe]) => ({ id, label, labelDe }));
 
 const shopProductCategories = [
@@ -401,8 +386,8 @@ const shopProductCategories = [
   "medium-rings",
   "wide-rings",
   "medium-rings",
-  "rings-size",
-  "ready-rings",
+  "rings",
+  "rings",
   "wide-rings",
   "narrow-rings",
   "brooches",
@@ -414,12 +399,14 @@ const shopProductCategories = [
 
 const shopProducts = products.map((product, index) => ({
   ...product,
-  category: shopProductCategories[index] || "ready-rings",
+  category: shopProductCategories[index] || "rings",
   isNewArrival: index === 0 || index === 4,
 }));
 
+shopProducts.push(...collectionProducts.map((product) => ({ ...product, category: "rings", isNewArrival: false })));
+
 const detailPageCollection = collections.find(
-  (collection) => pageName() === collection.href,
+  (collection) => (pageName() === "collection-rings-size.html" ? "collection-ready-rings.html" : pageName()) === collection.href,
 );
 
 const benefits = [
