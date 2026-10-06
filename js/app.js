@@ -287,8 +287,8 @@ const previewDescription = document.querySelector("#preview-description");
 const previewClose = document.querySelector(".preview-close");
 const oldGallery = document.querySelector("#old-gallery");
 
-let activeTheme = localStorage.getItem("lari-theme") || "light";
-let activeLanguage = localStorage.getItem("lari-language-v2") === "en" ? "en" : "de";
+let activeTheme = localStorage.getItem("lari-theme") === "dark" ? "dark" : "light";
+let activeLanguage = ["de", "en", "fr"].includes(localStorage.getItem("lari-language-v2")) ? localStorage.getItem("lari-language-v2") : "de";
 let noticeTimer;
 let heroIndex = 0;
 let heroTimer;
@@ -505,6 +505,8 @@ const copy = {
   },
 };
 
+copy.fr = copy.de;
+
 function asset(fileName) {
   return `assets/${fileName}`;
 }
@@ -592,7 +594,7 @@ function closePreview() {
 }
 
 function collectionCard(item) {
-  const title = activeLanguage === "de" ? item.titleDe : item.title;
+  const title = activeLanguage !== "en" ? item.titleDe : item.title;
   const media = item.icon
     ? `<span class="collection-icon" aria-hidden="true">${icons[item.icon]}</span>`
     : `<img src="${asset(item.image)}" alt="${productTitle(item)}" />`;
@@ -608,7 +610,7 @@ function collectionCard(item) {
 }
 
 function productTitle(item) {
-  if (activeLanguage !== "de") return item.title;
+  if (activeLanguage === "en") return item.title;
   return item.titleDe || ["Gedrehter Ring", "Mondsteinring", "Ring mit Punktmuster", "Organischer Siegelring", "Löffelring mit Blumenmuster", "Klassischer Silberring", "Breiter Löffelring", "Schlichter Bandring", "Vintage-Siegelring", "Gravierter Löffelring", "Breiter Blumenring", "Klassischer Löffelring", "Verzierter Silberring"][products.findIndex((product) => product.title === item.title)] || item.title;
 }
 
@@ -617,17 +619,17 @@ function productCard(item) {
     ? `<img src="${asset(item.image)}" alt="${productTitle(item)}" />`
     : `<span class="collection-icon product-icon" aria-hidden="true">${icons.gift}</span>`;
 
-  const tagText = item.tag ? (activeLanguage === "de" ? item.tagDe : item.tag) : "";
+  const tagText = item.tag ? (activeLanguage !== "en" ? item.tagDe : item.tag) : "";
   const tagBadge = tagText
     ? `<span class="product-card-tag">${tagText}</span>`
     : "";
 
-  const materialText = item.material ? (activeLanguage === "de" ? item.materialDe : item.material) : "";
+  const materialText = item.material ? (activeLanguage !== "en" ? item.materialDe : item.material) : "";
   const materialHtml = materialText ? `<span class="product-card-material">${materialText}</span>` : "";
 
   return `
     <article class="product-card">
-      <button class="product-preview" type="button" data-preview-type="product" data-preview-title="${item.title}" aria-label="${activeLanguage === "de" ? "Details zu" : "Preview"} ${productTitle(item)}">
+      <button class="product-preview" type="button" data-preview-type="product" data-preview-title="${item.title}" aria-label="${activeLanguage !== "en" ? "Details zu" : "Preview"} ${productTitle(item)}">
         ${tagBadge}
         ${media}
       </button>
@@ -637,7 +639,7 @@ function productCard(item) {
           ${materialHtml}
           <p class="product-card-price">${item.price}</p>
         </div>
-        <button type="button" aria-label="${activeLanguage === "de" ? "Merken:" : "Save"} ${productTitle(item)}" data-save="${item.title}">&#9825;</button>
+        <button type="button" aria-label="${activeLanguage !== "en" ? "Merken:" : "Save"} ${productTitle(item)}" data-save="${item.title}">&#9825;</button>
       </div>
     </article>
   `;
@@ -649,11 +651,11 @@ function priceNumber(item) {
 }
 
 function shopLabel(option) {
-  return activeLanguage === "de" ? option.labelDe : option.label;
+  return activeLanguage !== "en" ? option.labelDe : option.label;
 }
 
 function shopProductCard(item) {
-  const tagText = item.tag ? (activeLanguage === "de" ? item.tagDe : item.tag) : "";
+  const tagText = item.tag ? (activeLanguage !== "en" ? item.tagDe : item.tag) : "";
   const tagBadge = tagText
     ? `<span class="product-card-tag">${tagText}</span>`
     : "";
@@ -662,7 +664,7 @@ function shopProductCard(item) {
 
   return `
     <article class="shop-product-card">
-      <button class="shop-product-preview" type="button" data-preview-type="product" data-preview-title="${item.title}" aria-label="${activeLanguage === "de" ? "Details zu" : "Preview"} ${productTitle(item)}">
+      <button class="shop-product-preview" type="button" data-preview-type="product" data-preview-title="${item.title}" aria-label="${activeLanguage !== "en" ? "Details zu" : "Preview"} ${productTitle(item)}">
         ${tagBadge}
         <img src="${asset(item.image)}" alt="${productTitle(item)}" loading="lazy" />
       </button>
@@ -670,7 +672,7 @@ function shopProductCard(item) {
         <p>${categoryText}</p>
         <h3>${productTitle(item)}</h3>
         <span>${item.price}</span>
-        <button type="button" data-preview-type="product" data-preview-title="${item.title}">${activeLanguage === "de" ? "Details ansehen" : "View details"}</button>
+        <button type="button" data-preview-type="product" data-preview-title="${item.title}">${activeLanguage !== "en" ? "Details ansehen" : "View details"}</button>
       </div>
     </article>
   `;
@@ -696,7 +698,7 @@ function renderShopCatalog() {
   if (shopFilterForm) {
     shopFilterForm.innerHTML = `
       <fieldset>
-        <legend>${activeLanguage === "de" ? "Produktart" : "Product type"}</legend>
+        <legend>${activeLanguage !== "en" ? "Produktart" : "Product type"}</legend>
         ${shopCategoryOptions
           .map(
             (option) => `
@@ -719,25 +721,25 @@ function renderShopCatalog() {
   const sortLabel = document.querySelector(".shop-sort span");
   const sortOptions = shopSortSelect?.querySelectorAll("option");
 
-  if (heading) heading.textContent = activeLanguage === "de" ? "Alle Produkte" : "All products";
-  if (kicker) kicker.textContent = activeLanguage === "de" ? "Produkte" : "Products";
+  if (heading) heading.textContent = activeLanguage !== "en" ? "Alle Produkte" : "All products";
+  if (kicker) kicker.textContent = activeLanguage !== "en" ? "Produkte" : "Products";
   if (description) {
     description.textContent =
-      activeLanguage === "de"
+      activeLanguage !== "en"
         ? "Entdecke Ringe, Besteckstücke, Halsketten, Geschenke und Accessoires, handgefertigt von Lari."
         : "Browse rings, cutlery pieces, necklaces, gifts, and accessories handmade by Lari.";
   }
   if (serviceNote) {
     serviceNote.textContent =
-      activeLanguage === "de"
+      activeLanguage !== "en"
         ? "Handgefertigte Ringe und Accessoires aus altem Besteck - Gratis Versand innerhalb der Schweiz"
         : "Handmade rings and accessories from vintage silver cutlery - free shipping within Switzerland";
   }
-  if (newTitle) newTitle.textContent = activeLanguage === "de" ? "Neu eingetroffen" : "New arrivals";
-  if (sortLabel) sortLabel.textContent = activeLanguage === "de" ? "Sortieren nach" : "Sort by";
+  if (newTitle) newTitle.textContent = activeLanguage !== "en" ? "Neu eingetroffen" : "New arrivals";
+  if (sortLabel) sortLabel.textContent = activeLanguage !== "en" ? "Sortieren nach" : "Sort by";
   if (sortOptions?.length) {
     const labels =
-      activeLanguage === "de"
+      activeLanguage !== "en"
         ? ["Empfohlen", "Neueste", "Preis aufsteigend", "Preis absteigend"]
         : ["Featured", "Newest", "Price low to high", "Price high to low"];
     sortOptions.forEach((option, index) => {
@@ -760,13 +762,13 @@ function renderShopCatalog() {
   if (shopNewItemsCount) {
     shopNewItemsCount.textContent =
       newItems.length === 1
-        ? activeLanguage === "de"
+        ? activeLanguage !== "en"
           ? "1 Produkt"
           : "1 product"
-        : `${newItems.length} ${activeLanguage === "de" ? "Produkte" : "products"}`;
+        : `${newItems.length} ${activeLanguage !== "en" ? "Produkte" : "products"}`;
   }
   if (shopProductCount) {
-    const countText = activeLanguage === "de" ? "Produkte" : "products";
+    const countText = activeLanguage !== "en" ? "Produkte" : "products";
     shopProductCount.textContent = `${renderedProducts.length} ${countText}`;
   }
   shopProductGrid.innerHTML = renderedProducts.map(shopProductCard).join("");
@@ -807,11 +809,11 @@ function openPreview(item, type) {
     materialEl = previewDialog.querySelector(".preview-material");
   }
   const materialText =
-    activeLanguage === "de"
+    activeLanguage !== "en"
       ? item.materialDe || "Versilbertes Vintage-Besteck"
       : item.material || "Silver-plated Vintage Cutlery";
   materialEl.querySelector("h3").textContent =
-    activeLanguage === "de" ? "MATERIAL" : "MATERIAL";
+    activeLanguage !== "en" ? "MATERIAL" : "MATERIAL";
   materialEl.querySelector("p").textContent = materialText;
 
   // Dynamic Description Header
@@ -824,7 +826,7 @@ function openPreview(item, type) {
     descLabel = previewDialog.querySelector(".preview-desc-label");
   }
   descLabel.textContent =
-    activeLanguage === "de" ? "BESCHREIBUNG" : "DESCRIPTION";
+    activeLanguage !== "en" ? "BESCHREIBUNG" : "DESCRIPTION";
 
   const actions = previewDialog.querySelector(".preview-actions");
   actions.innerHTML = `<a class="button" href="contact.html?product=${encodeURIComponent(productTitle(item))}">${copy[activeLanguage].ask}</a>`;
@@ -851,15 +853,15 @@ function openPreview(item, type) {
     .join("");
 
   previewKicker.textContent =
-    type === "product" ? (activeLanguage === "de" ? "Handgemacht von Lari" : "Handmade by Lari") : copy[activeLanguage].collections;
+    type === "product" ? (activeLanguage !== "en" ? "Handgemacht von Lari" : "Handmade by Lari") : copy[activeLanguage].collections;
   previewTitle.textContent = productTitle(item);
   previewPrice.textContent = item.price || "";
   previewPrice.hidden = !item.price;
   previewDescription.textContent =
-    (activeLanguage === "de"
+    (activeLanguage !== "en"
       ? item.descriptionDe || copy.de.productDescriptions[products.findIndex((product) => product.title === item.title)]
       : item.description) ||
-    (activeLanguage === "de" ? "Handgefertigtes silberfarbenes Schmuckstück von Rings made by Lari." : "Handmade silver-toned piece from Rings made by Lari.");
+    (activeLanguage !== "en" ? "Handgefertigtes silberfarbenes Schmuckstück von Rings made by Lari." : "Handmade silver-toned piece from Rings made by Lari.");
 
   previewDialog.showModal();
   body.classList.add("sheet-open");
@@ -876,21 +878,45 @@ function benefitItem([title, text]) {
 
 function categoryLink(title) {
   const collection = collections.find((item) => item.title === title);
-  const label = activeLanguage === "de" ? collection.titleDe : collection.title;
+  const label = activeLanguage !== "en" ? collection.titleDe : collection.title;
   return `<a href="${collection.href}">${label}</a>`;
 }
 
 function renderLanguageSwitcher() {
-  document.querySelectorAll(".header-tools").forEach((tools) => {
-    if (tools.querySelector(".language-switcher")) return;
-    tools.insertAdjacentHTML(
-      "afterbegin",
-      `<div class="language-switcher" role="group" aria-label="Sprache">
-        <button type="button" data-lang-choice="en">EN</button>
-        <button type="button" data-lang-choice="de">DE</button>
-      </div>`,
-    );
+  const tools = document.querySelector(".header-tools");
+  if (!tools) return;
+  tools.innerHTML = `
+    <details class="language-menu">
+      <summary aria-label="Sprache"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><path d="M3 12h18"/></svg><span class="language-current"></span><svg class="language-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="m7 10 5 5 5-5"/></svg></summary>
+      <div class="language-options" role="group" aria-label="Sprache">
+        <button type="button" data-lang-choice="de" lang="de"><span>Deutsch</span><small>DE</small></button>
+        <button type="button" data-lang-choice="fr" lang="fr"><span>Français</span><small>FR</small></button>
+        <button type="button" data-lang-choice="en" lang="en"><span>English</span><small>EN</small></button>
+      </div>
+    </details>
+    <button class="theme-toggle" type="button">
+      <svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg>
+      <svg class="moon-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 13.5A9 9 0 0 1 10.5 3 9 9 0 1 0 20.5 13.5Z"/></svg>
+    </button>`;
+  tools.querySelector(".theme-toggle").addEventListener("click", () => setTheme(activeTheme === "dark" ? "light" : "dark"));
+  tools.querySelector("details").addEventListener("toggle", event => {
+    if (event.target.open) closeMobileMenu();
   });
+}
+
+function updateHeaderControls() {
+  const current = document.querySelector(".language-current");
+  if (current) current.textContent = activeLanguage.toUpperCase();
+  const toggle = document.querySelector(".theme-toggle");
+  if (!toggle) return;
+  const labels = {de: ["Helles Design aktivieren", "Dunkles Design aktivieren"], fr: ["Activer le thème clair", "Activer le thème sombre"], en: ["Use light theme", "Use dark theme"]};
+  toggle.setAttribute("aria-label", labels[activeLanguage][activeTheme === "dark" ? 0 : 1]);
+  toggle.title = toggle.getAttribute("aria-label");
+}
+
+function closeMobileMenu() {
+  body.classList.remove("nav-open");
+  menuToggle?.setAttribute("aria-expanded", "false");
 }
 
 function renderOldGallery() {
@@ -900,9 +926,9 @@ function renderOldGallery() {
       const isVideo = /\.(mp4|webm|mov)$/i.test(file);
       const media = isVideo
         ? `<video src="${file}" muted playsinline></video>`
-        : `<img src="${file}" alt="${activeLanguage === "de" ? "Schmuckdetail" : "Jewelry detail"} ${index + 1}" loading="lazy" />`;
+        : `<img src="${file}" alt="${activeLanguage !== "en" ? "Schmuckdetail" : "Jewelry detail"} ${index + 1}" loading="lazy" />`;
       return `
-        <button class="gallery-item-btn" type="button" data-index="${index}" aria-label="${activeLanguage === "de" ? "Bild öffnen" : "Open view"} ${index + 1}">
+        <button class="gallery-item-btn" type="button" data-index="${index}" aria-label="${activeLanguage !== "en" ? "Bild öffnen" : "Open view"} ${index + 1}">
           ${media}
         </button>
       `;
@@ -917,7 +943,7 @@ function pageName() {
 }
 
 function setPageText(language) {
-  const t = copy[language];
+  const t = copy[language === "fr" ? "de" : language];
   document.documentElement.lang = language;
   document.querySelectorAll("[data-copy]").forEach((element) => { element.textContent = t[element.dataset.copy]; });
   document.querySelectorAll(".nav a").forEach((link, index) => {
@@ -994,15 +1020,15 @@ function setPageText(language) {
     const title = pageHero.querySelector("h1");
     const paragraph = pageHero.querySelector(".page-copy p");
     if (kicker)
-      kicker.textContent = language === "de" ? "Kollektion" : "Collection";
+      kicker.textContent = language !== "en" ? "Kollektion" : "Collection";
     if (title)
       title.textContent =
-        language === "de"
+        language !== "en"
           ? detailPageCollection.titleDe
           : detailPageCollection.title;
     if (paragraph) {
       paragraph.textContent =
-        language === "de"
+        language !== "en"
           ? detailPageCollection.descriptionDe
           : detailPageCollection.description;
     }
@@ -1064,11 +1090,11 @@ function setTheme(theme) {
     button.classList.toggle("active", isActive);
     button.setAttribute("aria-pressed", String(isActive));
   });
-  renderCards();
-  updateSettingsMenuState();
+  updateHeaderControls();
 }
 
 function setLanguage(language) {
+  restoreFrench();
   activeLanguage = language;
   localStorage.setItem("lari-language-v2", language);
   injectSectionDividers();
@@ -1076,16 +1102,16 @@ function setLanguage(language) {
   renderCards();
   updateBrandLogo();
   updateFavicon();
-  renderHeaderSettings();
-  updateSettingsMenuState();
   updateSectionDescriptions();
+  updateHeaderControls();
+  applyFrench();
 }
 
 function updateBrandLogo() {
   const brand = document.querySelector(".brand");
   if (brand) {
     brand.innerHTML = `<img src="assets/old-site/logo_scaled.webp" alt="Rings made by Lari" class="logo-image" />`;
-    brand.setAttribute("aria-label", activeLanguage === "de" ? "Rings made by Lari – Startseite" : "Rings made by Lari home");
+    brand.setAttribute("aria-label", activeLanguage !== "en" ? "Rings made by Lari – Startseite" : "Rings made by Lari home");
     brand.style.display = "flex";
     brand.style.alignItems = "center";
   }
@@ -1102,126 +1128,15 @@ function updateFavicon() {
   favicon.href = "assets/old-site/logo.webp";
 }
 
-function renderHeaderSettings() {
-  const tools = document.querySelector(".header-tools");
-  if (!tools) return;
-
-  // Insert settings toggle button if it doesn't exist
-  if (!tools.querySelector(".settings-toggle")) {
-    const settingsButtonHtml = `
-      <button class="settings-toggle" type="button" aria-label="Einstellungen" data-action="settings">
-        ${icons.settings}
-      </button>
-    `;
-    tools.insertAdjacentHTML("beforeend", settingsButtonHtml);
-
-    // Set up click listener for settings menu toggle
-    const toggle = tools.querySelector(".settings-toggle");
-    toggle.addEventListener("click", (e) => {
-      e.stopPropagation();
-      const menu = document.querySelector(".settings-menu");
-      if (menu) {
-        const isOpen = !menu.hidden;
-        menu.hidden = isOpen;
-        toggle.classList.toggle("active", !isOpen);
-      }
-    });
-  }
-
-  // Insert settings menu overlay if it doesn't exist
-  let settingsMenu = document.querySelector(".settings-menu");
-  if (!settingsMenu) {
-    document.body.insertAdjacentHTML(
-      "beforeend",
-      `<div class="settings-menu" id="settings-menu" hidden>
-        <div class="settings-section">
-          <h4 class="lang-title">Language</h4>
-          <div class="settings-buttons">
-            <button type="button" data-lang-set="en">EN</button>
-            <button type="button" data-lang-set="de">DE</button>
-          </div>
-        </div>
-        <div class="settings-section">
-          <h4 class="theme-title">Theme</h4>
-          <div class="settings-buttons">
-            <button type="button" data-theme-set="light">Light</button>
-            <button type="button" data-theme-set="dark">Dark</button>
-          </div>
-        </div>
-      </div>`,
-    );
-    settingsMenu = document.querySelector(".settings-menu");
-
-    // Close menu when clicking outside
-    document.addEventListener("click", (e) => {
-      const toggle = document.querySelector(".settings-toggle");
-      if (settingsMenu && !settingsMenu.hidden) {
-        if (
-          !settingsMenu.contains(e.target) &&
-          (!toggle || !toggle.contains(e.target))
-        ) {
-          settingsMenu.hidden = true;
-          toggle?.classList.remove("active");
-        }
-      }
-    });
-
-    // Menu settings interaction click listeners
-    settingsMenu.addEventListener("click", (e) => {
-      const langBtn = e.target.closest("[data-lang-set]");
-      if (langBtn) {
-        setLanguage(langBtn.dataset.langSet);
-      }
-      const themeBtn = e.target.closest("[data-theme-set]");
-      if (themeBtn) {
-        setTheme(themeBtn.dataset.themeSet);
-      }
-    });
-  }
-}
-
-function updateSettingsMenuState() {
-  const settingsMenu = document.querySelector(".settings-menu");
-  if (!settingsMenu) return;
-
-  // Set active language button style state
-  settingsMenu.querySelectorAll("[data-lang-set]").forEach((btn) => {
-    btn.classList.toggle("active", btn.dataset.langSet === activeLanguage);
-  });
-
-  // Set active theme button style state
-  settingsMenu.querySelectorAll("[data-theme-set]").forEach((btn) => {
-    btn.classList.toggle("active", btn.dataset.themeSet === activeTheme);
-  });
-
-  // Localize text variables inside settings menu
-  const langTitle = settingsMenu.querySelector(".lang-title");
-  if (langTitle) {
-    langTitle.textContent = activeLanguage === "de" ? "Sprache" : "Language";
-  }
-  const themeTitle = settingsMenu.querySelector(".theme-title");
-  if (themeTitle) {
-    themeTitle.textContent = activeLanguage === "de" ? "Modus" : "Theme";
-  }
-  const lightBtn = settingsMenu.querySelector('[data-theme-set="light"]');
-  if (lightBtn) {
-    lightBtn.textContent = activeLanguage === "de" ? "Hell" : "Light";
-  }
-  const darkBtn = settingsMenu.querySelector('[data-theme-set="dark"]');
-  if (darkBtn) {
-    darkBtn.textContent = activeLanguage === "de" ? "Dunkel" : "Dark";
-  }
-}
-
 function updateSectionDescriptions() {
   const newArrivalsHead = document.querySelector("#new-arrivals .section-head");
   if (newArrivalsHead) {
     newArrivalsHead.innerHTML = `
-      <h2 id="new-arrivals-title">${activeLanguage === "de" ? "Neu eingetroffen" : "New arrivals"}</h2>
+      <h2 id="new-arrivals-title">${activeLanguage !== "en" ? "Neu eingetroffen" : "New arrivals"}</h2>
       <span class="section-title-rule"></span>
-      <p class="section-description">${activeLanguage === "de" ? "Frisch eingetroffene Einzelstücke und neue handgeformte Silberringe." : "Fresh one-of-a-kind pieces and newly finished hand-shaped silver rings."}</p>
+      <p class="section-description">${activeLanguage !== "en" ? "Frisch eingetroffene Einzelstücke und neue handgeformte Silberringe." : "Fresh one-of-a-kind pieces and newly finished hand-shaped silver rings."}</p>
       <a href="#new-arrivals-grid" class="outline-button">
-        ${activeLanguage === "de" ? "NEUHEITEN ANSEHEN" : "VIEW NEW ARRIVALS"}
+        ${activeLanguage !== "en" ? "NEUHEITEN ANSEHEN" : "VIEW NEW ARRIVALS"}
         <svg class="button-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="width:14px; height:14px;"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
       </a>
     `;
@@ -1230,11 +1145,11 @@ function updateSectionDescriptions() {
   const collectionsHead = document.querySelector("#collections .section-head");
   if (collectionsHead) {
     collectionsHead.innerHTML = `
-      <h2 id="collections-title">${activeLanguage === "de" ? "Kollektionen entdecken" : "Discover the collections"}</h2>
+      <h2 id="collections-title">${activeLanguage !== "en" ? "Kollektionen entdecken" : "Discover the collections"}</h2>
       <span class="section-title-rule"></span>
-      <p class="section-description">${activeLanguage === "de" ? "Entdecke unsere einzigartigen Schmuckkollektionen, handgefertigt aus ausgewähltem Vintage-Silberbesteck." : "Explore our unique jewelry collections hand-crafted from selected vintage silver cutlery."}</p>
+      <p class="section-description">${activeLanguage !== "en" ? "Entdecke unsere einzigartigen Schmuckkollektionen, handgefertigt aus ausgewähltem Vintage-Silberbesteck." : "Explore our unique jewelry collections hand-crafted from selected vintage silver cutlery."}</p>
       <a href="shop.html" class="outline-button">
-        ${activeLanguage === "de" ? "ALLE KOLLEKTIONEN ANSEHEN" : "VIEW ALL COLLECTIONS"}
+        ${activeLanguage !== "en" ? "ALLE KOLLEKTIONEN ANSEHEN" : "VIEW ALL COLLECTIONS"}
         <svg class="button-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="width:14px; height:14px;"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
       </a>
     `;
@@ -1243,12 +1158,12 @@ function updateSectionDescriptions() {
   const bestsellersHead = document.querySelector("#bestsellers .section-head");
   if (bestsellersHead) {
     bestsellersHead.innerHTML = `
-      <span class="section-subtitle">${activeLanguage === "de" ? "UNSERE BESTSELLER" : "OUR BESTSELLERS"}</span>
-      <h2 id="bestsellers-title">${activeLanguage === "de" ? "Bestseller" : "Bestsellers"}</h2>
+      <span class="section-subtitle">${activeLanguage !== "en" ? "UNSERE BESTSELLER" : "OUR BESTSELLERS"}</span>
+      <h2 id="bestsellers-title">${activeLanguage !== "en" ? "Bestseller" : "Bestsellers"}</h2>
       <span class="section-title-rule"></span>
-      <p class="section-description">${activeLanguage === "de" ? "Stöbere in den beliebtesten Schmuckstücken und handgeformten Silberringen unserer Kunden." : "Browse our customer favorites and most popular hand-shaped silver rings."}</p>
+      <p class="section-description">${activeLanguage !== "en" ? "Stöbere in den beliebtesten Schmuckstücken und handgeformten Silberringen unserer Kunden." : "Browse our customer favorites and most popular hand-shaped silver rings."}</p>
       <a href="shop.html" class="outline-button">
-        ${activeLanguage === "de" ? "ALLE PRODUKTE ANSEHEN" : "VIEW ALL PRODUCTS"}
+        ${activeLanguage !== "en" ? "ALLE PRODUKTE ANSEHEN" : "VIEW ALL PRODUCTS"}
         <svg class="button-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="width:14px; height:14px;"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
       </a>
     `;
@@ -1257,12 +1172,12 @@ function updateSectionDescriptions() {
   const categoriesHead = document.querySelector("#shop-categories .section-head");
   if (categoriesHead) {
     categoriesHead.innerHTML = `
-      <span class="section-subtitle">${activeLanguage === "de" ? "KATEGORIEN ENTDECKEN" : "EXPLORE CATEGORIES"}</span>
-      <h2 id="shop-categories-title">${activeLanguage === "de" ? "Produktkategorien" : "Product categories"}</h2>
+      <span class="section-subtitle">${activeLanguage !== "en" ? "KATEGORIEN ENTDECKEN" : "EXPLORE CATEGORIES"}</span>
+      <h2 id="shop-categories-title">${activeLanguage !== "en" ? "Produktkategorien" : "Product categories"}</h2>
       <span class="section-title-rule"></span>
-      <p class="section-description">${activeLanguage === "de" ? "Durchsuche Schmuck und Accessoires nach Produktkategorie." : "Browse jewelry and accessories by product type."}</p>
+      <p class="section-description">${activeLanguage !== "en" ? "Durchsuche Schmuck und Accessoires nach Produktkategorie." : "Browse jewelry and accessories by product type."}</p>
       <a href="shop.html" class="outline-button">
-        ${activeLanguage === "de" ? "ALLE KATEGORIEN ANSEHEN" : "VIEW ALL CATEGORIES"}
+        ${activeLanguage !== "en" ? "ALLE KATEGORIEN ANSEHEN" : "VIEW ALL CATEGORIES"}
         <svg class="button-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="width:14px; height:14px;"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
       </a>
     `;
@@ -1287,9 +1202,12 @@ if (heroDots) {
 }
 
 document.querySelectorAll("[data-lang-choice]").forEach((button) => {
-  button.addEventListener("click", () =>
-    setLanguage(button.dataset.langChoice),
-  );
+  button.addEventListener("click", () => {
+    setLanguage(button.dataset.langChoice);
+    const menu = button.closest("details");
+    menu.open = false;
+    menu.querySelector("summary").focus();
+  });
 });
 
 themeButtons.forEach((button) => {
@@ -1308,10 +1226,22 @@ document.querySelectorAll("[data-action]").forEach((button) => {
 
 if (menuToggle) {
   menuToggle.addEventListener("click", () => {
+    document.querySelector(".language-menu").open = false;
     const isOpen = body.classList.toggle("nav-open");
     menuToggle.setAttribute("aria-expanded", String(isOpen));
   });
 }
+
+document.addEventListener("click", event => {
+  if (!event.target.closest(".language-menu")) document.querySelector(".language-menu").open = false;
+  if (!event.target.closest(".nav, .menu-toggle")) closeMobileMenu();
+});
+document.addEventListener("keydown", event => {
+  if (event.key !== "Escape") return;
+  const languages = document.querySelector(".language-menu");
+  if (languages.open) { languages.open = false; languages.querySelector("summary").focus(); }
+  if (body.classList.contains("nav-open")) { closeMobileMenu(); menuToggle.focus(); }
+});
 
 if (nav) {
   nav.querySelectorAll("a").forEach((link) => {
@@ -1457,7 +1387,7 @@ function openLightbox(index) {
   if (isVideo) {
     content.innerHTML = `<video src="${file}" controls autoplay loop muted playsinline></video>`;
   } else {
-    content.innerHTML = `<img src="${file}" alt="${activeLanguage === "de" ? "Galeriebild" : "Gallery image"} ${index + 1}" />`;
+    content.innerHTML = `<img src="${file}" alt="${activeLanguage !== "en" ? "Galeriebild" : "Gallery image"} ${index + 1}" />`;
   }
 
   lightbox.hidden = false;
@@ -1570,7 +1500,7 @@ document.body.insertAdjacentHTML("beforeend", `
   </nav>
 `);
 
-setTheme(activeTheme);
+body.dataset.theme = activeTheme;
 setLanguage(activeLanguage);
 
 // Native dialog provides keyboard dismissal, focus trapping and focus return.
@@ -1589,18 +1519,18 @@ document.querySelectorAll(".customer-story").forEach((link) => {
 const contactForm = document.querySelector("#contact-form");
 if (contactForm) {
   const selectedProduct = new URLSearchParams(window.location.search).get("product");
-  if (selectedProduct) contactForm.elements.message.value = selectedProduct;
+  if (selectedProduct) contactForm.elements.message.value = activeLanguage === "fr" ? translateFrench(selectedProduct) : selectedProduct;
   contactForm.addEventListener("submit", (event) => {
     event.preventDefault();
     const data = new FormData(contactForm);
     const message = [
-      `Name: ${data.get("name")}`,
+      `${activeLanguage === "fr" ? "Nom" : "Name"}: ${data.get("name")}`,
       `E-Mail: ${data.get("email")}`,
       `Adresse: ${data.get("address")}`,
-      `Gewünschte Bezahlung: ${data.get("payment")}`,
+      `${activeLanguage === "fr" ? "Mode de paiement souhaité" : "Gewünschte Bezahlung"}: ${data.get("payment")}`,
       "", data.get("message"),
     ].join("\n");
     // ponytail: GitHub Pages has no form backend; use email drafts until a delivery service is configured.
-    window.location.href = `mailto:rings_made_by_lari@hotmail.com?subject=${encodeURIComponent("Anfrage – Rings made by Lari")}&body=${encodeURIComponent(message)}`;
+    window.location.href = `mailto:rings_made_by_lari@hotmail.com?subject=${encodeURIComponent(activeLanguage === "fr" ? "Demande – Rings made by Lari" : "Anfrage – Rings made by Lari")}&body=${encodeURIComponent(message)}`;
   });
 }

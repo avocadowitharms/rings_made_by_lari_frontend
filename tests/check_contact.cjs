@@ -17,7 +17,7 @@ const form = {
 };
 const window = {location: {search: '?product=Ring%2043%20%26%20Gr%C3%B6sse%2056', href: ''}};
 vm.runInNewContext(contactCode, {
-  document: {querySelector: () => form}, window, URLSearchParams,
+  document: {querySelector: () => form}, window, URLSearchParams, activeLanguage: "de",
   FormData: class { get(key) { return values.get(key); } },
 });
 assert.equal(form.elements.message.value, 'Ring 43 & Grösse 56');
@@ -31,3 +31,16 @@ assert.equal(email.searchParams.get('subject'), 'Anfrage – Rings made by Lari'
 for (const value of values.values()) assert.ok(email.searchParams.get('body').includes(value));
 assert.equal([...email.searchParams].length, 2);
 console.log('OK: contact product prefill and email encoding, without sending.');
+
+vm.runInNewContext(contactCode, {
+  document: {querySelector: () => form}, window, URLSearchParams, activeLanguage: "fr",
+  translateFrench: value => value.replace("Ring", "Bague"),
+  FormData: class { get(key) { return values.get(key); } },
+});
+assert.equal(form.elements.message.value, 'Bague 43 & Grösse 56');
+submit({preventDefault() {}});
+const frenchEmail = new URL(window.location.href);
+assert.equal(frenchEmail.searchParams.get('subject'), 'Demande – Rings made by Lari');
+assert.ok(frenchEmail.searchParams.get('body').includes('Mode de paiement souhaité: TWINT'));
+for (const value of values.values()) assert.ok(frenchEmail.searchParams.get('body').includes(value));
+console.log('OK: French email labels and subject; user input remains unchanged.');

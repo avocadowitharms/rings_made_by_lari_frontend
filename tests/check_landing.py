@@ -41,7 +41,7 @@ print(f'OK: {len(manifest)} reference images, {len(paths)-1} gallery images, sha
 
 assert (root / "index.html").is_file()
 assert (root / ".nojekyll").is_file()
-assert '"lari-language-v2") === "en" ? "en" : "de"' in script
+assert '["de", "en", "fr"].includes(localStorage.getItem("lari-language-v2"))' in script
 from urllib.parse import urlsplit, unquote
 for page in web.glob("*.html"):
     html = page.read_text(encoding="utf-8")
