@@ -3482,3 +3482,137 @@ body[data-theme="light"] :is(.shop-product-card, .product-card) .product-card-ta
   .preview-copy { align-self: stretch; min-height: 0; overflow-y: auto; }
   .preview-card > img { min-height: 0; }
 }
+
+/* Retail invitation: supplied artwork on desktop, readable live copy on phones. */
+.hero-with-partners {
+  grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
+  align-items: center;
+  gap: 20px;
+  padding: 30px clamp(20px, 3vw, 48px) 60px;
+}
+.hero-with-partners .hero-copy {
+  width: 100%;
+  max-width: none;
+  padding: 40px 0 40px clamp(0px, 2vw, 28px);
+}
+.hero-with-partners .hero-copy h1 { font-size: clamp(48px, 5.5vw, 82px); }
+.hero-partners { position: relative; z-index: 4; min-width: 0; text-align: center; }
+.hero-partners-art { width: 100%; height: auto; max-width: 680px; margin-inline: auto; }
+.hero-partners-message {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+.hero-partners-contact { margin: 12px 0 0; }
+.hero-partners-contact:focus-visible { outline: 3px solid #ddd; outline-offset: 5px; }
+@media (max-width: 1000px) {
+  .hero-with-partners { grid-template-columns: minmax(0, 1fr); gap: 0; }
+  .hero-with-partners .hero-copy { padding: 40px 4px 24px; max-width: 680px; justify-self: center; }
+  .hero-partners { width: 100%; max-width: 680px; justify-self: center; }
+}
+@media (max-width: 600px) {
+  .hero-with-partners { padding: 24px 16px 56px; }
+  .hero-partners { margin-top: 24px; }
+  .hero-partners-art { display: none; }
+  .hero-partners-message {
+    position: relative;
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding: 44px 24px;
+    overflow: visible;
+    clip-path: none;
+    white-space: normal;
+    color: #0c0e0f;
+    background: #ddd;
+    border-radius: 46% 44% 42% 45% / 17% 20% 18% 22%;
+  }
+  .hero-partners-message h2 { font-family: var(--serif); font-size: clamp(34px, 8.7vw, 50px); font-weight: 500; line-height: 1.08; }
+  .hero-partners-message h2 span { display: block; margin: 12px 0; font-family: var(--sans); font-size: 14px; line-height: 1.5; text-transform: uppercase; }
+  .hero-partners-message p { margin-top: 24px; font-size: 16px; line-height: 1.6; }
+  .hero-partners-message hr { width: 65%; margin: 26px auto 0; border: 0; border-top: 1px solid currentColor; }
+  .hero-partners-contact { margin-top: 20px; }
+}
+
+/* Mobile invitation preserves the original blob and typography. */
+.hero-partners-question { display: none; }
+@media (max-width: 600px) {
+  #hero-partners-content { display: none; }
+  .hero-partners-question {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    max-width: 390px;
+    aspect-ratio: 1.08;
+    margin: 0 auto;
+    padding: 38px 20px 42px;
+    background: #ddd;
+    color: #0c0e0f;
+    border-radius: 54% 46% 45% 55% / 51% 48% 52% 49%;
+    text-align: center;
+  }
+  .hero-partners-question span { display: block; font-family: var(--sans); font-size: clamp(12px, 3.2vw, 15px); line-height: 1.5; text-transform: uppercase; margin: 12px 0; }
+  .hero-partners-question strong { display: block; font-family: var(--serif); font-size: clamp(32px, 8.5vw, 46px); font-weight: 500; line-height: 1.08; }
+  .hero-partners-question:focus-visible { outline: 3px solid #fff; outline-offset: 5px; }
+  .hero-partners-question:hover { background: #e8e8e8; }
+}
+.collaboration-layout > * { min-width: 0; }
+.collaboration-layout .contact-intro p + p { margin-top: 24px; }
+
+/* A smaller, gently tilted invitation badge. */
+@media (max-width: 600px) {
+  .hero-partners-question {
+    position: relative;
+    isolation: isolate;
+    width: 86%;
+    max-width: 300px;
+    padding: 30px 14px 40px;
+    background: transparent;
+    border-radius: 50%;
+  }
+  .hero-partners-question::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: #ddd;
+    border-radius: 54% 46% 45% 55% / 51% 48% 52% 49%;
+    transform: rotate(-7deg);
+    transition: background-color 180ms ease, transform 180ms ease;
+  }
+  .hero-partners-question::after {
+    content: "↗";
+    position: absolute;
+    right: 22%;
+    bottom: 13%;
+    font-family: var(--sans);
+    font-size: 21px;
+    line-height: 1;
+  }
+  .hero-partners-question span { font-size: clamp(10px, 2.8vw, 12px); margin: 9px 0; }
+  .hero-partners-question strong { font-size: clamp(28px, 7.3vw, 36px); }
+  .hero-partners-question:hover { background: transparent; }
+  .hero-partners-question:hover::before { background: #e8e8e8; transform: rotate(-3deg); }
+  .hero-partners-question:active::before { transform: rotate(-3deg) scale(.98); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-partners-question::before { transition: none; }
+}
+
+/* Translate desktop invitation as live text instead of displaying German artwork. */
+@media (min-width: 601px) {
+  html:not([lang="de"]) .hero-partners-art { display: none; }
+  html:not([lang="de"]) .hero-partners-message { position: relative; width: auto; height: auto; margin: 0; padding: 60px 38px; overflow: visible; clip-path: none; white-space: normal; color: #0c0e0f; background: #ddd; border-radius: 48% 46% 43% 45% / 28% 32% 30% 29%; }
+  html:not([lang="de"]) .hero-partners-message h2 { font-family: var(--serif); font-size: clamp(30px, 3vw, 46px); font-weight: 500; line-height: 1.2; }
+  html:not([lang="de"]) .hero-partners-message h2 > span { display: block; font-family: var(--sans); font-size: 14px; margin: 12px 0; text-transform: uppercase; }
+  html:not([lang="de"]) .hero-partners-message p { margin-top: 24px; line-height: 1.6; }
+}
+.hero-partners-question strong span { font: inherit; text-transform: none; margin: 0; }
+
+.hero-partners-message h2 strong { display: block; font: inherit; }

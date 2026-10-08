@@ -299,6 +299,38 @@ const frenchCopy = {
   "E-Mail:": "E-mail :"
 };
 
+Object.assign(frenchCopy, {
+  "Auf meiner Seite findest du eine grosse Auswahl an einzigartigen Ringen und Accessoires, die aus Besteck hergestellt werden.": "Sur mon site, tu trouveras un grand choix de bagues et d’accessoires uniques fabriqués à partir de couverts.",
+  "Die Ringe werden erst nach deiner Bestellung individuell für dich angefertigt – natürlich in deiner gewünschten Ringgrösse. Eine Ausnahme bilden die Ringe aus der Rubrik „Vorgefertigte Ringe“.": "Les bagues sont fabriquées spécialement pour toi après ta commande, bien sûr à la taille souhaitée. Seules les bagues de la rubrique « Bagues prêtes à porter » font exception.",
+  "Neben Ringen findest du bei mir auch eine vielfältige Auswahl an Geschenken, Broschen, Halsketten und weiteren besonderen Einzelstücken – alles hergestellt mit oder aus Besteck.": "En plus des bagues, tu trouveras un choix varié de cadeaux, de broches, de colliers et d’autres pièces uniques, tous réalisés avec ou à partir de couverts.",
+  "Hast du etwas auf meiner Seite entdeckt, das dir gefällt? Oder möchtest du mehr über ein bestimmtes Stück erfahren?": "Tu as repéré quelque chose qui te plaît sur mon site ? Ou tu aimerais en savoir plus sur une pièce en particulier ?",
+  "Dann kontaktiere mich gerne unverbindlich über das Kontaktformular. Ich freue mich auf deine Nachricht!": "Contacte-moi sans engagement via le formulaire de contact. Je me réjouis de recevoir ton message !",
+  "Hast du einen": "Tu as un",
+  "Concept Store": "concept store",
+  "oder einen": "ou une",
+  "Blumenladen?": "boutique de fleurs ?",
+  "Hast du einen Concept Store oder einen Blumenladen?": "Tu as un concept store ou une boutique de fleurs ?",
+  "Du möchtest dein Sortiment mit besonderen, handgefertigten Accessoires erweitern?": "Tu souhaites enrichir ton assortiment avec des accessoires uniques faits main ?",
+  "Meine Ringe aus altem Besteck und weitere liebevoll gefertigte Einzelstücke suchen ihren Platz in schönen Läden.": "Mes bagues réalisées à partir de couverts anciens et mes autres pièces uniques créées avec soin cherchent leur place dans de jolies boutiques.",
+  "Melde dich bei mir": "Contacte-moi",
+  "Zusammenarbeit": "Collaboration",
+  "Erzähl mir von deinem Laden und deinen Ideen für eine Zusammenarbeit. Ich freue mich auf deine Nachricht!": "Parle-moi de ta boutique et de tes idées de collaboration. Je me réjouis de recevoir ton message !",
+  "Direkt per E-Mail schreiben": "Écris-moi directement par e-mail",
+  "Lass uns zusammenarbeiten": "Collaborons ensemble",
+  "Kontaktperson": "Personne de contact",
+  "E-Mail-Adresse": "Adresse e-mail",
+  "Name deines Ladens": "Nom de ta boutique",
+  "Art deines Ladens": "Type de boutique",
+  "Ort deines Ladens": "Lieu de ta boutique",
+  "Website oder Instagram (optional)": "Site web ou Instagram (facultatif)",
+  "Deine Ideen und Wünsche": "Tes idées et tes souhaits",
+  "Zusammenarbeit anfragen": "Proposer une collaboration",
+  "Das Formular öffnet eine vorbereitete E-Mail in deinem E-Mail-Programm. Bitte sende sie dort ab. Du kannst mir auch direkt per E-Mail schreiben.": "Ce formulaire ouvre un e-mail prérempli dans ta messagerie. Envoie-le depuis celle-ci. Tu peux aussi m’écrire directement par e-mail.",
+  "Zum Beispiel Concept Store oder Blumenladen": "Par exemple, concept store ou boutique de fleurs",
+  "Schmuck aus": "à partir de",
+  "altem Besteck.": "couverts anciens."
+});
+
 function translateFrench(value) {
   if (/ (gespeichert|entfernt)\.?$/.test(value)) return value.replace(/^(.*) (gespeichert|entfernt)(\.?)$/, (_, title, action, dot) => translateFrench(title) + (action === "gespeichert" ? " enregistré" : " retiré") + dot);
   if (value.includes("\n")) return value.split("\n").map(translateFrench).join("\n");

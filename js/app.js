@@ -425,7 +425,7 @@ const copy = {
     nav: ["Start", "Kontakt", "Produkte", "Über mich", "Galerie"],
     light: "Hell",
     dark: "Dunkel",
-    homeTitle: "Handgemachter<br />Schmuck.",
+    homeTitle: "Handgemachter<br />Schmuck aus<br />altem Besteck.",
     homeText:
       "Entdecke meine einzigartigen, handgefertigten Schmuckstücke. Garantiert handgefertigt!",
     shopButton: "Kollektionen entdecken",
@@ -1108,6 +1108,7 @@ function setLanguage(language) {
   updateFavicon();
   updateSectionDescriptions();
   updateHeaderControls();
+  localizeNewContent();
   applyFrench();
 }
 
@@ -1504,6 +1505,104 @@ document.body.insertAdjacentHTML("beforeend", `
   </nav>
 `);
 
+const newPageCopy = {
+  "de": {
+    "intro1": "Auf meiner Seite findest du eine grosse Auswahl an einzigartigen Ringen und Accessoires, die aus Besteck hergestellt werden.",
+    "intro2": "Die Ringe werden erst nach deiner Bestellung individuell für dich angefertigt – natürlich in deiner gewünschten Ringgrösse. Eine Ausnahme bilden die Ringe aus der Rubrik „Vorgefertigte Ringe“.",
+    "intro3": "Neben Ringen findest du bei mir auch eine vielfältige Auswahl an Geschenken, Broschen, Halsketten und weiteren besonderen Einzelstücken – alles hergestellt mit oder aus Besteck.",
+    "intro4": "Hast du etwas auf meiner Seite entdeckt, das dir gefällt? Oder möchtest du mehr über ein bestimmtes Stück erfahren?",
+    "intro5": "Dann kontaktiere mich gerne unverbindlich über das Kontaktformular. Ich freue mich auf deine Nachricht!",
+    "questionStart": "Hast du einen",
+    "concept": "Concept Store",
+    "questionOr": "oder einen",
+    "flowers": "Blumenladen?",
+    "question": "Hast du einen Concept Store oder einen Blumenladen?",
+    "partnerIntro": "Du möchtest dein Sortiment mit besonderen, handgefertigten Accessoires erweitern?",
+    "partnerDetail": "Meine Ringe aus altem Besteck und weitere liebevoll gefertigte Einzelstücke suchen ihren Platz in schönen Läden.",
+    "partnerContact": "Melde dich bei mir",
+    "collaboration": "Zusammenarbeit",
+    "partnerInvite": "Erzähl mir von deinem Laden und deinen Ideen für eine Zusammenarbeit. Ich freue mich auf deine Nachricht!",
+    "directEmail": "Direkt per E-Mail schreiben",
+    "formHeading": "Lass uns zusammenarbeiten",
+    "person": "Kontaktperson",
+    "email": "E-Mail-Adresse",
+    "store": "Name deines Ladens",
+    "storeType": "Art deines Ladens",
+    "location": "Ort deines Ladens",
+    "website": "Website oder Instagram (optional)",
+    "message": "Deine Ideen und Wünsche",
+    "submit": "Zusammenarbeit anfragen",
+    "formNote": "Das Formular öffnet eine vorbereitete E-Mail in deinem E-Mail-Programm. Bitte sende sie dort ab. Du kannst mir auch direkt per E-Mail schreiben.",
+    "example": "Zum Beispiel Concept Store oder Blumenladen"
+  },
+  "en": {
+    "intro1": "On my website you’ll find a wide selection of unique rings and accessories made from cutlery.",
+    "intro2": "Each ring is made especially for you after you place your order, in your chosen ring size. The rings in the “Ready-made rings” category are the exception.",
+    "intro3": "Alongside rings, you’ll find a varied selection of gifts, brooches, necklaces and other special one-of-a-kind pieces, all made with or from cutlery.",
+    "intro4": "Have you spotted something you like on my website? Or would you like to know more about a particular piece?",
+    "intro5": "Feel free to get in touch through the contact form, with no obligation. I look forward to hearing from you!",
+    "questionStart": "Do you have a",
+    "concept": "concept store",
+    "questionOr": "or a",
+    "flowers": "flower shop?",
+    "question": "Do you have a concept store or a flower shop?",
+    "partnerIntro": "Would you like to expand your range with distinctive handmade accessories?",
+    "partnerDetail": "My rings made from old cutlery and other lovingly crafted one-of-a-kind pieces are looking for a home in lovely shops.",
+    "partnerContact": "Get in touch",
+    "collaboration": "Collaboration",
+    "partnerInvite": "Tell me about your shop and your ideas for working together. I look forward to hearing from you!",
+    "directEmail": "Email me directly",
+    "formHeading": "Let’s work together",
+    "person": "Contact person",
+    "email": "Email address",
+    "store": "Shop name",
+    "storeType": "Type of shop",
+    "location": "Shop location",
+    "website": "Website or Instagram (optional)",
+    "message": "Your ideas and wishes",
+    "submit": "Enquire about collaboration",
+    "formNote": "This form opens a prepared email in your email app. Please send it from there. You can also email me directly.",
+    "example": "For example, a concept store or flower shop"
+  },
+  "fr": {
+    "intro1": "Sur mon site, tu trouveras un grand choix de bagues et d’accessoires uniques fabriqués à partir de couverts.",
+    "intro2": "Les bagues sont fabriquées spécialement pour toi après ta commande, bien sûr à la taille souhaitée. Seules les bagues de la rubrique « Bagues prêtes à porter » font exception.",
+    "intro3": "En plus des bagues, tu trouveras un choix varié de cadeaux, de broches, de colliers et d’autres pièces uniques, tous réalisés avec ou à partir de couverts.",
+    "intro4": "Tu as repéré quelque chose qui te plaît sur mon site ? Ou tu aimerais en savoir plus sur une pièce en particulier ?",
+    "intro5": "Contacte-moi sans engagement via le formulaire de contact. Je me réjouis de recevoir ton message !",
+    "questionStart": "Tu as un",
+    "concept": "concept store",
+    "questionOr": "ou une",
+    "flowers": "boutique de fleurs ?",
+    "question": "Tu as un concept store ou une boutique de fleurs ?",
+    "partnerIntro": "Tu souhaites enrichir ton assortiment avec des accessoires uniques faits main ?",
+    "partnerDetail": "Mes bagues réalisées à partir de couverts anciens et mes autres pièces uniques créées avec soin cherchent leur place dans de jolies boutiques.",
+    "partnerContact": "Contacte-moi",
+    "collaboration": "Collaboration",
+    "partnerInvite": "Parle-moi de ta boutique et de tes idées de collaboration. Je me réjouis de recevoir ton message !",
+    "directEmail": "Écris-moi directement par e-mail",
+    "formHeading": "Collaborons ensemble",
+    "person": "Personne de contact",
+    "email": "Adresse e-mail",
+    "store": "Nom de ta boutique",
+    "storeType": "Type de boutique",
+    "location": "Lieu de ta boutique",
+    "website": "Site web ou Instagram (facultatif)",
+    "message": "Tes idées et tes souhaits",
+    "submit": "Proposer une collaboration",
+    "formNote": "Ce formulaire ouvre un e-mail prérempli dans ta messagerie. Envoie-le depuis celle-ci. Tu peux aussi m’écrire directement par e-mail.",
+    "example": "Par exemple, concept store ou boutique de fleurs"
+  }
+};
+function localizeNewContent() {
+  const copy = newPageCopy[activeLanguage];
+  document.querySelectorAll('[data-local-copy]').forEach(el => { el.textContent = copy[el.dataset.localCopy]; });
+  document.querySelectorAll('[data-local-placeholder]').forEach(el => { el.placeholder = copy[el.dataset.localPlaceholder]; });
+  if (document.querySelector('#collaboration-form')) document.title = copy.collaboration + ' | Rings made by Lari';
+  const hero = document.querySelector('#hero-title');
+  if (hero) hero.innerHTML = {de:'Handgemachter<br />Schmuck aus<br />altem Besteck.',en:'Handmade jewelry<br />from old cutlery.',fr:'Bijoux faits main<br />à partir de<br />couverts anciens.'}[activeLanguage];
+}
+
 body.dataset.theme = activeTheme;
 setLanguage(activeLanguage);
 
@@ -1537,5 +1636,25 @@ if (contactForm) {
     ].join("\n");
     // ponytail: GitHub Pages has no form backend; use email drafts until a delivery service is configured.
     window.location.href = `mailto:rings_made_by_lari@hotmail.com?subject=${encodeURIComponent(activeLanguage === "fr" ? "Demande – Rings made by Lari" : "Anfrage – Rings made by Lari")}&body=${encodeURIComponent(message)}`;
+  });
+}
+
+// Collaboration enquiries use the site's email-draft submission flow.
+const collaborationForm = document.querySelector("#collaboration-form");
+if (collaborationForm) {
+  collaborationForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const data = new FormData(collaborationForm);
+    const copy = newPageCopy[activeLanguage];
+    const message = [
+      `${copy.person}: ${data.get("name")}`,
+      `E-Mail: ${data.get("email")}`,
+      `${copy.store}: ${data.get("store")}`,
+      `${copy.storeType}: ${data.get("storeType")}`,
+      `${copy.location}: ${data.get("location")}`,
+      `${copy.website}: ${data.get("website")}`,
+      "", data.get("message"),
+    ].join("\n");
+    window.location.href = `mailto:rings_made_by_lari@hotmail.com?subject=${encodeURIComponent(copy.collaboration + " – " + data.get("store"))}&body=${encodeURIComponent(message)}`;
   });
 }
