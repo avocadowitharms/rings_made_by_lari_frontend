@@ -545,6 +545,31 @@ h1 {
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 24px;
 }
+.footer-bottom {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 20px 32px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+}
+.footer-copyright {
+  margin: 0;
+  color: var(--muted);
+  font-size: 12px;
+}
+.footer-credit {
+  margin: 0;
+  color: var(--text);
+  font-size: 16px;
+  line-height: 1.5;
+}
+.footer-credit a {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
 .benefit {
   max-width: 150px;
 }
