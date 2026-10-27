@@ -26,14 +26,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="css/styles.css?v=catalog-53" />
+    <link rel="stylesheet" href="css/styles.css?v=shop-filter-73" />
   </head>
   <body class="shop-page" data-theme="light">
     <aside class="social-banner" aria-label="Folge Lari"><span data-copy="socialFollow">Folge mir auf</span> <a href="https://www.instagram.com/rings_made_by_lari" target="_blank" rel="noopener noreferrer">Instagram</a><span aria-hidden="true">&amp;</span><a href="https://www.facebook.com/rings_made_by_lari" target="_blank" rel="noopener noreferrer">Facebook</a></aside>
     <header class="site-header">
       <a class="brand" href="index.html"><span>Rings</span><small>made by Lari</small></a>
       <button class="menu-toggle" type="button" aria-label="Navigation öffnen" aria-expanded="false" data-icon="menu"></button>
-      <nav class="nav" aria-label="Hauptnavigation"><a href="index.html">Start</a><a href="contact.html">Kontakt</a><a href="shop.html">Produkte</a><a href="about.html">Über mich</a><a href="gallery.html">Galerie</a></nav>
+      <nav class="nav" aria-label="Hauptnavigation"><a href="index.html">Start</a><a href="contact.html">Kontakt</a><a href="shop.html">Produkte</a><a href="about.html">Über mich</a><a href="gallery.html">Galerie</a><a href="collaboration.html" data-local-copy="collaboration">Zusammenarbeit</a></nav>
       <div class="header-tools" aria-label="Sprache">
 
 
@@ -51,36 +51,22 @@
       </nav>
 
       <section class="shop-catalog" aria-labelledby="shop-catalog-title">
-        <details class="shop-filter-panel">
-          <summary id="shop-filter-title">Filtern nach</summary>
-          <form class="shop-filter-form" id="shop-filter-form"></form>
-        </details>
 
         <div class="shop-catalog-content">
           <header class="shop-catalog-head">
             <div>
               <p class="shop-kicker">Alle Produkte</p>
-              <h1 id="shop-catalog-title">Alle Produkte</h1>
+              <div class="shop-title-row">
+                <h1 id="shop-catalog-title">Alle Produkte</h1>
+        <details class="shop-filter-panel">
+          <summary id="shop-filter-title">Filtern nach</summary>
+          <form class="shop-filter-form" id="shop-filter-form"></form>
+        </details>
+              </div>
               <p id="shop-catalog-description">Entdecke Ringe, Besteckstücke, Halsketten, Geschenke und Accessoires, handgemacht von Lari.</p>
             </div>
-            <label class="shop-sort">
-              <span>Sortieren nach</span>
-              <select id="shop-sort-select" aria-label="Produkte sortieren">
-                <option value="featured">Empfohlen</option>
-                <option value="new">Neueste</option>
-                <option value="price-low">Preis aufsteigend</option>
-                <option value="price-high">Preis absteigend</option>
-              </select>
-            </label>
           </header>
 
-          <section class="shop-new-items" id="shop-new-items" aria-labelledby="shop-new-items-title" hidden>
-            <div class="shop-row-head">
-              <h2 id="shop-new-items-title">Neu eingetroffen</h2>
-              <span id="shop-new-items-count"></span>
-            </div>
-            <div class="shop-gallery-row" id="shop-new-items-row"></div>
-          </section>
 
           <div class="shop-results-meta">
             <span id="shop-product-count">0 Produkte</span>
@@ -131,7 +117,7 @@
     <script src="js/catalog-fr.js?v=catalog-53"></script>
     <script src="js/fr.js?v=catalog-53"></script>
     <script src="js/products.js?v=catalog-53"></script>
-    <script src="js/app.js?v=catalog-53"></script>
+    <script src="js/app.js?v=catalog-cleanup-74"></script>
   </body>
 </html>
 

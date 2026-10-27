@@ -16,24 +16,6 @@ const collections = [
   ],
   ["Cutlery", "Besteck", "collection-cutlery.html", "old-061.jpg"],
   ["Gifts", "Geschenke", "collection-gifts.html", "old-007.jpg"],
-  [
-    "Keychains",
-    "Schlüsselanhänger",
-    "collection-keychains.html",
-    "old-008.webp",
-  ],
-  [
-    "Statement rings",
-    "Statement-Ringe",
-    "collection-ready-rings.html",
-    "old-015.jpg",
-  ],
-  [
-    "Vintage finds",
-    "Vintage-Funde",
-    "collection-cutlery.html",
-    "old-022.jpg",
-  ],
 ].map(([title, titleDe, href, image]) => ({
   title,
   titleDe,
@@ -184,9 +166,6 @@ oldSiteMedia.push(...[
 const products = [];
 
 const shopCategoryOptions = [
-  ["narrow-rings", "Narrow rings", "Schmale Ringe"],
-  ["medium-rings", "Medium rings", "Mittlere Ringe"],
-  ["wide-rings", "Wide rings", "Breite Ringe"],
   ["rings", "Rings", "Ringe"],
   ["bracelets", "Bracelets", "Armketten"],
   ["cutlery", "Cutlery", "Besteck"],
@@ -207,7 +186,8 @@ function collectionItems(page) {
   return catalogProducts.filter(item => item.categories.includes(category));
 }
 collections.forEach(collection => {
-  const first = collectionItems(collection.href)[0];
+  const items = collectionItems(collection.href);
+  const first = items.find(item => collection.href === "collection-ready-rings.html" && item.id === "c4f11619-8aa5-83f4-4cac-33ace3209b66") || items[0];
   if (first) collection.image = first.image;
 });
 
@@ -244,12 +224,8 @@ const categoryList = document.querySelector("#category-list");
 const newArrivalsGrid = document.querySelector("#new-arrivals-grid");
 const productsGrid = document.querySelector("#bestsellers-grid");
 const shopFilterForm = document.querySelector("#shop-filter-form");
-const shopSortSelect = document.querySelector("#shop-sort-select");
 const shopProductGrid = document.querySelector("#shop-product-grid");
 const shopProductCount = document.querySelector("#shop-product-count");
-const shopNewItems = document.querySelector("#shop-new-items");
-const shopNewItemsRow = document.querySelector("#shop-new-items-row");
-const shopNewItemsCount = document.querySelector("#shop-new-items-count");
 const collectionProductsGrid = document.querySelector(
   "#collection-products-grid",
 );
@@ -273,7 +249,6 @@ let noticeTimer;
 let heroIndex = 0;
 let heroTimer;
 let shopActiveCategories = [];
-let shopSortMode = "featured";
 
 const heroImages = ["old-site/e5a4ea_fefc2c59b94b41b798538316f51f7e24~mv2.jpg"];
 
@@ -589,6 +564,30 @@ function collectionCard(item) {
   `;
 }
 
+function renderHeroProducts() {
+  const track = document.querySelector('#hero-products-track');
+  if (!track) return;
+  track.innerHTML = catalogProducts.filter(item => item.category === "rings" && item.available !== false && item.image).slice(0, 10).map(item =>
+    `<button class="hero-product" type="button" data-preview-type="product" data-preview-id="${escapeHtml(item.id)}">
+      <span>${escapeHtml(productTitle(item))}</span>
+      <img src="${asset(item.image)}" alt="" decoding="async" />
+    </button>`
+  ).join('');
+}
+
+const heroProducts = document.querySelector('.hero-products');
+if (heroProducts) {
+  heroProducts.addEventListener('click', event => {
+    const control = event.target.closest('[data-product-direction]');
+    if (control) {
+      const track = document.querySelector('#hero-products-track');
+      track.scrollBy({left: Number(control.dataset.productDirection) * track.clientWidth, behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth'});
+    } else {
+      handleProductGridClick(event);
+    }
+  });
+}
+
 function productTitle(item) {
   return activeLanguage === "en" ? item.titleEn || item.title : item.titleDe || item.title;
 }
@@ -630,11 +629,6 @@ function productCard(item) {
   `;
 }
 
-function priceNumber(item) {
-  const match = String(item.price || "").match(/[\d.]+/);
-  return match ? Number(match[0]) : 0;
-}
-
 function shopLabel(option) {
   return activeLanguage !== "en" ? option.labelDe : option.label;
 }
@@ -663,20 +657,6 @@ function shopProductCard(item) {
   `;
 }
 
-function sortedShopProducts(items) {
-  const sorted = [...items];
-  if (shopSortMode === "new") {
-    sorted.sort((a, b) => Number(b.isNewArrival) - Number(a.isNewArrival));
-  }
-  if (shopSortMode === "price-low") {
-    sorted.sort((a, b) => priceNumber(a) - priceNumber(b));
-  }
-  if (shopSortMode === "price-high") {
-    sorted.sort((a, b) => priceNumber(b) - priceNumber(a));
-  }
-  return sorted;
-}
-
 function renderShopCatalog() {
   if (!shopProductGrid) return;
 
@@ -703,9 +683,6 @@ function renderShopCatalog() {
   const kicker = document.querySelector(".shop-kicker");
   const description = document.querySelector("#shop-catalog-description");
   const serviceNote = document.querySelector(".shop-service-note");
-  const newTitle = document.querySelector("#shop-new-items-title");
-  const sortLabel = document.querySelector(".shop-sort span");
-  const sortOptions = shopSortSelect?.querySelectorAll("option");
 
   if (heading) heading.textContent = activeLanguage !== "en" ? "Alle Produkte" : "All products";
   if (kicker) kicker.textContent = activeLanguage !== "en" ? "Produkte" : "Products";
@@ -721,38 +698,10 @@ function renderShopCatalog() {
         ? "Handgefertigte Ringe und Accessoires aus altem Besteck"
         : "Handmade rings and accessories from vintage silver cutlery";
   }
-  if (newTitle) newTitle.textContent = activeLanguage !== "en" ? "Neu eingetroffen" : "New arrivals";
-  if (sortLabel) sortLabel.textContent = activeLanguage !== "en" ? "Sortieren nach" : "Sort by";
-  if (sortOptions?.length) {
-    const labels =
-      activeLanguage !== "en"
-        ? ["Empfohlen", "Neueste", "Preis aufsteigend", "Preis absteigend"]
-        : ["Featured", "Newest", "Price low to high", "Price high to low"];
-    sortOptions.forEach((option, index) => {
-      if (labels[index]) option.textContent = labels[index];
-    });
-  }
-
   const filtered = shopActiveCategories.length
     ? shopProducts.filter((item) => item.categories.some(category => shopActiveCategories.includes(category)))
     : shopProducts;
-  const renderedProducts = sortedShopProducts(filtered);
-  const newItems = shopProducts.filter((item) => item.isNewArrival).slice(0, 2);
-
-  if (shopNewItems) {
-    shopNewItems.hidden = newItems.length === 0;
-  }
-  if (shopNewItemsRow) {
-    shopNewItemsRow.innerHTML = newItems.map(shopProductCard).join("");
-  }
-  if (shopNewItemsCount) {
-    shopNewItemsCount.textContent =
-      newItems.length === 1
-        ? activeLanguage !== "en"
-          ? "1 Produkt"
-          : "1 product"
-        : `${newItems.length} ${activeLanguage !== "en" ? "Produkte" : "products"}`;
-  }
+  const renderedProducts = filtered;
   if (shopProductCount) {
     const countText = activeLanguage !== "en" ? "Produkte" : "products";
     shopProductCount.textContent = `${renderedProducts.length} ${countText}`;
@@ -814,7 +763,7 @@ function openPreview(item, type) {
     activeLanguage !== "en" ? "BESCHREIBUNG" : "DESCRIPTION";
 
   const actions = previewDialog.querySelector(".preview-actions");
-  actions.innerHTML = `<a class="button" href="contact.html?product=${encodeURIComponent(productTitle(item))}&reference=${encodeURIComponent(item.source || "")}">${copy[activeLanguage].ask}</a>`;
+  actions.innerHTML = `<a class="button" href="contact.html?product=${encodeURIComponent(productTitle(item))}">${copy[activeLanguage].ask}</a>`;
 
   // Set image source and alt
   if (item.image) {
@@ -1301,9 +1250,6 @@ function handleShopProductClick(event) {
   handleProductGridClick(event);
 }
 
-if (shopNewItemsRow) {
-  shopNewItemsRow.addEventListener("click", handleShopProductClick);
-}
 
 if (shopFilterForm) {
   shopFilterForm.addEventListener("change", () => {
@@ -1315,12 +1261,6 @@ if (shopFilterForm) {
   });
 }
 
-if (shopSortSelect) {
-  shopSortSelect.addEventListener("change", () => {
-    shopSortMode = shopSortSelect.value;
-    renderShopCatalog();
-  });
-}
 
 if (collectionsGrid) {
   collectionsGrid.addEventListener("click", (event) => {
@@ -1507,11 +1447,15 @@ document.body.insertAdjacentHTML("beforeend", `
 
 const newPageCopy = {
   "de": {
-    "intro1": "Auf meiner Seite findest du eine grosse Auswahl an einzigartigen Ringen und Accessoires, die aus Besteck hergestellt werden.",
-    "intro2": "Die Ringe werden erst nach deiner Bestellung individuell für dich angefertigt – natürlich in deiner gewünschten Ringgrösse. Eine Ausnahme bilden die Ringe aus der Rubrik „Vorgefertigte Ringe“.",
-    "intro3": "Neben Ringen findest du bei mir auch eine vielfältige Auswahl an Geschenken, Broschen, Halsketten und weiteren besonderen Einzelstücken – alles hergestellt mit oder aus Besteck.",
-    "intro4": "Hast du etwas auf meiner Seite entdeckt, das dir gefällt? Oder möchtest du mehr über ein bestimmtes Stück erfahren?",
-    "intro5": "Dann kontaktiere mich gerne unverbindlich über das Kontaktformular. Ich freue mich auf deine Nachricht!",
+    "enquiryTemplate": "Produkt: {product}\nGrösse: bitte angeben\nAnzahl: 1",
+    "enquiryExample": "Produkt: z. B. Ring 3\nGrösse: z. B. 58\nAnzahl: z. B. 1",
+    "paymentExample": "Twint, PayPal oder Überweisung",
+    "productSlideshow": "Entdecke meine Produkte",
+    "previousProducts": "Zurück",
+    "nextProducts": "Weiter",
+    "intro1": "Entdecke einzigartige Ringe und Accessoires aus Besteck – individuell nach deiner Bestellung und in deiner Wunschgrösse angefertigt (ausgenommen vorgefertigte Ringe).",
+    "intro2": "Ausserdem findest du besondere Geschenke, Broschen, Halsketten und weitere Einzelstücke.",
+    "intro3": "Hast du Fragen oder etwas entdeckt, das dir gefällt? Dann freue ich mich auf deine unverbindliche Nachricht über das Kontaktformular!",
     "questionStart": "Hast du einen",
     "concept": "Concept Store",
     "questionOr": "oder einen",
@@ -1536,11 +1480,15 @@ const newPageCopy = {
     "example": "Zum Beispiel Concept Store oder Blumenladen"
   },
   "en": {
-    "intro1": "On my website you’ll find a wide selection of unique rings and accessories made from cutlery.",
-    "intro2": "Each ring is made especially for you after you place your order, in your chosen ring size. The rings in the “Ready-made rings” category are the exception.",
-    "intro3": "Alongside rings, you’ll find a varied selection of gifts, brooches, necklaces and other special one-of-a-kind pieces, all made with or from cutlery.",
-    "intro4": "Have you spotted something you like on my website? Or would you like to know more about a particular piece?",
-    "intro5": "Feel free to get in touch through the contact form, with no obligation. I look forward to hearing from you!",
+    "enquiryTemplate": "Product: {product}\nSize: please specify\nQuantity: 1",
+    "enquiryExample": "Product: e.g. Ring 3\nSize: e.g. 58\nQuantity: e.g. 1",
+    "paymentExample": "Twint, PayPal or bank transfer",
+    "productSlideshow": "Discover my products",
+    "previousProducts": "Previous",
+    "nextProducts": "Next",
+    "intro1": "Discover unique rings and accessories made from cutlery – crafted individually after you order and in your chosen ring size (except ready-made rings).",
+    "intro2": "You’ll also find special gifts, brooches, necklaces and other one-of-a-kind pieces.",
+    "intro3": "Have a question or spotted something you like? I look forward to your no-obligation message through the contact form!",
     "questionStart": "Do you have a",
     "concept": "concept store",
     "questionOr": "or a",
@@ -1565,11 +1513,15 @@ const newPageCopy = {
     "example": "For example, a concept store or flower shop"
   },
   "fr": {
-    "intro1": "Sur mon site, tu trouveras un grand choix de bagues et d’accessoires uniques fabriqués à partir de couverts.",
-    "intro2": "Les bagues sont fabriquées spécialement pour toi après ta commande, bien sûr à la taille souhaitée. Seules les bagues de la rubrique « Bagues prêtes à porter » font exception.",
-    "intro3": "En plus des bagues, tu trouveras un choix varié de cadeaux, de broches, de colliers et d’autres pièces uniques, tous réalisés avec ou à partir de couverts.",
-    "intro4": "Tu as repéré quelque chose qui te plaît sur mon site ? Ou tu aimerais en savoir plus sur une pièce en particulier ?",
-    "intro5": "Contacte-moi sans engagement via le formulaire de contact. Je me réjouis de recevoir ton message !",
+    "enquiryTemplate": "Produit : {product}\nTaille : à préciser\nQuantité : 1",
+    "enquiryExample": "Produit : p. ex. Bague 3\nTaille : p. ex. 58\nQuantité : p. ex. 1",
+    "paymentExample": "Twint, PayPal ou virement bancaire",
+    "productSlideshow": "Découvre mes créations",
+    "previousProducts": "Précédent",
+    "nextProducts": "Suivant",
+    "intro1": "Découvre des bagues et des accessoires uniques réalisés à partir de couverts – fabriqués spécialement après ta commande et à la taille souhaitée (sauf les bagues prêtes à porter).",
+    "intro2": "Tu trouveras aussi des cadeaux originaux, des broches, des colliers et d’autres pièces uniques.",
+    "intro3": "Tu as une question ou tu as repéré quelque chose qui te plaît ? Je me réjouis de recevoir ton message sans engagement via le formulaire de contact !",
     "questionStart": "Tu as un",
     "concept": "concept store",
     "questionOr": "ou une",
@@ -1595,6 +1547,7 @@ const newPageCopy = {
   }
 };
 function localizeNewContent() {
+  renderHeroProducts();
   const copy = newPageCopy[activeLanguage];
   document.querySelectorAll('[data-local-copy]').forEach(el => { el.textContent = copy[el.dataset.localCopy]; });
   document.querySelectorAll('[data-local-placeholder]').forEach(el => { el.placeholder = copy[el.dataset.localPlaceholder]; });
@@ -1622,8 +1575,7 @@ document.querySelectorAll(".customer-story").forEach((link) => {
 const contactForm = document.querySelector("#contact-form");
 if (contactForm) {
   const selectedProduct = new URLSearchParams(window.location.search).get("product");
-  const reference = new URLSearchParams(window.location.search).get("reference");
-  if (selectedProduct) contactForm.elements.message.value = (activeLanguage === "fr" ? translateFrench(selectedProduct) : selectedProduct) + (reference?.startsWith("https://ringsmadebylari.wixsite.com/dein-onlineshop-f/product-page/") ? "\n" + reference : "");
+  if (selectedProduct) contactForm.elements.message.value = newPageCopy[activeLanguage].enquiryTemplate.replace("{product}", () => activeLanguage === "fr" ? translateFrench(selectedProduct) : selectedProduct);
   contactForm.addEventListener("submit", (event) => {
     event.preventDefault();
     const data = new FormData(contactForm);

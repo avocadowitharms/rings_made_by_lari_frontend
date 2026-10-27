@@ -34,7 +34,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600;700&display=swap"
     rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css?v=localized-60" />
+  <link rel="stylesheet" href="css/styles.css?v=product-slideshow-68" />
 </head>
 
 <body data-theme="light">
@@ -52,7 +52,7 @@
       data-icon="menu"></button>
 
     <nav class="nav" aria-label="Hauptnavigation"><a href="index.html">Start</a><a href="contact.html">Kontakt</a><a
-        href="shop.html">Produkte</a><a href="about.html">Über mich</a><a href="gallery.html">Galerie</a></nav>
+        href="shop.html">Produkte</a><a href="about.html">Über mich</a><a href="gallery.html">Galerie</a><a href="collaboration.html" data-local-copy="collaboration">Zusammenarbeit</a></nav>
 
     <div class="header-tools" aria-label="Sprache">
 
@@ -61,7 +61,7 @@
   </header>
 
   <main id="home">
-    <section class="hero hero-with-partners" aria-labelledby="hero-title">
+    <section class="hero hero-with-products" aria-labelledby="hero-title">
       <div class="hero-slider" id="hero-slider" aria-hidden="true"></div>
       <div class="hero-copy">
         <h1 id="hero-title">Handgemachter<br />Schmuck aus<br />altem Besteck.</h1>
@@ -69,19 +69,14 @@
         <p>Entdecke meine einzigartigen, handgefertigten Schmuckstücke. Garantiert handgefertigt!</p>
         <a class="button" href="shop.html" data-copy="catalogButton">Zum Produktekatalog</a>
       </div>
-      <aside class="hero-partners" aria-labelledby="hero-partners-title">
-        <a class="hero-partners-question" href="collaboration.html"><span data-local-copy="questionStart">Hast du einen</span><strong data-local-copy="concept">Concept Store</strong><span data-local-copy="questionOr">oder einen</span><strong data-local-copy="flowers">Blumenladen?</strong></a>
-        <div id="hero-partners-content">
-          <img class="hero-partners-art" src="assets/hero-retail-partners.png" width="1000" height="1000" alt="" />
-          <div class="hero-partners-message">
-            <h2 id="hero-partners-title"><span data-local-copy="questionStart">Hast du einen</span><strong data-local-copy="concept">Concept Store</strong><span data-local-copy="questionOr">oder einen</span><strong data-local-copy="flowers">Blumenladen?</strong></h2>
-            <p><span data-local-copy="partnerIntro">Du möchtest dein Sortiment mit besonderen, handgefertigten Accessoires erweitern?</span></p>
-            <hr />
-            <p data-local-copy="partnerDetail">Meine Ringe aus altem Besteck und weitere liebevoll gefertigte Einzelstücke suchen ihren Platz in schönen Läden.</p>
-          </div>
-          <a class="button hero-partners-contact" href="collaboration.html"><span data-local-copy="partnerContact">Melde dich bei mir</span></a>
+      <section class="hero-products" aria-labelledby="hero-products-title">
+        <h2 id="hero-products-title" data-local-copy="productSlideshow">Entdecke meine Produkte</h2>
+        <div class="hero-products-track" id="hero-products-track" tabindex="0" aria-labelledby="hero-products-title"></div>
+        <div class="hero-products-controls">
+          <button type="button" data-product-direction="-1"><span aria-hidden="true">← </span><span data-local-copy="previousProducts">Zurück</span></button>
+          <button type="button" data-product-direction="1"><span data-local-copy="nextProducts">Weiter</span><span aria-hidden="true"> →</span></button>
         </div>
-      </aside>
+      </section>
       <div class="hero-dots" id="hero-dots" aria-label="Titelbilder"></div>
     </section>
 
@@ -90,11 +85,9 @@
         <h2 id="intro-title" data-copy="introTitle">Kleine Stücke. Voller Charakter.</h2>
       </div>
       <div>
-        <p data-local-copy="intro1">Auf meiner Seite findest du eine grosse Auswahl an einzigartigen Ringen und Accessoires, die aus Besteck hergestellt werden.</p>
-        <p data-local-copy="intro2">Die Ringe werden erst nach deiner Bestellung individuell für dich angefertigt – natürlich in deiner gewünschten Ringgrösse. Eine Ausnahme bilden die Ringe aus der Rubrik „Vorgefertigte Ringe“.</p>
-        <p data-local-copy="intro3">Neben Ringen findest du bei mir auch eine vielfältige Auswahl an Geschenken, Broschen, Halsketten und weiteren besonderen Einzelstücken – alles hergestellt mit oder aus Besteck.</p>
-        <p data-local-copy="intro4">Hast du etwas auf meiner Seite entdeckt, das dir gefällt? Oder möchtest du mehr über ein bestimmtes Stück erfahren?</p>
-        <p data-local-copy="intro5">Dann kontaktiere mich gerne unverbindlich über das Kontaktformular. Ich freue mich auf deine Nachricht!</p><a class="outline-button" href="contact.html"
+        <p data-local-copy="intro1">Entdecke einzigartige Ringe und Accessoires aus Besteck – individuell nach deiner Bestellung und in deiner Wunschgrösse angefertigt (ausgenommen vorgefertigte Ringe).</p>
+        <p data-local-copy="intro2">Ausserdem findest du besondere Geschenke, Broschen, Halsketten und weitere Einzelstücke.</p>
+        <p data-local-copy="intro3">Hast du Fragen oder etwas entdeckt, das dir gefällt? Dann freue ich mich auf deine unverbindliche Nachricht über das Kontaktformular!</p><a class="outline-button" href="contact.html"
           data-copy="contactButton">Kontakt aufnehmen</a>
       </div>
     </section>
@@ -213,9 +206,9 @@
   <div class="notice" role="status" aria-live="polite" hidden></div>
 
   <script src="js/catalog-fr.js?v=catalog-53"></script>
-  <script src="js/fr.js?v=localized-60"></script>
+  <script src="js/fr.js?v=intro-65"></script>
   <script src="js/products.js?v=catalog-53"></script>
-  <script src="js/app.js?v=localized-60"></script>
+  <script src="js/app.js?v=catalog-cleanup-74"></script>
 </body>
 
 </html>

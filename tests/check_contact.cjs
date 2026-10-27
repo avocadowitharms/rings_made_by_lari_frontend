@@ -4,7 +4,8 @@ const fs = require('node:fs');
 const vm = require('node:vm');
 const path = require('node:path');
 const source = fs.readFileSync(path.join(__dirname, '../js/app.js'), 'utf8');
-const contactCode = source.slice(source.indexOf('const contactForm ='));
+const contactCode = source.slice(source.indexOf('const contactForm ='), source.indexOf('// Collaboration enquiries'));
+const newPageCopy = vm.runInNewContext(source.slice(source.indexOf('const newPageCopy ='), source.indexOf('function localizeNewContent()')) + ';newPageCopy');
 const values = new Map([
   ['name', 'Lari & Ava'], ['email', 'test@example.com'],
   ['address', 'Strasse 1\nBern'], ['payment', 'TWINT'],
@@ -15,12 +16,12 @@ const form = {
   elements: {message: {value: ''}},
   addEventListener(type, handler) { assert.equal(type, 'submit'); submit = handler; },
 };
-const window = {location: {search: '?product=Ring%2043%20%26%20Gr%C3%B6sse%2056', href: ''}};
+const window = {location: {search: '?product=Ring%2043%20%26%20Gr%C3%B6sse%2056&reference=https%3A%2F%2Fringsmadebylari.wixsite.com%2Fdein-onlineshop-f%2Fproduct-page%2Fring-43', href: ''}};
 vm.runInNewContext(contactCode, {
-  document: {querySelector: () => form}, window, URLSearchParams, activeLanguage: "de",
+  document: {querySelector: () => form}, window, URLSearchParams, newPageCopy, activeLanguage: "de",
   FormData: class { get(key) { return values.get(key); } },
 });
-assert.equal(form.elements.message.value, 'Ring 43 & Grösse 56');
+assert.equal(form.elements.message.value, 'Produkt: Ring 43 & Grösse 56\nGrösse: bitte angeben\nAnzahl: 1');
 let prevented = false;
 submit({preventDefault() { prevented = true; }});
 assert.ok(prevented);
@@ -33,11 +34,11 @@ assert.equal([...email.searchParams].length, 2);
 console.log('OK: contact product prefill and email encoding, without sending.');
 
 vm.runInNewContext(contactCode, {
-  document: {querySelector: () => form}, window, URLSearchParams, activeLanguage: "fr",
+  document: {querySelector: () => form}, window, URLSearchParams, newPageCopy, activeLanguage: "fr",
   translateFrench: value => value.replace("Ring", "Bague"),
   FormData: class { get(key) { return values.get(key); } },
 });
-assert.equal(form.elements.message.value, 'Bague 43 & Grösse 56');
+assert.equal(form.elements.message.value, 'Produit : Bague 43 & Grösse 56\nTaille : à préciser\nQuantité : 1');
 submit({preventDefault() {}});
 const frenchEmail = new URL(window.location.href);
 assert.equal(frenchEmail.searchParams.get('subject'), 'Demande – Rings made by Lari');

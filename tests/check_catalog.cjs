@@ -41,3 +41,13 @@ for (const source of strings) {
 }
 assert.deepEqual(untranslated, [], 'Missing French catalog translations');
 console.log(`OK: ${products.length} original products, prices, galleries, unique detail routing, collections, French copy and collapsed filter.`);
+
+const widths = ['narrow-rings', 'medium-rings', 'wide-rings'];
+assert(!vm.runInContext('shopCategoryOptions', context).some(option => widths.includes(option.id)));
+for (const ring of products.filter(p => p.category === 'rings' || p.categories.some(c => widths.includes(c)))) {
+  assert(ring.categories.includes('rings'), ring.title);
+}
+console.log('OK: width filters removed; all rings belong to the Rings filter.');
+
+assert(!shop.includes('class="shop-sort"'));
+assert(!shop.includes('id="shop-new-items"'));

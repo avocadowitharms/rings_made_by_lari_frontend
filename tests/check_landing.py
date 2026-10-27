@@ -24,7 +24,7 @@ for path in paths:
 assert 'fefc2c59' in paths[-1], 'Reference hero must be retained'
 assert len(paths[:-1]) == len(set(paths[:-1])), 'Duplicate gallery paths'
 
-expected = ['index.html', 'contact.html', 'shop.html', 'about.html', 'gallery.html']
+expected = ['index.html', 'contact.html', 'shop.html', 'about.html', 'gallery.html', 'collaboration.html']
 for page in web.glob('*.html'):
     html = page.read_text(encoding='utf-8')
     nav = re.search(r'<nav class="nav".*?</nav>', html, re.S).group()
@@ -75,6 +75,8 @@ catalog = json.loads(subprocess.check_output([
 ], encoding="utf-8"))
 assert not any(item["href"] in ["collection-ring-size-measurer.html", "collection-gift-cards.html", "collection-rings-size.html"] for item in catalog["collections"])
 assert any(item["titleDe"] == "Ringe" for item in catalog["collections"])
+assert next(item for item in catalog["collections"] if item["titleDe"] == "Ringe")["image"] == next(item for item in catalog["shopProducts"] if item["id"] == "c4f11619-8aa5-83f4-4cac-33ace3209b66")["image"]
+assert not any(item["titleDe"] in ["Statement-Ringe", "Vintage-Funde", "Schlüsselanhänger"] for item in catalog["collections"])
 assert not any(item["id"] in ["rings-size", "ready-rings", "ring-measurer"] for item in catalog["shopCategoryOptions"])
 for ring in catalog["collectionProducts"]:
     assert any(item["title"] == ring["title"] and item["category"] == "rings" for item in catalog["shopProducts"])
@@ -88,3 +90,26 @@ for page in web.glob("*.html"):
     assert not re.search(r"Login placeholder|Platzhalter|Kategorie:|\[Bitte |\[Name und", text), page
 assert len(catalog["shopProducts"]) == 71
 print("OK: demo catalog and visible template placeholders removed.")
+
+# Retail invitation lives on its dedicated page instead of the home hero.
+home = (root / "index.html").read_text(encoding="utf-8")
+partner = (root / "collaboration.html").read_text(encoding="utf-8")
+assert "hero-retail-partners.png" not in home
+assert "hero-partners" not in home
+assert 'src="assets/hero-retail-partners.png"' in partner
+assert 'id="collaboration-form"' in partner
+for page in root.glob("*.html"):
+    assert 'href="collaboration.html" data-local-copy="collaboration"' in page.read_text(encoding="utf-8"), page
+print("OK: retail artwork moved to the translated collaboration page and linked from every navigation.")
+
+# Check the actual dictionaries used by the shared language switcher.
+local_copy = json.loads(subprocess.check_output([
+    "node", "-e", script[script.index("const newPageCopy ="):script.index("function localizeNewContent()")]
+    + "console.log(JSON.stringify(newPageCopy));"
+], encoding="utf-8"))
+for language, label in [("de", "Zusammenarbeit"), ("en", "Collaboration"), ("fr", "Collaboration")]:
+    assert local_copy[language]["collaboration"] == label
+    for key in re.findall(r'data-local-(?:copy|placeholder)="([^\"]+)"', partner):
+        assert local_copy[language][key], (language, key)
+assert "localizeNewContent();" in script
+print("OK: collaboration navigation, page and form translations in German, English and French.")

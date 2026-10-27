@@ -26,25 +26,37 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="css/styles.css?v=catalog-53" />
+    <link rel="stylesheet" href="css/styles.css?v=contact-layout-69" />
   </head>
   <body data-theme="light">
     <aside class="social-banner" aria-label="Folge Lari"><span data-copy="socialFollow">Folge mir auf</span> <a href="https://www.instagram.com/rings_made_by_lari" target="_blank" rel="noopener noreferrer">Instagram</a><span aria-hidden="true">&amp;</span><a href="https://www.facebook.com/rings_made_by_lari" target="_blank" rel="noopener noreferrer">Facebook</a></aside>
     <header class="site-header">
       <a class="brand" href="index.html"><span>Rings</span><small>made by Lari</small></a>
       <button class="menu-toggle" type="button" aria-label="Navigation öffnen" aria-expanded="false" data-icon="menu"></button>
-      <nav class="nav" aria-label="Hauptnavigation"><a href="index.html">Start</a><a href="contact.html">Kontakt</a><a href="shop.html">Produkte</a><a href="about.html">Über mich</a><a href="gallery.html">Galerie</a></nav>
+      <nav class="nav" aria-label="Hauptnavigation"><a href="index.html">Start</a><a href="contact.html">Kontakt</a><a href="shop.html">Produkte</a><a href="about.html">Über mich</a><a href="gallery.html">Galerie</a><a href="collaboration.html" data-local-copy="collaboration">Zusammenarbeit</a></nav>
       <div class="header-tools" aria-label="Sprache">
 
 
       </div>
     </header>
     <main>
-      <section class="contact-layout">
+      <section class="contact-layout contact-form-first">
         <div class="contact-intro">
           <p class="section-subtitle" data-copy="contactKicker">Kontakt</p>
           <h1 data-copy="contactTitle">Dein Wunschstück beginnt hier.</h1>
-          <p data-copy="contactIntro">Neu habe ich keinen klassischen Onlineshop mehr. Du kannst dir meine Produkte ganz einfach online anschauen und deine gewünschten Artikel anschliessend über das Kontaktformular bei mir anfragen.</p><p data-copy="contactDetails">Ich prüfe deine Anfrage persönlich und melde mich anschliessend bei dir, um dir die Verfügbarkeit zu bestätigen und alle weiteren Details zu deiner Bestellung zu klären.</p>
+        </div>
+        <form class="contact-form" id="contact-form" action="mailto:rings_made_by_lari@hotmail.com" method="post" enctype="text/plain">
+          <h2 data-copy="formTitle">Frage deine Produkte hier an</h2>
+          <label><span data-copy="formName">Vor- und Nachname</span><input name="name" autocomplete="name" maxlength="120" required /></label>
+          <label><span data-copy="formEmail">E-Mail-Adresse</span><input name="email" type="email" autocomplete="email" maxlength="254" required /></label>
+          <label><span data-copy="formAddress">Adresse</span><textarea name="address" autocomplete="street-address" rows="2" maxlength="500"></textarea></label>
+          <label><span data-copy="formMessage">Deine Bestellung oder Nachricht</span><textarea name="message" data-local-placeholder="enquiryExample" placeholder="Produkt: z. B. Ring 3&#10;Grösse: z. B. 58&#10;Anzahl: z. B. 1" rows="5" maxlength="3000" required></textarea></label>
+          <label><span data-copy="formPayment">Gewünschte Bezahlung</span><input name="payment" data-local-placeholder="paymentExample" placeholder="Twint, PayPal oder Überweisung" maxlength="100" /></label>
+          <button class="button" type="submit" data-copy="formSubmit">Anfrage im E-Mail-Programm öffnen</button>
+          <p class="contact-form-note" data-copy="formNote">Das Formular öffnet eine vorbereitete E-Mail in deinem E-Mail-Programm. Bitte sende sie dort ab. Alternativ kannst du mir direkt schreiben oder anrufen.</p>
+        </form>
+        <div class="contact-intro">
+<p data-copy="contactIntro">Neu habe ich keinen klassischen Onlineshop mehr. Du kannst dir meine Produkte ganz einfach online anschauen und deine gewünschten Artikel anschliessend über das Kontaktformular bei mir anfragen.</p><p data-copy="contactDetails">Ich prüfe deine Anfrage persönlich und melde mich anschliessend bei dir, um dir die Verfügbarkeit zu bestätigen und alle weiteren Details zu deiner Bestellung zu klären.</p>
           <p data-copy="contactPayment">Deine Bestellung ist erst nach deiner Bezahlung verbindlich.</p><p class="contact-steps" data-copy="contactSteps">Produkte entdecken → Wunschprodukte auswählen → Anfrage ausfüllen → Persönlich bestellen</p>
           <div class="contact-actions">
             <a class="button" href="mailto:rings_made_by_lari@hotmail.com">
@@ -57,16 +69,7 @@
             </a>
           </div>
         </div>
-        <form class="contact-form" id="contact-form" action="mailto:rings_made_by_lari@hotmail.com" method="post" enctype="text/plain">
-          <h2 data-copy="formTitle">Frage deine Produkte hier an</h2>
-          <label><span data-copy="formName">Vor- und Nachname</span><input name="name" autocomplete="name" maxlength="120" required /></label>
-          <label><span data-copy="formEmail">E-Mail-Adresse</span><input name="email" type="email" autocomplete="email" maxlength="254" required /></label>
-          <label><span data-copy="formAddress">Adresse</span><textarea name="address" autocomplete="street-address" rows="2" maxlength="500"></textarea></label>
-          <label><span data-copy="formMessage">Deine Bestellung oder Nachricht</span><textarea name="message" rows="5" maxlength="3000" required></textarea></label>
-          <label><span data-copy="formPayment">Gewünschte Bezahlung</span><input name="payment" maxlength="100" /></label>
-          <button class="button" type="submit" data-copy="formSubmit">Anfrage im E-Mail-Programm öffnen</button>
-          <p class="contact-form-note" data-copy="formNote">Das Formular öffnet eine vorbereitete E-Mail in deinem E-Mail-Programm. Bitte sende sie dort ab. Alternativ kannst du mir direkt schreiben oder anrufen.</p>
-        </form>
+
       </section>
       <footer class="footer" id="contact">
         <div class="benefits" id="benefits"></div>
@@ -78,9 +81,9 @@
     </footer>
     </main>
     <div class="notice" role="status" aria-live="polite" hidden></div><script src="js/catalog-fr.js?v=catalog-53"></script>
-    <script src="js/fr.js?v=catalog-53"></script>
+    <script src="js/fr.js?v=intro-65"></script>
     <script src="js/products.js?v=catalog-53"></script>
-    <script src="js/app.js?v=catalog-53"></script>
+    <script src="js/app.js?v=catalog-cleanup-74"></script>
   </body>
 </html>
 

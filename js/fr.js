@@ -300,11 +300,9 @@ const frenchCopy = {
 };
 
 Object.assign(frenchCopy, {
-  "Auf meiner Seite findest du eine grosse Auswahl an einzigartigen Ringen und Accessoires, die aus Besteck hergestellt werden.": "Sur mon site, tu trouveras un grand choix de bagues et d’accessoires uniques fabriqués à partir de couverts.",
-  "Die Ringe werden erst nach deiner Bestellung individuell für dich angefertigt – natürlich in deiner gewünschten Ringgrösse. Eine Ausnahme bilden die Ringe aus der Rubrik „Vorgefertigte Ringe“.": "Les bagues sont fabriquées spécialement pour toi après ta commande, bien sûr à la taille souhaitée. Seules les bagues de la rubrique « Bagues prêtes à porter » font exception.",
-  "Neben Ringen findest du bei mir auch eine vielfältige Auswahl an Geschenken, Broschen, Halsketten und weiteren besonderen Einzelstücken – alles hergestellt mit oder aus Besteck.": "En plus des bagues, tu trouveras un choix varié de cadeaux, de broches, de colliers et d’autres pièces uniques, tous réalisés avec ou à partir de couverts.",
-  "Hast du etwas auf meiner Seite entdeckt, das dir gefällt? Oder möchtest du mehr über ein bestimmtes Stück erfahren?": "Tu as repéré quelque chose qui te plaît sur mon site ? Ou tu aimerais en savoir plus sur une pièce en particulier ?",
-  "Dann kontaktiere mich gerne unverbindlich über das Kontaktformular. Ich freue mich auf deine Nachricht!": "Contacte-moi sans engagement via le formulaire de contact. Je me réjouis de recevoir ton message !",
+  "Entdecke einzigartige Ringe und Accessoires aus Besteck – individuell nach deiner Bestellung und in deiner Wunschgrösse angefertigt (ausgenommen vorgefertigte Ringe).": "Découvre des bagues et des accessoires uniques réalisés à partir de couverts – fabriqués spécialement après ta commande et à la taille souhaitée (sauf les bagues prêtes à porter).",
+  "Ausserdem findest du besondere Geschenke, Broschen, Halsketten und weitere Einzelstücke.": "Tu trouveras aussi des cadeaux originaux, des broches, des colliers et d’autres pièces uniques.",
+  "Hast du Fragen oder etwas entdeckt, das dir gefällt? Dann freue ich mich auf deine unverbindliche Nachricht über das Kontaktformular!": "Tu as une question ou tu as repéré quelque chose qui te plaît ? Je me réjouis de recevoir ton message sans engagement via le formulaire de contact !",
   "Hast du einen": "Tu as un",
   "Concept Store": "concept store",
   "oder einen": "ou une",
