@@ -34,7 +34,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600;700&display=swap"
     rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css?v=product-slideshow-68" />
+  <link rel="stylesheet" href="css/styles.css?v=catalog-order-79" />
 </head>
 
 <body data-theme="light">
@@ -109,7 +109,7 @@
           rel="noopener noreferrer"><span data-copy="proofCta">Feedback auf Instagram ansehen</span><span
             aria-hidden="true">↗</span></a>
       </div>
-      <div class="customer-stories" aria-label="Kundenimpressionen">
+      <div class="customer-stories" id="customer-stories" tabindex="0" aria-label="Kundenimpressionen">
         <a class="customer-story" href="assets/customer-stories/story-1.png" target="_blank" rel="noopener">
           <img src="assets/customer-stories/story-1.png"
             alt="Zwei Hände mit handgemachten Ringen: Die Ringe sind in ihrem neuen Zuhause angekommen."
@@ -151,6 +151,10 @@
           <span data-copy="story7">10 von 10 – euer Feedback</span><span class="story-enlarge"
             aria-hidden="true">↗</span>
         </a>
+      </div>
+      <div class="customer-stories-controls">
+        <button type="button" data-story-direction="-1" aria-controls="customer-stories">← <span data-local-copy="previousProducts">Zurück</span></button>
+        <button type="button" data-story-direction="1" aria-controls="customer-stories"><span data-local-copy="nextProducts">Weiter</span> →</button>
       </div>
     </section>
 
@@ -208,7 +212,7 @@
   <script src="js/catalog-fr.js?v=catalog-53"></script>
   <script src="js/fr.js?v=intro-65"></script>
   <script src="js/products.js?v=catalog-53"></script>
-  <script src="js/app.js?v=catalog-cleanup-74"></script>
+  <script src="js/app.js?v=catalog-order-79"></script>
 </body>
 
 </html>

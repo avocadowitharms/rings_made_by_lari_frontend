@@ -3545,3 +3545,61 @@ html:not([lang="de"]) .collaboration-art { display: none; }
   .shop-title-row h1 { font-size: clamp(32px, 7vw, 52px); }
   .shop-title-row .shop-filter-panel { padding-inline: 12px; font-size: 13px; }
 }
+
+/* Keep the collection overview readable in both themes and fill desktop space. */
+#collections .section-head, #collections .section-head h2 { color: var(--text); }
+#collections .section-description { color: var(--muted); }
+#collections .outline-button { color: var(--text); border-color: var(--line); background: var(--surface); }
+#collections.content-section::after { content: none; }
+@media (min-width: 921px) {
+  #collections.content-section { display: block; max-width: 1440px; margin-inline: auto; padding: 72px 40px; }
+  #collections .section-head { display: flex; flex-direction: row; flex-wrap: wrap; align-items: center; max-width: none; width: 100%; gap: 16px 32px; margin-bottom: 32px; }
+  #collections .section-head h2 { max-width: none; width: 100%; margin: 0; font-size: clamp(40px, 4vw, 56px) !important; }
+  #collections .section-description { max-width: 680px; margin: 0 !important; }
+  #collections .outline-button { margin-left: auto; }
+  #collections .grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; }
+  #collections .collection-card { box-shadow: none; }
+}
+
+/* One alignment and spacing system for the home page. */
+#home { --home-width: 1280px; --home-gutter: clamp(20px, 3vw, 40px); --home-space: clamp(48px, 5vw, 80px); }
+#home > section:not(.hero), #home > .footer {
+  width: 100%; max-width: var(--home-width); margin-inline: auto;
+  padding: var(--home-space) var(--home-gutter);
+}
+#home > .section-divider { max-width: calc(var(--home-width) - 80px); width: calc(100% - 2 * var(--home-gutter)); margin: 0 auto; }
+#home > .landing-intro { display: block; }
+#home > .landing-intro > div:first-child { margin-bottom: 24px; }
+#home > .landing-intro > div:last-child { max-width: 760px; }
+#home > section:not(.hero) h2 {
+  max-width: none; margin: 0 0 24px; font-family: var(--serif);
+  font-size: clamp(34px, 4vw, 52px) !important; font-weight: 500; line-height: 1.12;
+  color: var(--text); text-align: left;
+}
+#home > section .section-subtitle { display: none; }
+#home #collections .section-head, #home .landing-gallery .section-head {
+  display: flex; flex-direction: row; flex-wrap: wrap; align-items: center; justify-content: space-between;
+  width: 100%; max-width: none; gap: 12px 24px; margin: 0 0 28px; padding: 0; text-align: left;
+}
+#home #collections .section-head h2 { flex-basis: 100%; margin-bottom: 0; }
+#home #collections .section-description { margin: 0 !important; max-width: 720px; }
+#home .landing-gallery .section-head h2 { margin: 0; }
+#home .social-proof { gap: 28px; }
+#home .social-proof-copy { max-width: none; }
+#home .social-proof-copy > p { max-width: 760px; margin: 0; }
+#home .hero-with-products {
+  padding-inline: max(var(--home-gutter), calc((100% - var(--home-width)) / 2 + var(--home-gutter)));
+}
+@media (min-width: 921px) {
+  #home #collections .grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; }
+  #home .customer-stories { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; }
+}
+
+#home .customer-stories { display: flex; gap: 20px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; padding: 4px 4px 12px; }
+#home .customer-stories::-webkit-scrollbar { display: none; }
+#home .customer-story { flex: 0 0 calc((100% - 60px) / 4); scroll-snap-align: start; }
+.customer-stories-controls { display: flex; justify-content: space-between; gap: 12px; }
+.customer-stories-controls button { min-height: 44px; padding: 8px 16px; border: 1px solid var(--line); border-radius: 24px; background: var(--surface); color: var(--text); cursor: pointer; }
+.customer-stories-controls button:focus-visible, .customer-stories:focus-visible { outline: 2px solid var(--text); outline-offset: 3px; }
+@media (max-width: 920px) { #home .customer-story { flex-basis: calc((100% - 20px) / 2); } }
+@media (max-width: 560px) { #home .customer-story { flex-basis: 82%; } }

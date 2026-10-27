@@ -176,7 +176,8 @@ const shopCategoryOptions = [
   ["accessories", "Accessories", "Zubehör"],
 ].map(([id, label, labelDe]) => ({ id, label, labelDe }));
 
-const shopProducts = catalogProducts;
+const shopCategoryOrder = {rings: 0, necklaces: 1, "lucky-charms": 2, bracelets: 3, brooches: 4, cutlery: 5, gifts: 6, accessories: 7};
+const shopProducts = [...catalogProducts].sort((a, b) => (shopCategoryOrder[a.category] ?? 8) - (shopCategoryOrder[b.category] ?? 8));
 function collectionItems(page) {
   const category = page.replace("collection-", "").replace(".html", "");
   if (["ready-rings", "rings-size"].includes(category)) return collectionProducts;
@@ -1558,6 +1559,13 @@ function localizeNewContent() {
 
 body.dataset.theme = activeTheme;
 setLanguage(activeLanguage);
+
+document.querySelectorAll('[data-story-direction]').forEach(button => {
+  button.addEventListener('click', () => {
+    const track = document.querySelector('#customer-stories');
+    track.scrollBy({left: Number(button.dataset.storyDirection) * track.clientWidth, behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth'});
+  });
+});
 
 // Native dialog provides keyboard dismissal, focus trapping and focus return.
 const proofDialog = document.querySelector("#proof-dialog");

@@ -51,3 +51,15 @@ console.log('OK: width filters removed; all rings belong to the Rings filter.');
 
 assert(!shop.includes('class="shop-sort"'));
 assert(!shop.includes('id="shop-new-items"'));
+
+const orderedProducts = vm.runInContext('shopProducts', context);
+const order = ['rings', 'necklaces', 'lucky-charms', 'bracelets', 'brooches', 'cutlery', 'gifts', 'accessories'];
+assert.equal(orderedProducts.length, products.length);
+assert.equal(orderedProducts[0].category, 'rings');
+for (let i = 1; i < orderedProducts.length; i++) {
+  assert(order.indexOf(orderedProducts[i - 1].category) <= order.indexOf(orderedProducts[i].category));
+}
+for (const category of order) {
+  assert.deepEqual(orderedProducts.filter(p => p.category === category).map(p => p.id), products.filter(p => p.category === category).map(p => p.id));
+}
+console.log('OK: rings, necklaces and pendants first; gifts and accessories last, preserving order within categories.');

@@ -22,3 +22,17 @@ assert.equal(image.src, link.href); assert.equal(image.alt, 'Original customer s
 click({ctrlKey: true, preventDefault: () => prevented++});
 assert.equal(opened, 1); assert.equal(prevented, 1);
 console.log('OK: seven real stories, enlargement and modified-click behavior.');
+
+let move;
+const track = {clientWidth: 1000, scrollBy: options => { move = options; }};
+const controls = [-1, 1].map(direction => ({dataset: {storyDirection: direction}, addEventListener(type, handler) { this.click = handler; }}));
+vm.runInNewContext(source.slice(source.indexOf("document.querySelectorAll('[data-story-direction]')"), source.indexOf('// Native dialog provides keyboard')), {
+  document: {querySelectorAll: () => controls, querySelector: () => track},
+  window: {matchMedia: () => ({matches: true})}
+});
+for (const control of controls) {
+  control.click();
+  assert.equal(move.left, control.dataset.storyDirection * 1000);
+  assert.equal(move.behavior, 'instant');
+}
+console.log('OK: story slideshow controls and reduced motion.');
