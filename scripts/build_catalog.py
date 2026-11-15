@@ -19,6 +19,8 @@ def build(records):
     result=[]
     for row in records:
         p=row['product']; categories=list(dict.fromkeys(CATEGORY[c['name']] for c in p['categories'] if c['name'] in CATEGORY))
+        # These two sets are out of stock; keep the cutlery category available.
+        if p['id'] in {'01af4bd1-3612-ae2a-0940-1f2bb23062cc', '80042e7f-ca19-8e60-9a94-54a29f91812c'}: continue
         if any(c.endswith('rings') for c in categories) and 'rings' not in categories: categories.append('rings')
         primary=next((c for c in ['rings','gifts','necklaces','bracelets','brooches','cutlery','lucky-charms','accessories'] if c in categories),None)
         assert primary,p['name']

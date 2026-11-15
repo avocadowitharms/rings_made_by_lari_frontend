@@ -88,7 +88,7 @@ assert "jewelry-" not in script
 for page in web.glob("*.html"):
     text = page.read_text(encoding="utf-8")
     assert not re.search(r"Login placeholder|Platzhalter|Kategorie:|\[Bitte |\[Name und", text), page
-assert len(catalog["shopProducts"]) == 71
+assert len(catalog["shopProducts"]) == 69
 print("OK: demo catalog and visible template placeholders removed.")
 
 # Retail invitation lives on its dedicated page instead of the home hero.

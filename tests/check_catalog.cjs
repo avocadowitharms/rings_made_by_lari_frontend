@@ -5,8 +5,15 @@ const app = fs.readFileSync('js/app.js', 'utf8');
 vm.runInContext(fs.readFileSync('js/products.js', 'utf8') + app.split('const benefits =')[0], context);
 const products = vm.runInContext('catalogProducts', context);
 const originals = JSON.parse(fs.readFileSync('docs/reference-products.json', 'utf8'));
-assert.equal(products.length, 71);
-assert.equal(new Set(products.map(p => p.id)).size, 71);
+const excludedIds = ['01af4bd1-3612-ae2a-0940-1f2bb23062cc', '80042e7f-ca19-8e60-9a94-54a29f91812c'];
+const expected = originals.filter(row => !excludedIds.includes(row.product.id));
+assert.equal(products.length, expected.length);
+assert.deepEqual([...products.map(p => p.id)].sort(), expected.map(row => row.product.id).sort());
+assert(!products.some(p => excludedIds.includes(p.id)));
+assert(vm.runInContext('shopCategoryOptions', context).some(p => p.id === 'cutlery'));
+assert(vm.runInContext('collections', context).some(p => p.href === 'collection-cutlery.html'));
+assert.equal(vm.runInContext('collectionItems("collection-cutlery.html").length', context), 0);
+assert.equal(new Set(products.map(p => p.id)).size, expected.length);
 for (const item of products) {
   const source = originals.find(row => row.source === item.source).product;
   assert.equal(item.id, source.id);
